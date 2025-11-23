@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 40, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/relay/Downloads/nano-main/nano-main/app/api/check-api-key/route.ts"],"sourcesContent":["import { NextResponse } from \"next/server\"\n\nexport async function GET() {\n  const apiKey = process.env.AI_GATEWAY_API_KEY\n\n  return NextResponse.json({\n    configured: !!apiKey,\n  })\n}\n"],"names":[],"mappings":";;;;AAAA;;AAEO,eAAe;IACpB,MAAM,SAAS,QAAQ,GAAG,CAAC,kBAAkB;IAE7C,OAAO,yPAAY,CAAC,IAAI,CAAC;QACvB,YAAY,CAAC,CAAC;IAChB;AACF"}}]
+}
