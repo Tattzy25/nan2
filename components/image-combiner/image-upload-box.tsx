@@ -16,7 +16,7 @@ export function ImageUploadBox({ imageNumber, preview, onDrop, onClear, onSelect
   return (
     <div
       className={cn(
-        "w-full h-[60px] sm:h-[80px] md:h-[100px] lg:h-[12vh] xl:h-[14vh] border border-gray-600 flex items-center justify-center cursor-pointer hover:border-white transition-all bg-black/30 relative group",
+        "w-full h-[60px] sm:h-[80px] md:h-[100px] lg:h-[12vh] xl:h-[14vh] border border-gray-600 rounded-2xl md:rounded-3xl overflow-hidden flex items-center justify-center cursor-pointer hover:border-white transition-all bg-black/30 relative group",
         preview && "border-white",
       )}
       onDrop={onDrop}
@@ -39,7 +39,7 @@ export function ImageUploadBox({ imageNumber, preview, onDrop, onClear, onSelect
               e.stopPropagation()
               onClear()
             }}
-            className="absolute top-0.5 right-0.5 sm:top-1 sm:right-1 z-10 bg-black/90 hover:bg-white/90 text-white hover:text-black p-1 sm:p-1.5 transition-all shadow-lg border border-white/40 opacity-100"
+            className="absolute top-0.5 right-0.5 sm:top-1 sm:right-1 z-10 bg-black/90 hover:bg-white/90 text-white hover:text-black p-1 sm:p-1.5 transition-all shadow-lg border border-white/40 opacity-100 rounded-full"
             aria-label={`Clear image ${imageNumber}`}
           >
             <svg
@@ -57,7 +57,7 @@ export function ImageUploadBox({ imageNumber, preview, onDrop, onClear, onSelect
           <img
             src={preview || "/placeholder.svg"}
             alt={`Image ${imageNumber}`}
-            className="w-full h-full object-contain"
+            className="w-full h-full object-contain rounded-2xl md:rounded-3xl"
           />
         </div>
       ) : (

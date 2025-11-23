@@ -7,6 +7,9 @@ import { useMobile } from "@/hooks/use-mobile"
 import type { Generation } from "./hooks/use-image-generation"
 import { useEffect } from "react"
 
+const actionButtonClass =
+  "text-xs h-7 px-2 md:px-3 bg-transparent border-gray-600 text-white hover:bg-gray-700 flex items-center gap-1 lg:bg-black/80 lg:backdrop-blur-sm disabled:opacity-50 disabled:cursor-not-allowed rounded-xl md:rounded-2xl"
+
 interface OutputSectionProps {
   selectedGeneration: Generation | undefined
   generations: Generation[]
@@ -88,7 +91,7 @@ export function OutputSection({
         disabled={!generatedImage}
         variant="outline"
         size="sm"
-        className="text-xs h-7 px-2 md:px-3 bg-transparent border-gray-600 text-white hover:bg-gray-700 flex items-center gap-1 lg:bg-black/80 lg:backdrop-blur-sm disabled:opacity-50 disabled:cursor-not-allowed"
+        className={actionButtonClass}
         title="Use as Input"
       >
         <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -101,7 +104,7 @@ export function OutputSection({
         disabled={!generatedImage}
         variant="outline"
         size="sm"
-        className="text-xs h-7 px-2 md:px-3 bg-transparent border-gray-600 text-white hover:bg-gray-700 flex items-center gap-1 lg:bg-black/80 lg:backdrop-blur-sm disabled:opacity-50 disabled:cursor-not-allowed"
+        className={actionButtonClass}
         title={isMobile ? "Copy to clipboard" : "Copy to clipboard"}
       >
         <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -115,7 +118,7 @@ export function OutputSection({
         disabled={!generatedImage}
         variant="outline"
         size="sm"
-        className="text-xs h-7 px-2 md:px-3 bg-transparent border-gray-600 text-white hover:bg-gray-700 flex items-center gap-1 lg:bg-black/80 lg:backdrop-blur-sm disabled:opacity-50 disabled:cursor-not-allowed"
+        className={actionButtonClass}
         title="Download image"
       >
         <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
