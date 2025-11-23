@@ -664,7 +664,7 @@ export function ImageCombiner() {
       <div className="relative z-10 w-full h-full flex items-center justify-center p-2 md:p-4">
         <div className="w-full max-w-[98vw] lg:max-w-[96vw] 2xl:max-w-[94vw]">
           <div className="w-full mx-auto select-none">
-            <div className="bg-black/70 border-0 px-3 py-3 md:px-4 md:py-4 lg:px-6 lg:py-6 flex flex-col rounded-lg">
+            <div className="bg-black/70 border border-white/10 px-3 py-3 md:px-4 md:py-4 lg:px-6 lg:py-6 flex flex-col rounded-3xl md:rounded-[40px] overflow-hidden">
               <div className="flex items-start justify-between gap-4 mb-2 md:mb-3 flex-shrink-0">
                 <div>
                   {!logoLoaded && <Skeleton className="w-6 h-6 md:w-7 md:h-7 mb-0.5 md:mb-1 rounded" />}
