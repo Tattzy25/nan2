@@ -17,7 +17,6 @@ import { GenerationHistory } from "./generation-history"
 import { GlobalDropZone } from "./global-drop-zone"
 import { FullscreenViewer } from "./fullscreen-viewer"
 import { Skeleton } from "@/components/ui/skeleton"
-import { ApiKeyWarning } from "@/components/api-key-warning"
 
 const MemoizedDithering = memo(Dithering)
 
@@ -695,8 +694,6 @@ export function ImageCombiner() {
                   </p>
                 </div>
               </div>
-
-              {apiKeyMissing && <ApiKeyWarning />}
 
               <div className="flex flex-col gap-4 xl:gap-0">
                 <div
