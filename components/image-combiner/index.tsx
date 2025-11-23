@@ -682,15 +682,7 @@ export function ImageCombiner() {
                     <div className="hidden md:block">TaTTTy</div>
                   </h1>
                   <p className="text-[9px] md:text-[10px] text-gray-400 select-none tracking-wide mt-0.5 md:mt-1">
-                    Playground by{" "}
-                    <a
-                      href="https://vercel.com/ai-gateway"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:text-gray-300 transition-colors"
-                    >
-                      Vercel AI Gateway
-                    </a>
+                    Powered By YOU
                   </p>
                 </div>
               </div>

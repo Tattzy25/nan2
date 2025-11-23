@@ -4685,22 +4685,8 @@ function ImageCombiner() {
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_$40$opentelemetry$2b$_3a23a8f646cf08a50a02cbb7ec41fbf4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                 className: "text-[9px] md:text-[10px] text-gray-400 select-none tracking-wide mt-0.5 md:mt-1",
-                                                children: [
-                                                    "Playground by",
-                                                    " ",
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_$40$opentelemetry$2b$_3a23a8f646cf08a50a02cbb7ec41fbf4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                                        href: "https://vercel.com/ai-gateway",
-                                                        target: "_blank",
-                                                        rel: "noopener noreferrer",
-                                                        className: "hover:text-gray-300 transition-colors",
-                                                        children: "Vercel AI Gateway"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/Downloads/nano-main/nano-main/components/image-combiner/index.tsx",
-                                                        lineNumber: 686,
-                                                        columnNumber: 21
-                                                    }, this)
-                                                ]
-                                            }, void 0, true, {
+                                                children: "Powered By YOU"
+                                            }, void 0, false, {
                                                 fileName: "[project]/Downloads/nano-main/nano-main/components/image-combiner/index.tsx",
                                                 lineNumber: 684,
                                                 columnNumber: 19
@@ -4764,7 +4750,7 @@ function ImageCombiner() {
                                                             isLoadingMore: isLoadingMore
                                                         }, void 0, false, {
                                                             fileName: "[project]/Downloads/nano-main/nano-main/components/image-combiner/index.tsx",
-                                                            lineNumber: 709,
+                                                            lineNumber: 701,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_$40$opentelemetry$2b$_3a23a8f646cf08a50a02cbb7ec41fbf4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4781,18 +4767,18 @@ function ImageCombiner() {
                                                                 isLoadingMore: isLoadingMore
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Downloads/nano-main/nano-main/components/image-combiner/index.tsx",
-                                                                lineNumber: 747,
+                                                                lineNumber: 739,
                                                                 columnNumber: 23
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/Downloads/nano-main/nano-main/components/image-combiner/index.tsx",
-                                                            lineNumber: 746,
+                                                            lineNumber: 738,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/Downloads/nano-main/nano-main/components/image-combiner/index.tsx",
-                                                    lineNumber: 703,
+                                                    lineNumber: 695,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_$40$opentelemetry$2b$_3a23a8f646cf08a50a02cbb7ec41fbf4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4807,12 +4793,12 @@ function ImageCombiner() {
                                                         className: "w-0.5 h-8 bg-white/20 group-hover:bg-white/40 transition-colors rounded-full"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Downloads/nano-main/nano-main/components/image-combiner/index.tsx",
-                                                        lineNumber: 767,
+                                                        lineNumber: 759,
                                                         columnNumber: 21
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/Downloads/nano-main/nano-main/components/image-combiner/index.tsx",
-                                                    lineNumber: 761,
+                                                    lineNumber: 753,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_$40$opentelemetry$2b$_3a23a8f646cf08a50a02cbb7ec41fbf4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4838,18 +4824,18 @@ function ImageCombiner() {
                                                         onOpenInNewTab: openImageInNewTab
                                                     }, void 0, false, {
                                                         fileName: "[project]/Downloads/nano-main/nano-main/components/image-combiner/index.tsx",
-                                                        lineNumber: 776,
+                                                        lineNumber: 768,
                                                         columnNumber: 21
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/Downloads/nano-main/nano-main/components/image-combiner/index.tsx",
-                                                    lineNumber: 770,
+                                                    lineNumber: 762,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Downloads/nano-main/nano-main/components/image-combiner/index.tsx",
-                                            lineNumber: 699,
+                                            lineNumber: 691,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_$40$opentelemetry$2b$_3a23a8f646cf08a50a02cbb7ec41fbf4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4866,18 +4852,18 @@ function ImageCombiner() {
                                                 isLoadingMore: isLoadingMore
                                             }, void 0, false, {
                                                 fileName: "[project]/Downloads/nano-main/nano-main/components/image-combiner/index.tsx",
-                                                lineNumber: 798,
+                                                lineNumber: 790,
                                                 columnNumber: 19
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/Downloads/nano-main/nano-main/components/image-combiner/index.tsx",
-                                            lineNumber: 797,
+                                            lineNumber: 789,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Downloads/nano-main/nano-main/components/image-combiner/index.tsx",
-                                    lineNumber: 698,
+                                    lineNumber: 690,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_$40$opentelemetry$2b$_3a23a8f646cf08a50a02cbb7ec41fbf4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4891,7 +4877,7 @@ function ImageCombiner() {
                                             children: "Make this app your own"
                                         }, void 0, false, {
                                             fileName: "[project]/Downloads/nano-main/nano-main/components/image-combiner/index.tsx",
-                                            lineNumber: 813,
+                                            lineNumber: 805,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_$40$opentelemetry$2b$_3a23a8f646cf08a50a02cbb7ec41fbf4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -4899,7 +4885,7 @@ function ImageCombiner() {
                                             children: "•"
                                         }, void 0, false, {
                                             fileName: "[project]/Downloads/nano-main/nano-main/components/image-combiner/index.tsx",
-                                            lineNumber: 821,
+                                            lineNumber: 813,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_$40$opentelemetry$2b$_3a23a8f646cf08a50a02cbb7ec41fbf4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -4908,7 +4894,7 @@ function ImageCombiner() {
                                             children: "How it works"
                                         }, void 0, false, {
                                             fileName: "[project]/Downloads/nano-main/nano-main/components/image-combiner/index.tsx",
-                                            lineNumber: 822,
+                                            lineNumber: 814,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_$40$opentelemetry$2b$_3a23a8f646cf08a50a02cbb7ec41fbf4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -4916,7 +4902,7 @@ function ImageCombiner() {
                                             children: "•"
                                         }, void 0, false, {
                                             fileName: "[project]/Downloads/nano-main/nano-main/components/image-combiner/index.tsx",
-                                            lineNumber: 825,
+                                            lineNumber: 817,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_$40$opentelemetry$2b$_3a23a8f646cf08a50a02cbb7ec41fbf4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -4927,13 +4913,13 @@ function ImageCombiner() {
                                             children: "Feedback?"
                                         }, void 0, false, {
                                             fileName: "[project]/Downloads/nano-main/nano-main/components/image-combiner/index.tsx",
-                                            lineNumber: 826,
+                                            lineNumber: 818,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Downloads/nano-main/nano-main/components/image-combiner/index.tsx",
-                                    lineNumber: 812,
+                                    lineNumber: 804,
                                     columnNumber: 15
                                 }, this)
                             ]
@@ -4962,7 +4948,7 @@ function ImageCombiner() {
                 onOpenChange: setShowHowItWorks
             }, void 0, false, {
                 fileName: "[project]/Downloads/nano-main/nano-main/components/image-combiner/index.tsx",
-                lineNumber: 840,
+                lineNumber: 832,
                 columnNumber: 7
             }, this),
             showFullscreen && fullscreenImageUrl && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_$40$opentelemetry$2b$_3a23a8f646cf08a50a02cbb7ec41fbf4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$nano$2d$main$2f$nano$2d$main$2f$components$2f$image$2d$combiner$2f$fullscreen$2d$viewer$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FullscreenViewer"], {
@@ -4972,7 +4958,7 @@ function ImageCombiner() {
                 onNavigate: handleFullscreenNavigate
             }, void 0, false, {
                 fileName: "[project]/Downloads/nano-main/nano-main/components/image-combiner/index.tsx",
-                lineNumber: 843,
+                lineNumber: 835,
                 columnNumber: 9
             }, this)
         ]

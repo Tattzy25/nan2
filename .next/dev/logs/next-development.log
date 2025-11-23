@@ -62437,3 +62437,123 @@ https://nextjs.org/docs/messages/module-not-found
 [01:08:52.659] Server  LOG      ✓ Compiled in 98ms
 [01:08:58.047] Server  LOG      ✓ Compiled in 70ms
 [01:09:03.156] Server  LOG      ✓ Compiled in 48ms
+[02:00:21.713] Browser ERROR   Error saving generation to localStorage: {}
+[02:01:11.945] Browser ERROR   Error saving generation to localStorage: {}
+[02:07:33.120] Server  LOG      ✓ Compiled in 3.6s
+[02:07:34.536] Server  LOG      ✓ Compiled in 85ms
+[02:07:35.497] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:07:36.706] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[02:07:36.706] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/","sdkn":"@vercel/analytics/react","sdkv":"1.5.0","sv":"0.1.3","ts":1763894449165}
+[02:07:38.291] Server  LOG      ✓ Compiled in 172ms
+[02:07:43.447] Server  LOG      ✓ Compiled in 313ms
+[02:07:49.401] Server  LOG      ✓ Compiled in 156ms
+[02:07:55.451] Server  LOG      ✓ Compiled in 80ms
+[02:10:50.470] Server  LOG      ✓ Compiled in 575ms
+[02:12:16.264] Server  LOG      ✓ Compiled in 195ms
+[02:12:21.034] Server  LOG      ✓ Compiled in 182ms
+[02:12:25.800] Server  LOG      ✓ Compiled in 72ms
+[02:12:29.356] Server  ERROR   C:\Users\relay\Downloads\nano-main\nano-main\.next\dev\server\chunks\ssr\[root-of-the-server]__12066695._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[02:12:29.359] Server  ERROR   C:\Users\relay\Downloads\nano-main\nano-main\.next\dev\server\chunks\ssr\[turbopack]_runtime.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[02:12:29.359] Server  ERROR   C:\Users\relay\Downloads\nano-main\nano-main\.next\dev\server\chunks\ssr\[root-of-the-server]__c77fa3ab._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[02:12:29.365] Server  ERROR   C:\Users\relay\Downloads\nano-main\nano-main\.next\dev\server\chunks\ssr\afe3c_next_dist_2883bbbf._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[02:12:29.481] Server  ERROR   C:\Users\relay\node_modules\.pnpm\next@16.0.3_@opentelemetry+_3a23a8f646cf08a50a02cbb7ec41fbf4\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[02:12:29.486] Server  ERROR   C:\Users\relay\node_modules\.pnpm\next@16.0.3_@opentelemetry+_3a23a8f646cf08a50a02cbb7ec41fbf4\node_modules\next\dist\server\lib\trace\tracer.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[02:12:29.488] Server  ERROR   C:\Users\relay\node_modules\.pnpm\@opentelemetry+api@1.9.0\node_modules\@opentelemetry\api\build\src\context\NoopContextManager.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[02:12:29.489] Server  ERROR   C:\Users\relay\node_modules\.pnpm\@opentelemetry+api@1.9.0\node_modules\@opentelemetry\api\build\src\api\context.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[02:12:29.489] Server  ERROR   C:\Users\relay\node_modules\.pnpm\@opentelemetry+api@1.9.0\node_modules\@opentelemetry\api\build\src\trace\NoopTracer.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[02:12:29.491] Server  ERROR   C:\Users\relay\node_modules\.pnpm\@opentelemetry+api@1.9.0\node_modules\@opentelemetry\api\build\src\trace\ProxyTracer.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[02:12:29.495] Server  ERROR    ⨯ ReferenceError: Rock_Salt is not defined
+[02:12:29.497] Server  ERROR   C:\Users\relay\Downloads\nano-main\nano-main\.next\dev\server\chunks\ssr\[root-of-the-server]__12066695._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[02:12:29.499] Server  ERROR   C:\Users\relay\Downloads\nano-main\nano-main\.next\dev\server\chunks\ssr\[turbopack]_runtime.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[02:12:29.500] Server  ERROR   C:\Users\relay\Downloads\nano-main\nano-main\.next\dev\server\chunks\ssr\[root-of-the-server]__c77fa3ab._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[02:12:29.501] Server  ERROR   C:\Users\relay\Downloads\nano-main\nano-main\.next\dev\server\chunks\ssr\afe3c_next_dist_2883bbbf._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[02:12:29.503] Server  ERROR   C:\Users\relay\node_modules\.pnpm\next@16.0.3_@opentelemetry+_3a23a8f646cf08a50a02cbb7ec41fbf4\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[02:12:29.504] Server  ERROR   C:\Users\relay\node_modules\.pnpm\next@16.0.3_@opentelemetry+_3a23a8f646cf08a50a02cbb7ec41fbf4\node_modules\next\dist\server\lib\trace\tracer.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[02:12:29.504] Server  ERROR   C:\Users\relay\node_modules\.pnpm\@opentelemetry+api@1.9.0\node_modules\@opentelemetry\api\build\src\context\NoopContextManager.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[02:12:29.505] Server  ERROR   C:\Users\relay\node_modules\.pnpm\@opentelemetry+api@1.9.0\node_modules\@opentelemetry\api\build\src\api\context.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[02:12:29.505] Server  ERROR   C:\Users\relay\node_modules\.pnpm\@opentelemetry+api@1.9.0\node_modules\@opentelemetry\api\build\src\trace\NoopTracer.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[02:12:29.506] Server  ERROR   C:\Users\relay\node_modules\.pnpm\@opentelemetry+api@1.9.0\node_modules\@opentelemetry\api\build\src\trace\ProxyTracer.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[02:12:29.507] Server  ERROR    ⨯ ReferenceError: Rock_Salt is not defined
+[02:12:29.554] Server  ERROR   C:\Users\relay\Downloads\nano-main\nano-main\.next\dev\server\chunks\ssr\[root-of-the-server]__12066695._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[02:12:29.554] Server  ERROR   C:\Users\relay\Downloads\nano-main\nano-main\.next\dev\server\chunks\ssr\[turbopack]_runtime.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[02:12:29.554] Server  ERROR   C:\Users\relay\Downloads\nano-main\nano-main\.next\dev\server\chunks\ssr\[root-of-the-server]__c77fa3ab._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[02:12:29.555] Server  ERROR   C:\Users\relay\Downloads\nano-main\nano-main\.next\dev\server\chunks\ssr\afe3c_next_dist_2883bbbf._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[02:12:29.556] Server  ERROR   C:\Users\relay\node_modules\.pnpm\next@16.0.3_@opentelemetry+_3a23a8f646cf08a50a02cbb7ec41fbf4\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[02:12:29.557] Server  ERROR   C:\Users\relay\node_modules\.pnpm\next@16.0.3_@opentelemetry+_3a23a8f646cf08a50a02cbb7ec41fbf4\node_modules\next\dist\server\lib\trace\tracer.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[02:12:29.558] Server  ERROR   C:\Users\relay\node_modules\.pnpm\@opentelemetry+api@1.9.0\node_modules\@opentelemetry\api\build\src\context\NoopContextManager.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[02:12:29.558] Server  ERROR   C:\Users\relay\node_modules\.pnpm\@opentelemetry+api@1.9.0\node_modules\@opentelemetry\api\build\src\api\context.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[02:12:29.559] Server  ERROR   C:\Users\relay\node_modules\.pnpm\@opentelemetry+api@1.9.0\node_modules\@opentelemetry\api\build\src\trace\NoopTracer.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[02:12:29.559] Server  ERROR   C:\Users\relay\node_modules\.pnpm\@opentelemetry+api@1.9.0\node_modules\@opentelemetry\api\build\src\trace\ProxyTracer.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[02:12:29.561] Server  ERROR    ⨯ ReferenceError: Rock_Salt is not defined
+[02:12:29.562] Server  ERROR   C:\Users\relay\Downloads\nano-main\nano-main\.next\dev\server\chunks\ssr\[root-of-the-server]__12066695._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[02:12:29.563] Server  ERROR   C:\Users\relay\Downloads\nano-main\nano-main\.next\dev\server\chunks\ssr\[turbopack]_runtime.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[02:12:29.563] Server  ERROR   C:\Users\relay\Downloads\nano-main\nano-main\.next\dev\server\chunks\ssr\[root-of-the-server]__c77fa3ab._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[02:12:29.563] Server  ERROR   C:\Users\relay\Downloads\nano-main\nano-main\.next\dev\server\chunks\ssr\afe3c_next_dist_2883bbbf._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[02:12:29.565] Server  ERROR   C:\Users\relay\node_modules\.pnpm\next@16.0.3_@opentelemetry+_3a23a8f646cf08a50a02cbb7ec41fbf4\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[02:12:29.565] Server  ERROR   C:\Users\relay\node_modules\.pnpm\next@16.0.3_@opentelemetry+_3a23a8f646cf08a50a02cbb7ec41fbf4\node_modules\next\dist\server\lib\trace\tracer.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[02:12:29.566] Server  ERROR   C:\Users\relay\node_modules\.pnpm\@opentelemetry+api@1.9.0\node_modules\@opentelemetry\api\build\src\context\NoopContextManager.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[02:12:29.567] Server  ERROR   C:\Users\relay\node_modules\.pnpm\@opentelemetry+api@1.9.0\node_modules\@opentelemetry\api\build\src\api\context.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[02:12:29.568] Server  ERROR   C:\Users\relay\node_modules\.pnpm\@opentelemetry+api@1.9.0\node_modules\@opentelemetry\api\build\src\trace\NoopTracer.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[02:12:29.569] Server  ERROR   C:\Users\relay\node_modules\.pnpm\@opentelemetry+api@1.9.0\node_modules\@opentelemetry\api\build\src\trace\ProxyTracer.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[02:12:29.570] Server  ERROR    ⨯ ReferenceError: Rock_Salt is not defined
+[02:12:30.446] Server  ERROR   Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:
+1. You might have mismatching versions of React and the renderer (such as React DOM)
+2. You might be breaking the Rules of Hooks
+3. You might have more than one copy of React in the same app
+See https://react.dev/link/invalid-hook-call for tips about how to debug and fix this problem.
+[02:12:30.448] Server  ERROR   C:\Users\relay\node_modules\next\dist\next-devtools\userspace\pages\pages-dev-overlay-setup.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[02:12:30.449] Server  ERROR   TypeError: Cannot read properties of null (reading 'useInsertionEffect')
+[02:12:30.450] Server  ERROR   Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:
+1. You might have mismatching versions of React and the renderer (such as React DOM)
+2. You might be breaking the Rules of Hooks
+3. You might have more than one copy of React in the same app
+See https://react.dev/link/invalid-hook-call for tips about how to debug and fix this problem.
+[02:12:30.451] Server  ERROR   C:\Users\relay\node_modules\next\dist\next-devtools\userspace\pages\pages-dev-overlay-setup.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[02:12:30.451] Server  ERROR   TypeError: Cannot read properties of null (reading 'useInsertionEffect')
+[02:12:30.455] Server  ERROR   C:\Users\relay\node_modules\next\dist\next-devtools\userspace\pages\pages-dev-overlay-setup.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[02:12:30.455] Server  ERROR    ⨯ TypeError: Cannot read properties of null (reading 'useInsertionEffect')
+[02:12:30.457] Server  ERROR   C:\Users\relay\node_modules\next\dist\next-devtools\userspace\pages\pages-dev-overlay-setup.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[02:12:30.457] Server  ERROR    ⨯ TypeError: Cannot read properties of null (reading 'useInsertionEffect')
+[02:12:30.460] Server  ERROR   C:\Users\relay\node_modules\next\dist\next-devtools\userspace\pages\pages-dev-overlay-setup.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[02:12:30.460] Server  ERROR   TypeError: Cannot read properties of null (reading 'useInsertionEffect')
+[02:12:30.461] Server  ERROR   C:\Users\relay\node_modules\next\dist\next-devtools\userspace\pages\pages-dev-overlay-setup.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[02:12:30.461] Server  ERROR    ⨯ "unhandledRejection:" TypeError: Cannot read properties of null (reading 'useInsertionEffect')
+[02:12:30.462] Server  ERROR   C:\Users\relay\node_modules\next\dist\next-devtools\userspace\pages\pages-dev-overlay-setup.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[02:12:30.462] Server  ERROR    ⨯ "unhandledRejection: " TypeError: Cannot read properties of null (reading 'useInsertionEffect')
+[02:12:30.470] Server  ERROR   Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:
+1. You might have mismatching versions of React and the renderer (such as React DOM)
+2. You might be breaking the Rules of Hooks
+3. You might have more than one copy of React in the same app
+See https://react.dev/link/invalid-hook-call for tips about how to debug and fix this problem.
+[02:12:30.471] Server  ERROR   C:\Users\relay\node_modules\next\dist\next-devtools\userspace\pages\pages-dev-overlay-setup.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[02:12:30.471] Server  ERROR   TypeError: Cannot read properties of null (reading 'useInsertionEffect')
+[02:12:30.471] Server  ERROR   Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:
+1. You might have mismatching versions of React and the renderer (such as React DOM)
+2. You might be breaking the Rules of Hooks
+3. You might have more than one copy of React in the same app
+See https://react.dev/link/invalid-hook-call for tips about how to debug and fix this problem.
+[02:12:30.472] Server  ERROR   C:\Users\relay\node_modules\next\dist\next-devtools\userspace\pages\pages-dev-overlay-setup.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[02:12:30.472] Server  ERROR   TypeError: Cannot read properties of null (reading 'useInsertionEffect')
+[02:12:30.474] Server  ERROR   C:\Users\relay\node_modules\next\dist\next-devtools\userspace\pages\pages-dev-overlay-setup.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[02:12:30.475] Server  ERROR    ⨯ TypeError: Cannot read properties of null (reading 'useInsertionEffect')
+[02:12:30.476] Server  ERROR   C:\Users\relay\node_modules\next\dist\next-devtools\userspace\pages\pages-dev-overlay-setup.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[02:12:30.476] Server  ERROR    ⨯ TypeError: Cannot read properties of null (reading 'useInsertionEffect')
+[02:12:30.478] Server  ERROR   C:\Users\relay\node_modules\next\dist\next-devtools\userspace\pages\pages-dev-overlay-setup.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[02:12:30.478] Server  ERROR   TypeError: Cannot read properties of null (reading 'useInsertionEffect')
+[02:12:30.478] Server  ERROR   C:\Users\relay\node_modules\next\dist\next-devtools\userspace\pages\pages-dev-overlay-setup.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[02:12:30.478] Server  ERROR    ⨯ "unhandledRejection:" TypeError: Cannot read properties of null (reading 'useInsertionEffect')
+[02:12:30.479] Server  ERROR   C:\Users\relay\node_modules\next\dist\next-devtools\userspace\pages\pages-dev-overlay-setup.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[02:12:30.479] Server  ERROR    ⨯ "unhandledRejection: " TypeError: Cannot read properties of null (reading 'useInsertionEffect')
+[02:12:30.724] Browser ERROR   uncaughtError: TypeError: Cannot read properties of null (reading 'useInsertionEffect')
+[02:12:32.505] Server  LOG      ✓ Compiled in 50ms
+[02:12:36.116] Server  LOG      ✓ Compiled in 58ms
+[02:13:13.994] Server  LOG      ✓ Compiled in 109ms
+[02:13:14.798] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:13:15.742] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[02:13:15.742] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/","sdkn":"@vercel/analytics/react","sdkv":"1.5.0","sv":"0.1.3","ts":1763894788226}
+[02:14:51.453] Server  LOG      ✓ Compiled in 70ms
+[02:14:51.817] Server  LOG      ✓ Compiled in 133ms
+[02:14:52.528] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:14:53.682] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[02:14:53.682] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/","sdkn":"@vercel/analytics/react","sdkv":"1.5.0","sv":"0.1.3","ts":1763894885919}
+[02:19:38.509] Server  LOG      ✓ Compiled in 56ms

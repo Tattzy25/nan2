@@ -1,30 +1,30 @@
 globalThis.__BUILD_MANIFEST = {
   "pages": {
     "/_app": [
-      "static/chunks/node_modules_next_dist_compiled_8ca6b690._.js",
-      "static/chunks/node_modules_next_dist_shared_lib_82dc2e9d._.js",
-      "static/chunks/node_modules_next_dist_client_d0aa886c._.js",
-      "static/chunks/node_modules_next_dist_b0a279d5._.js",
-      "static/chunks/node_modules_next_app_72f3d36f.js",
-      "static/chunks/[next]_entry_page-loader_ts_742e4b53._.js",
-      "static/chunks/node_modules_react-dom_4411d9bd._.js",
-      "static/chunks/node_modules_7f09fef0._.js",
+      "static/chunks/afe3c_next_dist_compiled_a2f21ba3._.js",
+      "static/chunks/afe3c_next_dist_shared_lib_e72e0092._.js",
+      "static/chunks/afe3c_next_dist_client_0cbb3327._.js",
+      "static/chunks/afe3c_next_dist_1af9f8e3._.js",
+      "static/chunks/afe3c_next_app_ffe9aa94.js",
+      "static/chunks/[next]_entry_page-loader_ts_645c5112._.js",
+      "static/chunks/76102_react-dom_44795136._.js",
+      "static/chunks/node_modules__pnpm_7136f466._.js",
       "static/chunks/[root-of-the-server]__31604dd8._.js",
       "static/chunks/Downloads_nano-main_nano-main_pages__app_2da965e7._.js",
-      "static/chunks/turbopack-Downloads_nano-main_nano-main_pages__app_e720e0a1._.js"
+      "static/chunks/turbopack-Downloads_nano-main_nano-main_pages__app_36ee8b1d._.js"
     ],
     "/_error": [
-      "static/chunks/node_modules_next_dist_compiled_8ca6b690._.js",
-      "static/chunks/node_modules_next_dist_shared_lib_cf5b50a6._.js",
-      "static/chunks/node_modules_next_dist_client_d0aa886c._.js",
-      "static/chunks/node_modules_next_dist_19fd0646._.js",
-      "static/chunks/node_modules_next_error_1cfbb379.js",
-      "static/chunks/[next]_entry_page-loader_ts_43b523b5._.js",
-      "static/chunks/node_modules_react-dom_4411d9bd._.js",
-      "static/chunks/node_modules_7f09fef0._.js",
+      "static/chunks/afe3c_next_dist_compiled_a2f21ba3._.js",
+      "static/chunks/afe3c_next_dist_shared_lib_0932119b._.js",
+      "static/chunks/afe3c_next_dist_client_0cbb3327._.js",
+      "static/chunks/afe3c_next_dist_a441fa1f._.js",
+      "static/chunks/afe3c_next_error_28aa3136.js",
+      "static/chunks/[next]_entry_page-loader_ts_00108d81._.js",
+      "static/chunks/76102_react-dom_44795136._.js",
+      "static/chunks/node_modules__pnpm_7136f466._.js",
       "static/chunks/[root-of-the-server]__d063ae78._.js",
       "static/chunks/Downloads_nano-main_nano-main_pages__error_2da965e7._.js",
-      "static/chunks/turbopack-Downloads_nano-main_nano-main_pages__error_05e56740._.js"
+      "static/chunks/turbopack-Downloads_nano-main_nano-main_pages__error_2ebd30e1._.js"
     ]
   },
   "devFiles": [],
