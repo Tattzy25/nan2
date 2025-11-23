@@ -7,7 +7,8 @@ import { Trash2 } from "lucide-react"
 import { ImageUploadBox } from "./image-upload-box"
 import { cn } from "@/lib/utils"
 
-const btnClassName = "w-full h-10 md:h-12 text-sm md:base font-semibold bg-white text-black hover:bg-gray-200"
+const btnClassName =
+  "w-full h-10 md:h-12 rounded-2xl text-sm md:base font-semibold bg-white text-black hover:bg-gray-200"
 
 interface InputSectionProps {
   prompt: string
@@ -84,7 +85,7 @@ export function InputSection({
             </div>
             <div className="flex items-center gap-2">
               <Select value={aspectRatio} onValueChange={setAspectRatio}>
-                <SelectTrigger className="w-24 sm:w-28 md:w-32 !h-7 md:!h-10 px-3 !py-0 bg-black/50 border border-gray-600 text-white text-xs md:text-sm focus:ring-0 focus:ring-offset-0 focus-visible:ring-0 focus-visible:ring-offset-0 data-[state=open]:ring-0 data-[state=open]:ring-offset-0">
+                <SelectTrigger className="w-24 sm:w-28 md:w-32 h-7 md:h-10 px-3 py-0 rounded-xl bg-black/50 border border-gray-600 text-white text-xs md:text-sm focus:ring-0 focus:ring-offset-0 focus-visible:ring-0 focus-visible:ring-offset-0 data-[state=open]:ring-0 data-[state=open]:ring-offset-0">
                   <SelectValue placeholder="1:1" />
                 </SelectTrigger>
                 <SelectContent className="bg-black/95 border-gray-600 text-white">
@@ -102,7 +103,7 @@ export function InputSection({
                 onClick={onClearAll}
                 disabled={!prompt.trim() && !hasImages}
                 variant="outline"
-                className="h-7 md:h-10 px-3 py-0 text-xs md:text-sm bg-transparent border border-gray-600 text-white hover:bg-gray-700 disabled:opacity-50"
+                className="h-7 md:h-10 px-3 py-0 rounded-xl text-xs md:text-sm bg-transparent border border-gray-600 text-white hover:bg-gray-700 disabled:opacity-50"
               >
                 <Trash2 className="size-4 md:hidden" />
                 <span className="hidden md:inline">Clear</span>
@@ -115,14 +116,10 @@ export function InputSection({
             onChange={(e) => setPrompt(e.target.value)}
             onKeyDown={onKeyDown}
             onPaste={onPromptPaste}
-            placeholder=""
+            aria-label="Prompt"
+            placeholder="Describe what you want to create"
             autoFocus
-            className="w-full flex-1 min-h-[100px] max-h-[140px] lg:min-h-[12vh] lg:max-h-[18vh] xl:min-h-[14vh] xl:max-h-[20vh] p-2 md:p-4 bg-black/50 border-2 border-gray-600 resize-none focus:outline-none focus:border-white text-white text-xs md:text-base select-text"
-            style={{
-              fontSize: "16px",
-              WebkitUserSelect: "text",
-              userSelect: "text",
-            }}
+            className="w-full flex-1 min-h-[100px] max-h-[140px] lg:min-h-[12vh] lg:max-h-[18vh] xl:min-h-[14vh] xl:max-h-[20vh] p-2 md:p-4 bg-black/50 border-2 border-gray-600 rounded-2xl resize-none focus:outline-none focus:border-white text-white text-base select-text"
           />
         </div>
 
@@ -132,11 +129,11 @@ export function InputSection({
               <div className="flex flex-col gap-1">
                 <label className="text-sm md:text-base font-medium text-gray-300">Images (optional)</label>
               </div>
-              <div className="inline-flex bg-black/50 border border-gray-600">
+              <div className="inline-flex bg-black/50 border border-gray-600 rounded-2xl">
                 <button
                   onClick={() => setUseUrls(false)}
                   className={cn(
-                    "px-2 py-1 md:px-4 md:py-2 text-xs md:text-sm font-medium transition-all",
+                    "px-2 py-1 md:px-4 md:py-2 text-xs md:text-sm font-medium transition-all rounded-2xl",
                     !useUrls ? "bg-white text-black" : "text-gray-300 hover:text-white",
                   )}
                 >
@@ -145,7 +142,7 @@ export function InputSection({
                 <button
                   onClick={() => setUseUrls(true)}
                   className={cn(
-                    "px-2 py-1 md:px-4 md:py-2 text-xs md:text-sm font-medium transition-all",
+                    "px-2 py-1 md:px-4 md:py-2 text-xs md:text-sm font-medium transition-all rounded-2xl",
                     useUrls ? "bg-white text-black" : "text-gray-300 hover:text-white",
                   )}
                 >
@@ -162,12 +159,15 @@ export function InputSection({
                     value={image1Url}
                     onChange={(e) => onUrlChange(e.target.value, 1)}
                     placeholder="First image URL"
-                    className="w-full p-2 md:p-3 pr-8 bg-black/50 border border-gray-600 text-white text-xs focus:outline-none focus:ring-2 focus:ring-white select-text"
+                    aria-label="First image URL"
+                    className="w-full p-2 md:p-3 pr-8 rounded-2xl bg-black/50 border border-gray-600 text-white text-xs focus:outline-none focus:ring-2 focus:ring-white select-text"
                   />
                   {image1Url && (
                     <button
+                      type="button"
                       onClick={() => onClearImage(1)}
                       className="absolute right-1 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
+                      aria-label="Clear first image URL"
                     >
                       <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <line x1="18" y1="6" x2="6" y2="18" />
@@ -182,12 +182,15 @@ export function InputSection({
                     value={image2Url}
                     onChange={(e) => onUrlChange(e.target.value, 2)}
                     placeholder="Second image URL"
-                    className="w-full p-2 md:p-3 pr-8 bg-black/50 border border-gray-600 text-white text-xs focus:outline-none focus:ring-2 focus:ring-white select-text"
+                    aria-label="Second image URL"
+                    className="w-full p-2 md:p-3 pr-8 rounded-2xl bg-black/50 border border-gray-600 text-white text-xs focus:outline-none focus:ring-2 focus:ring-white select-text"
                   />
                   {image2Url && (
                     <button
+                      type="button"
                       onClick={() => onClearImage(2)}
                       className="absolute right-1 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
+                      aria-label="Clear second image URL"
                     >
                       <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <line x1="18" y1="6" x2="6" y2="18" />
@@ -202,7 +205,7 @@ export function InputSection({
                 <div className="grid grid-cols-2 gap-3 sm:gap-4 w-full">
                   <ImageUploadBox
                     imageNumber={1}
-                    preview={image1Preview}
+                    preview={image1Preview ?? ""}
                     onDrop={(e) => {
                       e.preventDefault()
                       const file = e.dataTransfer.files[0]
@@ -224,6 +227,8 @@ export function InputSection({
                     type="file"
                     accept="image/*,.heic,.heif"
                     className="hidden"
+                    aria-label="Upload first image"
+                    title="Upload first image"
                     onChange={(e) => {
                       const file = e.target.files?.[0]
                       if (file) {
@@ -235,7 +240,7 @@ export function InputSection({
 
                   <ImageUploadBox
                     imageNumber={2}
-                    preview={image2Preview}
+                    preview={image2Preview ?? ""}
                     onDrop={(e) => {
                       e.preventDefault()
                       const file = e.dataTransfer.files[0]
@@ -257,6 +262,8 @@ export function InputSection({
                     type="file"
                     accept="image/*,.heic,.heif"
                     className="hidden"
+                    aria-label="Upload second image"
+                    title="Upload second image"
                     onChange={(e) => {
                       const file = e.target.files?.[0]
                       if (file) {

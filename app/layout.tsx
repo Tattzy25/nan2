@@ -2,7 +2,7 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Inter, JetBrains_Mono } from "next/font/google"
 import { Suspense } from "react"
-import { Analytics } from "@vercel/analytics/react"
+import { Analytics } from "@vercel/analytics/next"
 import { ErrorBoundary } from "@/components/error-boundary"
 import "./globals.css"
 
@@ -17,7 +17,7 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "TaTTTy Playground - Powered by Vercel AI Gateway",
+  title: "TaTTTy",
   description:
     "TaTTTy: Google's newest AI image generation model. Create and edit stunning images with advanced AI capabilities through Vercel AI Gateway.",
   keywords: [
@@ -30,21 +30,21 @@ export const metadata: Metadata = {
     "AI art generator",
     "image editing AI",
     "Google image generation",
-    "v0 tattty",
+    "TaTTTy",
     "Vercel AI Gateway",
   ],
-  authors: [{ name: "v0" }],
-  creator: "v0",
-  publisher: "v0",
-  generator: "v0.app",
-  metadataBase: new URL("https://v0nanobananapro.vercel.app"),
+  authors: [{ name: "TaTTTy" }],
+  creator: "TaTTTy",
+  publisher: "TaTTTy",
+  generator: "tattty.com",
+  metadataBase: new URL("https://tattty.com"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://v0nanobananapro.vercel.app",
+    url: "https://tattty.com",
     title: "TaTTTy Playground - Powered by Vercel AI Gateway",
     description:
       "TaTTTy: Google's newest AI image generation model. Create and edit stunning images with advanced AI.",
@@ -77,6 +77,17 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  icons: {
+    icon: [
+      { url: "/tatlogo.svg", type: "image/svg+xml" },
+      { url: "/tatt-logo-lite-x32.png", type: "image/png", sizes: "32x32" },
+      { url: "/tatt-black512.png", type: "image/png", sizes: "512x512" },
+    ],
+    apple: [
+      { url: "/tatt-white512.png", type: "image/png", sizes: "512x512" },
+    ],
+    shortcut: [{ url: "/tatlogo.svg", type: "image/svg+xml" }],
+  },
   manifest: "/manifest.json",
 }
 
@@ -93,17 +104,12 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${inter.variable} ${jetbrainsMono.variable}`}
-      suppressHydrationWarning
-      style={{ backgroundColor: "#000000" }}
-    >
+    <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable}`} suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
-      <body className="font-mono antialiased" style={{ backgroundColor: "#000000" }}>
+      <body className="font-mono antialiased bg-black">
         <ErrorBoundary>
           <Suspense fallback={null}>{children}</Suspense>
         </ErrorBoundary>

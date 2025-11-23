@@ -619,7 +619,7 @@ export function ImageCombiner() {
             alternateName: "TaTTTy",
             description:
               "TaTTTy is a powerful AI image generation and editing tool powered by Google Gemini 2.5 Flash Image. Create, edit, and transform images with natural language prompts.",
-            url: "https://v0nanobananapro.vercel.app",
+            url: "https://tattty.com",
             applicationCategory: "MultimediaApplication",
             operatingSystem: "Web Browser",
             offers: {
@@ -629,8 +629,8 @@ export function ImageCombiner() {
             },
             creator: {
               "@type": "Organization",
-              name: "v0",
-              url: "https://v0.app",
+              name: "TaTTTy",
+              url: "https://tattty.com",
             },
             keywords:
               "tattty, AI image generation, AI image editor, free AI image generator, text to image, Gemini image generation",
@@ -669,8 +669,8 @@ export function ImageCombiner() {
                 <div>
                   {!logoLoaded && <Skeleton className="w-6 h-6 md:w-7 md:h-7 mb-0.5 md:mb-1 rounded" />}
                   <img
-                    src="/v0-logo.svg"
-                    alt="v0 logo"
+                    src="/tatlogo.svg"
+                    alt="Tatlogo brand"
                     width="28"
                     height="28"
                     className={`w-6 h-6 md:w-7 md:h-7 mb-0.5 md:mt-1 ${logoLoaded ? "block" : "hidden"}`}
@@ -803,12 +803,12 @@ export function ImageCombiner() {
 
               <div className="mt-4 border-t border-white/10 pt-5 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 text-xs text-white/60 flex-shrink-0">
                 <a
-                  href="https://v0.dev/chat/template-link-here"
+                  href="https://tattty.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-white/80 transition-colors flex items-center gap-1"
                 >
-                  Make this app your own
+                  Visit tattty.com
                 </a>
                 <span className="text-white/20 hidden sm:inline">•</span>
                 <button onClick={() => setShowHowItWorks(true)} className="hover:text-white/80 transition-colors">
