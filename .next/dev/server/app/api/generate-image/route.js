@@ -1,0 +1,12 @@
+var R=require("../../../chunks/[turbopack]_runtime.js")("server/app/api/generate-image/route.js")
+R.c("server/chunks/e0a3c_@vercel_oidc_dist_5a4c0b6c._.js")
+R.c("server/chunks/afe3c_next_4861a715._.js")
+R.c("server/chunks/4b6e4_@opentelemetry_api_build_esm_9cee443b._.js")
+R.c("server/chunks/37e87_zod_v4_96656cb0._.js")
+R.c("server/chunks/37e87_zod_v3_6dfd1cb1._.js")
+R.c("server/chunks/31e13_ai_dist_index_mjs_db7595ee._.js")
+R.c("server/chunks/node_modules__pnpm_25634a39._.js")
+R.c("server/chunks/[root-of-the-server]__7fcb08dc._.js")
+R.c("server/chunks/2e15f_nano-main__next-internal_server_app_api_generate-image_route_actions_b6af5996.js")
+R.m("[project]/node_modules/.pnpm/next@16.0.3_@opentelemetry+_3a23a8f646cf08a50a02cbb7ec41fbf4/node_modules/next/dist/esm/build/templates/app-route.js { INNER_APP_ROUTE => \"[project]/Downloads/nano-main/nano-main/app/api/generate-image/route.ts [app-route] (ecmascript)\" } [app-route] (ecmascript)")
+module.exports=R.m("[project]/node_modules/.pnpm/next@16.0.3_@opentelemetry+_3a23a8f646cf08a50a02cbb7ec41fbf4/node_modules/next/dist/esm/build/templates/app-route.js { INNER_APP_ROUTE => \"[project]/Downloads/nano-main/nano-main/app/api/generate-image/route.ts [app-route] (ecmascript)\" } [app-route] (ecmascript)").exports
