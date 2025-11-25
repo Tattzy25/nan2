@@ -1,6 +1,5 @@
 {
   "/api/check-api-key/route": "app/api/check-api-key/route.js",
-  "/api/generate-image/route": "app/api/generate-image/route.js",
-  "/him-and-her/page": "app/him-and-her/page.js",
-  "/page": "app/page.js"
+  "/page": "app/page.js",
+  "/wtf/page": "app/wtf/page.js"
 }
