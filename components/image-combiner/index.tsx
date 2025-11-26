@@ -18,6 +18,7 @@ import { GlobalDropZone } from "./global-drop-zone"
 import { FullscreenViewer } from "./fullscreen-viewer"
 import { Skeleton } from "@/components/ui/skeleton"
 import { ModeToggle } from "@/components/ui/mode-toggle"
+import { DotPattern } from "@/components/hero"
 
 const MemoizedDithering = memo(Dithering)
 
@@ -645,49 +646,12 @@ export function ImageCombiner() {
         <GlobalDropZone dropZoneHover={dropZoneHover} onSetDropZoneHover={setDropZoneHover} onDrop={handleGlobalDrop} />
       )}
 
-      <div className="fixed inset-0 z-0 select-none shader-background bg-black">
-        <MemoizedDithering
-          colorBack="#00000000"
-          colorFront="#005B5B"
-          speed={0.43}
-          shape="wave"
-          type="4x4"
-          pxSize={3}
-          scale={1.13}
-          style={{
-            backgroundColor: "#000000",
-            height: "100vh",
-            width: "100vw",
-          }}
-        />
-      </div>
+      <DotPattern />
 
       <div className="relative z-10 w-full h-full flex items-center justify-center p-2 md:p-4">
         <div className="w-full max-w-[98vw] lg:max-w-[96vw] 2xl:max-w-[94vw]">
           <div className="w-full mx-auto select-none">
-            <div className="bg-black/70 border border-white/10 px-3 py-3 md:px-4 md:py-4 lg:px-6 lg:py-6 flex flex-col rounded-3xl md:rounded-[40px] overflow-hidden">
-              <div className="flex items-start justify-between gap-4 mb-2 md:mb-3 flex-shrink-0">
-                <div>
-                  {!logoLoaded && <Skeleton className="w-6 h-6 md:w-7 md:h-7 mb-0.5 md:mb-1 rounded" />}
-                  <img
-                    src="/tatlogo.svg"
-                    alt="Tatlogo brand"
-                    width="28"
-                    height="28"
-                    className={`w-6 h-6 md:w-7 md:h-7 mb-0.5 md:mt-1 ${logoLoaded ? "block" : "hidden"}`}
-                    onLoad={() => setLogoLoaded(true)}
-                  />
-                  <h1 className="text-lg md:text-2xl font-bold text-white select-none leading-none">
-                    <div className="md:hidden">TaTTTy</div>
-                    <div className="md:hidden mt-0.5"></div>
-                    <div className="hidden md:block">TaTTTy</div>
-                  </h1>
-                  <p className="text-[9px] md:text-[10px] text-gray-400 select-none tracking-wide mt-0.5 md:mt-1">
-                    Powered By YOU
-                  </p>
-                </div>
-              </div>
-
+            <div className="bg-transparent backdrop-blur-md border-2 border-green-400 shadow-[0_0_20px_rgba(34,197,94,0.5)] px-3 py-3 md:px-4 md:py-4 lg:px-6 lg:py-6 flex flex-col rounded-3xl md:rounded-[40px] overflow-hidden">
               <div className="flex flex-col gap-4 xl:gap-0">
                 <div
                   ref={containerRef}

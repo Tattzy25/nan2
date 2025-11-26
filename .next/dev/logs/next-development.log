@@ -1,6 +1,2232 @@
-[00:00:01.040] Server  LOG      ✓ Ready in 640ms
-[00:00:05.781] Server  LOG      ○ Compiling / ...
-[00:00:11.348] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:11.826] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:00:11.826] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:00:11.826] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764139540643}
+[00:00:01.466] Server  LOG      ✓ Ready in 963ms
+[00:00:05.289] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:07.350] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:07.350] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:00:07.350] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764143547829}
+[00:01:40.383] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:40.986] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:01:40.986] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:01:40.986] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764143642429}
+[00:07:05.584] Server  LOG      ✓ Compiled in 78ms
+[00:08:31.652] Browser ERROR   Error in generation: {}
+[00:08:49.410] Browser ERROR   Error saving generation to localStorage: {}
+[00:17:32.504] Server  LOG      ✓ Compiled in 324ms
+[00:18:03.498] Server  LOG      ✓ Compiled in 171ms
+[01:08:04.651] Server  LOG      ✓ Compiled in 242ms
+[01:09:07.527] Server  LOG      ✓ Compiled in 201ms
+[01:10:11.800] Server  ERROR    ⨯ ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:10:11.804] Server  ERROR    ⨯ ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:10:11.806] Server  ERROR    ⨯ ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:10:11.809] Server  ERROR    ⨯ ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:10:11.815] Server  ERROR    ⨯ ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:10:11.817] Server  ERROR    ⨯ ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:10:11.819] Server  ERROR    ⨯ ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:10:11.821] Server  ERROR    ⨯ ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:10:11.822] Server  ERROR    ⨯ ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:10:11.826] Server  ERROR    ⨯ ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:10:11.829] Server  ERROR    ⨯ ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:10:11.830] Server  ERROR    ⨯ ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:10:11.832] Server  ERROR    ⨯ ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:10:11.833] Server  ERROR    ⨯ ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:10:11.836] Server  ERROR    ⨯ ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:10:11.838] Server  ERROR    ⨯ ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:10:11.842] Server  ERROR    ⨯ ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:10:11.847] Server  ERROR    ⨯ ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:10:11.848] Server  ERROR    ⨯ ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:10:11.849] Server  ERROR    ⨯ ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:10:11.852] Server  ERROR    ⨯ ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:10:11.854] Server  ERROR    ⨯ ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:10:11.855] Server  ERROR    ⨯ ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:10:11.856] Server  ERROR    ⨯ ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:10:11.859] Server  ERROR    ⨯ ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:10:11.862] Server  ERROR    ⨯ ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:10:11.864] Server  ERROR    ⨯ ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:10:11.865] Server  ERROR    ⨯ ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:10:11.868] Server  ERROR    ⨯ ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:10:11.869] Server  ERROR    ⨯ ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:10:11.871] Server  ERROR    ⨯ ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:10:11.876] Server  ERROR    ⨯ ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:10:11.878] Server  ERROR    ⨯ ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:10:11.879] Server  ERROR    ⨯ ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:10:11.882] Server  ERROR    ⨯ ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:10:11.883] Server  ERROR    ⨯ ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:10:11.885] Server  ERROR    ⨯ ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:10:11.887] Server  ERROR    ⨯ ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:10:11.889] Server  ERROR    ⨯ ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:10:11.890] Server  ERROR    ⨯ ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:10:11.893] Server  ERROR    ⨯ ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:10:11.895] Server  ERROR    ⨯ ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:10:11.897] Server  ERROR    ⨯ ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:10:11.898] Server  ERROR    ⨯ ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:10:11.902] Server  ERROR    ⨯ ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:10:11.903] Server  ERROR    ⨯ ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:10:11.905] Server  ERROR    ⨯ ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:10:11.906] Server  ERROR    ⨯ ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:10:11.909] Server  ERROR    ⨯ ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:10:11.910] Server  ERROR    ⨯ ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:10:11.912] Server  ERROR    ⨯ ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:10:11.914] Server  ERROR    ⨯ ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:10:11.916] Server  ERROR    ⨯ ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:10:11.918] Server  ERROR    ⨯ ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:10:11.920] Server  ERROR    ⨯ ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:10:11.921] Server  ERROR    ⨯ ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:10:11.925] Server  ERROR    ⨯ ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:10:11.926] Server  ERROR    ⨯ ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:10:11.929] Server  ERROR    ⨯ ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:10:11.930] Server  ERROR    ⨯ ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:10:11.932] Server  LOG      ✓ Compiled in 424ms
+[01:10:12.420] Browser ERROR   ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[01:10:15.614] Browser ERROR   ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[01:10:16.419] Browser ERROR   ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[01:10:25.414] Browser ERROR   ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[01:10:25.414] Browser ERROR   ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[01:10:25.414] Browser ERROR   ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[01:10:25.414] Browser ERROR   ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[01:11:07.676] Browser ERROR   ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[01:11:08.411] Browser ERROR   ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[01:11:16.697] Server  LOG      ✓ Compiled in 71ms
+[01:11:31.306] Server  LOG      ✓ Compiled in 493ms
+[01:12:31.929] Server  LOG      ✓ Compiled in 135ms
+[01:15:42.208] Browser ERROR   Error in generation: {}
+[01:16:12.887] Server  LOG      ✓ Compiled in 218ms
+[01:16:13.144] Browser ERROR   ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[01:16:13.144] Browser ERROR   ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[01:16:13.144] Browser ERROR   ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[01:16:13.144] Browser ERROR   ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[01:16:13.144] Browser ERROR   ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[01:16:13.144] Browser ERROR   ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[01:16:13.144] Browser ERROR   ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[01:16:13.144] Browser ERROR   ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[01:16:13.144] Browser ERROR   ./Downloads/nan2/nano-main/components/hero.tsx:4:1
+Module not found: Can't resolve '@/components/ui/text-hover-effect'
+  2 |
+  3 | import React, { useEffect, useId, useRef, useState } from "react"
+> 4 | import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { cn } from "@/lib/utils"
+  6 |
+  7 | /**
+
+Import map: aliased to relative './components/ui/text-hover-effect' inside of [project]/Downloads/nan2/nano-main
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component Browser]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nan2/nano-main/components/hero.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Client Component SSR]
+    ./Downloads/nan2/nano-main/components/image-combiner/index.tsx [Server Component]
+    ./Downloads/nan2/nano-main/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[01:17:12.821] Server  LOG      ✓ Compiled in 298ms
+[01:18:48.407] Server  LOG      ✓ Compiled in 103ms
