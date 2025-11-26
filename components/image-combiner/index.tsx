@@ -766,29 +766,7 @@ export function ImageCombiner() {
                 </div>
               </div>
 
-              <div className="mt-4 border-t border-white/10 pt-5 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 text-xs text-white/60 flex-shrink-0">
-                <a
-                  href="https://tattty.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-white/80 transition-colors flex items-center gap-1"
-                >
-                  Visit tattty.com
-                </a>
-                <span className="text-white/20 hidden sm:inline">•</span>
-                <button onClick={() => setShowHowItWorks(true)} className="hover:text-white/80 transition-colors">
-                  How it works
-                </button>
-                <span className="text-white/20 hidden sm:inline">•</span>
-                <a
-                  href="https://x.com/estebansuarez"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-white/80 transition-colors flex items-center gap-1"
-                >
-                  Feedback?
-                </a>
-                <span className="text-white/20 hidden sm:inline">•</span>
+              <div className="mt-4 border-t border-white/10 pt-5 flex items-center justify-center text-xs text-white/60 flex-shrink-0">
                 <ModeToggle />
               </div>
             </div>

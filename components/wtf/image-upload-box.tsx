@@ -16,8 +16,8 @@ export function ImageUploadBox({ imageNumber, preview, onDrop, onClear, onSelect
   return (
     <div
       className={cn(
-        "w-full h-[60px] sm:h-[80px] md:h-[100px] lg:h-[12vh] xl:h-[14vh] border border-gray-600 rounded-2xl md:rounded-3xl overflow-hidden flex items-center justify-center cursor-pointer hover:border-white transition-all bg-black/30 relative group",
-        preview && "border-white",
+        "w-full h-[60px] sm:h-[80px] md:h-[100px] lg:h-[12vh] xl:h-[14vh] border-2 border-green-400 shadow-[0_0_20px_rgba(34,197,94,0.5)] rounded-2xl md:rounded-3xl overflow-hidden flex items-center justify-center cursor-pointer hover:bg-green-400/10 transition-all bg-black/30 relative group",
+        preview && "border-green-400 shadow-[0_0_20px_rgba(34,197,94,0.5)]",
       )}
       onDrop={onDrop}
       onDragOver={(e) => e.preventDefault()}

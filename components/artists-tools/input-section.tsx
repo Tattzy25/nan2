@@ -3,6 +3,12 @@
 import type React from "react"
 import { Button } from "@/components/ui/button"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group"
+import {
+  InputGroup,
+  InputGroupInput,
+  InputGroupButton,
+} from "@/components/ui/input-group"
 import { Trash2 } from "lucide-react"
 import { ImageUploadBox } from "./image-upload-box"
 import { cn } from "@/lib/utils"
@@ -129,76 +135,70 @@ export function InputSection({
               <div className="flex flex-col gap-1">
                 <label className="text-sm md:text-base font-medium text-gray-300">Images (optional)</label>
               </div>
-              <div className="inline-flex bg-black/50 border border-gray-600 rounded-2xl">
-                <button
-                  onClick={() => setUseUrls(false)}
-                  className={cn(
-                    "px-2 py-1 md:px-4 md:py-2 text-xs md:text-sm font-medium transition-all rounded-2xl",
-                    !useUrls ? "bg-white text-black" : "text-gray-300 hover:text-white",
-                  )}
+              <ToggleGroup
+                type="single"
+                value={useUrls ? "urls" : "files"}
+                onValueChange={(value) => setUseUrls(value === "urls")}
+                variant="default"
+                spacing={0}
+              >
+                <ToggleGroupItem
+                  value="files"
+                  className="data-[state=on]:border-2 data-[state=on]:border-green-400"
                 >
                   Files
-                </button>
-                <button
-                  onClick={() => setUseUrls(true)}
-                  className={cn(
-                    "px-2 py-1 md:px-4 md:py-2 text-xs md:text-sm font-medium transition-all rounded-2xl",
-                    useUrls ? "bg-white text-black" : "text-gray-300 hover:text-white",
-                  )}
+                </ToggleGroupItem>
+                <ToggleGroupItem
+                  value="urls"
+                  className="data-[state=on]:border-2 data-[state=on]:border-green-400"
                 >
                   URLs
-                </button>
-              </div>
+                </ToggleGroupItem>
+              </ToggleGroup>
             </div>
 
             {useUrls ? (
               <div className="space-y-2 lg:min-h-[12vh] xl:min-h-[14vh]">
-                <div className="relative">
-                  <input
+                <InputGroup>
+                  <InputGroupInput
                     type="url"
                     value={image1Url}
                     onChange={(e) => onUrlChange(e.target.value, 1)}
                     placeholder="First image URL"
                     aria-label="First image URL"
-                    className="w-full p-2 md:p-3 pr-8 rounded-2xl bg-black/50 border border-gray-600 text-white text-xs focus:outline-none focus:ring-2 focus:ring-white select-text"
                   />
                   {image1Url && (
-                    <button
-                      type="button"
+                    <InputGroupButton
                       onClick={() => onClearImage(1)}
-                      className="absolute right-1 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
                       aria-label="Clear first image URL"
                     >
-                      <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="size-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <line x1="18" y1="6" x2="6" y2="18" />
                         <line x1="6" y1="6" x2="18" y2="18" />
                       </svg>
-                    </button>
+                    </InputGroupButton>
                   )}
-                </div>
-                <div className="relative">
-                  <input
+                </InputGroup>
+                <InputGroup>
+                  <InputGroupInput
                     type="url"
                     value={image2Url}
                     onChange={(e) => onUrlChange(e.target.value, 2)}
                     placeholder="Second image URL"
                     aria-label="Second image URL"
-                    className="w-full p-2 md:p-3 pr-8 rounded-2xl bg-black/50 border border-gray-600 text-white text-xs focus:outline-none focus:ring-2 focus:ring-white select-text"
                   />
                   {image2Url && (
-                    <button
-                      type="button"
+                    <InputGroupButton
                       onClick={() => onClearImage(2)}
-                      className="absolute right-1 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
                       aria-label="Clear second image URL"
                     >
-                      <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="size-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <line x1="18" y1="6" x2="6" y2="18" />
                         <line x1="6" y1="6" x2="18" y2="18" />
                       </svg>
-                    </button>
+                    </InputGroupButton>
                   )}
-                </div>
+                </InputGroup>
               </div>
             ) : (
               <div className="select-none lg:min-h-[12vh] xl:min-h-[14vh]">
