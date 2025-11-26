@@ -1,7 +1,7 @@
 "use client"
 
 import type React from "react"
-import { Button } from "@/components/ui/button"
+import { Button,} from "@/components/ui/button"
 import {
   Select,
   SelectContent,
@@ -133,7 +133,7 @@ export function InputSection({
                   </ToggleGroupItem>
                 </ToggleGroup>
                 <Select value={aspectRatio} onValueChange={setAspectRatio}>
-                  <SelectTrigger className="w-24 sm:w-28 md:w-32 h-7 md:h-10 px-3 py-0 rounded-md bg-black/50 border-2 border-green-400 shadow-[0_0_20px_rgba(34,197,94,0.5)] text-white text-xs md:text-sm">
+                  <SelectTrigger className="w-24 sm:w-28 md:w-32 h-7 md:h-10 px-3 py-0 rounded-md bg-black/50 border-2 border-green-400 text-white text-xs md:text-sm">
                     <SelectValue placeholder="Select ratio" />
                   </SelectTrigger>
                   <SelectContent>
@@ -147,17 +147,9 @@ export function InputSection({
                     ))}
                   </SelectContent>
                 </Select>
-                <Button
-                  onClick={onClearAll}
-                  disabled={!prompt.trim() && !hasImages}
-                  variant="outline"
-                  className="h-7 md:h-10 px-3 py-0 rounded-xl text-xs md:text-sm bg-transparent border border-gray-600 text-white hover:bg-gray-700 disabled:opacity-50"
-                >
-                  <Trash2 className="size-4 md:hidden" />
-                  <span className="hidden md:inline">Clear</span>
-                </Button>
-              </div>
-            </div>
+              
+                
+                 
 
             {useUrls ? (
               <div className="space-y-2 lg:min-h-[12vh] xl:min-h-[14vh]">
