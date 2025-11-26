@@ -17,11 +17,10 @@ import { GenerationHistory } from "./generation-history"
 import { GlobalDropZone } from "./global-drop-zone"
 import { FullscreenViewer } from "./fullscreen-viewer"
 import { Skeleton } from "@/components/ui/skeleton"
-import { ModeToggle } from "@/components/ui/mode-toggle"
 
 const MemoizedDithering = memo(Dithering)
 
-export function ImageCombiner() {
+export function ArtistsToolsCombiner() {
   const isMobile = useMobile()
   const [prompt, setPrompt] = useState("A beautiful landscape with mountains and a lake at sunset")
   const [useUrls, setUseUrls] = useState(false)
@@ -824,8 +823,6 @@ export function ImageCombiner() {
                 >
                   Feedback?
                 </a>
-                <span className="text-white/20 hidden sm:inline">•</span>
-                <ModeToggle />
               </div>
             </div>
           </div>
@@ -846,4 +843,4 @@ export function ImageCombiner() {
   )
 }
 
-export default ImageCombiner
+export default ArtistsToolsCombiner
