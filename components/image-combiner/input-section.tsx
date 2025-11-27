@@ -1,7 +1,7 @@
 "use client"
 
 import type React from "react"
-import { Button,} from "@/components/ui/button"
+import { Button } from "@/components/ui/button"
 import {
   Select,
   SelectContent,
@@ -20,8 +20,7 @@ import { Trash2 } from "lucide-react"
 import { ImageUploadBox } from "./image-upload-box"
 import { cn } from "@/lib/utils"
 
-const btnClassName =
-  "w-full h-10 md:h-12 rounded-2xl text-sm md:base font-semibold bg-white text-black hover:bg-gray-200"
+// Use standardized shadcn Button variants instead of a custom class
 
 interface InputSectionProps {
   prompt: string
@@ -90,8 +89,8 @@ export function InputSection({
 }: InputSectionProps) {
   return (
     <div className="flex flex-col h-full min-h-0">
-      <div className="space-y-3 md:space-y-4 min-h-0 flex flex-col">
-        <div className="space-y-3 md:space-y-4 flex flex-col">
+      <div className="space-y-6 md:space-y-8 min-h-0 flex flex-col">
+        <div className="space-y-6 md:space-y-8 flex flex-col">
           <div className="space-y-3">
             <TextareaWithLabel
               ref={promptTextareaRef}
@@ -105,7 +104,7 @@ export function InputSection({
           </div>
         </div>
 
-        <div className="space-y-2 md:space-y-4">
+        <div className="space-y-6 md:space-y-8">
           <div>
             <div className="flex items-center justify-between mb-2 md:mb-3 select-none">
               <div className="flex flex-col gap-1">
@@ -147,9 +146,8 @@ export function InputSection({
                     ))}
                   </SelectContent>
                 </Select>
-              
-                
-                 
+              </div>
+            </div>
 
             {useUrls ? (
               <div className="space-y-2 lg:min-h-[12vh] xl:min-h-[14vh]">
@@ -272,12 +270,22 @@ export function InputSection({
           </div>
         </div>
 
-        <div className="pt-0">
-          <Button onClick={onGenerate} disabled={!canGenerate || isConvertingHeic} className={btnClassName}>
+        <div className="pt-0 mt-6 md:mt-8 mb-6 md:mb-8">
+          <Button
+            onClick={onGenerate}
+            disabled={!canGenerate || isConvertingHeic}
+            size="lg"
+            variant="outline"
+            className="w-full border-2 border-green-400 shadow-[0_0_12px_rgba(34,197,94,0.35)] hover:shadow-[0_0_16px_rgba(34,197,94,0.5)] bg-transparent hover:bg-green-500/10"
+          >
             {isConvertingHeic ? "Converting HEIC..." : "Run"}
           </Button>
         </div>
       </div>
     </div>
   )
+}
+
+export function ButtonOutline() {
+  return <Button variant="outline">Outline</Button>
 }
