@@ -260,7 +260,7 @@ const NavbarFlow: React.FC<NavbarFlowProps> = ({
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={emblemMotion}
-            className="bg-gray-200/80 dark:bg-black/95 backdrop-blur-sm text-gray-800 dark:text-gray-200 px-4 lg:px-8 py-3 lg:py-4 rounded-full font-semibold text-lg lg:text-xl z-10 flex-shrink-0"
+            className="bg-gray-200/80 dark:bg-black/95 backdrop-blur-sm text-gray-800 dark:text-gray-200 px-4 lg:px-8 py-3 lg:py-4 rounded-full font-semibold text-lg lg:text-xl z-10 flex-shrink-0 shadow-[0_0_12px_rgba(34,197,94,0.35)] border-2 border-green-400"
           >
             {emblem}
           </motion.div>
@@ -271,7 +271,7 @@ const NavbarFlow: React.FC<NavbarFlowProps> = ({
               padding: "8px 20px",
             }}
             animate={navMotion}
-            className="bg-gray-200/80 dark:bg-black/95 backdrop-blur-sm rounded-full flex items-center justify-center gap-6 lg:gap-12 z-10 flex-shrink-0"
+            className="bg-gray-200/80 dark:bg-black/95 backdrop-blur-sm rounded-full flex items-center justify-center gap-6 lg:gap-12 z-10 flex-shrink-0 shadow-[0_0_12px_rgba(34,197,94,0.35)] border-2 border-green-400"
             onMouseLeave={() => setSelectedSubmenu(null)}
           >
             {links.map((element) => (
@@ -304,7 +304,7 @@ const NavbarFlow: React.FC<NavbarFlowProps> = ({
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={switchMotion}
-            className="bg-gray-200/80 dark:bg-black/95 backdrop-blur-sm rounded-full p-2 lg:p-3 z-10 flex-shrink-0 flex items-center gap-2 lg:gap-3"
+            className="bg-gray-200/80 dark:bg-black/95 backdrop-blur-sm rounded-full p-2 lg:p-3 z-10 flex-shrink-0 flex items-center gap-2 lg:gap-3 shadow-[0_0_12px_rgba(34,197,94,0.35)] border-2 border-green-400"
           >
             {extraIcons.map((icon, idx) => (
               <div key={idx} className="flex items-center justify-center">
