@@ -15,7 +15,7 @@ import {
   InputGroupInput,
   InputGroupButton,
 } from "@/components/ui/input-group"
-import { Textarea, TextareaWithLabel } from "@/components/ui/textarea"
+import { Textarea } from "@/components/ui/textarea"
 import { Trash2 } from "lucide-react"
 import { ImageUploadBox } from "./image-upload-box"
 import { cn } from "@/lib/utils"
@@ -92,8 +92,7 @@ export function InputSection({
       <div className="space-y-6 md:space-y-8 min-h-0 flex flex-col">
         <div className="space-y-6 md:space-y-8 flex flex-col">
           <div className="space-y-3">
-            <TextareaWithLabel
-              ref={promptTextareaRef}
+            <Textarea
               value={prompt}
               onChange={(e) => setPrompt(e.target.value)}
               onKeyDown={onKeyDown}

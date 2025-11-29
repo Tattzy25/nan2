@@ -1,5 +1,28 @@
 {
-  "node": {},
+  "node": {
+    "7f7a4e8e189fe1a5e91fc7cc5e607dbf468b35dd63": {
+      "workers": {
+        "app/him-and-her/page": {
+          "moduleId": "[project]/Downloads/nan2/nano-main/.next-internal/server/app/him-and-her/page/actions.js { ACTIONS_MODULE0 => \"[project]/Downloads/nan2/nano-main/app/actions/search.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "search",
+          "filename": "Downloads/nan2/nano-main/app/actions/search.ts"
+        },
+        "app/page": {
+          "moduleId": "[project]/Downloads/nan2/nano-main/.next-internal/server/app/page/actions.js { ACTIONS_MODULE0 => \"[project]/Downloads/nan2/nano-main/app/actions/search.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "search",
+          "filename": "Downloads/nan2/nano-main/app/actions/search.ts"
+        }
+      },
+      "layer": {
+        "app/him-and-her/page": "action-browser",
+        "app/page": "action-browser"
+      },
+      "filename": "Downloads/nan2/nano-main/app/actions/search.ts",
+      "exportedName": "search"
+    }
+  },
   "edge": {},
   "encryptionKey": "++4nxP28djpX1MAcetSNNqDhSnwxDeCyaXksxNmI0zs="
 }

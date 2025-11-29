@@ -56,6 +56,15 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
   type __Unused = __Check
 }
 
+// Validate ../../../app/floating-test/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/floating-test">> = Specific
+  const handler = {} as typeof import("../../../app/floating-test/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
 // Validate ../../../app/him-and-her/page.tsx
 {
   type __IsExpected<Specific extends AppPageConfig<"/him-and-her">> = Specific
@@ -96,6 +105,15 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
 {
   type __IsExpected<Specific extends RouteHandlerConfig<"/api/generate-image">> = Specific
   const handler = {} as typeof import("../../../app/api/generate-image/route.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/api/route.ts
+{
+  type __IsExpected<Specific extends RouteHandlerConfig<"/api">> = Specific
+  const handler = {} as typeof import("../../../app/api/route.js")
   type __Check = __IsExpected<typeof handler>
   // @ts-ignore
   type __Unused = __Check

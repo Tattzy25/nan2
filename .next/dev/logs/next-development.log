@@ -1,6 +1,33 @@
-[00:00:01.737] Server  LOG      ✓ Ready in 1144ms
-[00:00:36.567] Server  LOG      ○ Compiling / ...
-[00:00:38.500] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:39.053] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:00:39.053] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:00:39.053] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764428717502}
+[00:00:03.009] Server  LOG      ✓ Ready in 2.5s
+[00:00:04.160] Server  LOG     Discovering workflow directives "1653ms"
+[00:00:04.214] Server  LOG     Created steps bundle "51ms"
+[00:00:04.264] Server  LOG     Discovering workflow directives "1194ms"
+[00:00:04.441] Server  LOG     Created steps bundle "154ms"
+[00:00:04.738] Server  LOG     Created intermediate workflow bundle "493ms"
+[00:00:05.030] Server  LOG     Rebuilt steps bundle "216ms"
+[00:00:05.032] Server  LOG     Created intermediate workflow bundle "419ms"
+[00:00:05.090] Server  LOG     Creating webhook route
+[00:00:05.955] Server  LOG     Rebuilt workflow bundle "924ms"
+[00:00:07.495] Server  LOG      ○ Compiling / ...
+[00:00:09.360] Server  LOG     Discovering workflow directives "4063ms"
+[00:00:09.472] Server  LOG     Created steps bundle "106ms"
+[00:00:10.093] Server  LOG     Created intermediate workflow bundle "597ms"
+[00:00:12.841] Server  LOG     Discovering workflow directives "2652ms"
+[00:00:12.924] Server  LOG     Created steps bundle "78ms"
+[00:00:13.270] Server  LOG     Created intermediate workflow bundle "251ms"
+[00:00:15.761] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:16.076] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:16.076] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:00:16.076] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764439768804}
+[00:01:22.159] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:22.588] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:01:22.588] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/him-and-her","route":"/him-and-her"}
+[00:01:22.588] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/him-and-her color: rgb(120, 120, 120) color: inherit {"dp":"/him-and-her","o":"http://localhost:3000/him-and-her","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764439835451}
+[00:01:29.272] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:30.292] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:01:30.292] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:01:30.292] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764439843156}
+[00:02:21.715] Server  LOG     Rebuilt steps bundle "87ms"
+[00:02:21.720] Server  LOG     Rebuilt steps bundle "91ms"
+[00:02:21.846] Server  LOG     Rebuilt workflow bundle "130ms"
+[00:02:21.850] Server  LOG     Rebuilt workflow bundle "129ms"

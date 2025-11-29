@@ -4,7 +4,9 @@ import { Inter, JetBrains_Mono } from "next/font/google"
 import { Suspense } from "react"
 import { Analytics } from "@vercel/analytics/next"
 import { ErrorBoundary } from "@/components/error-boundary"
+import { FloatingKbdSearch } from "@/components/ui/floating-kbd-search"
 import { ThemeProvider } from "@/components/theme-provider"
+import { SearchOverlayContent } from "@/components/search-overlay-content"
 import "./globals.css"
 
 const inter = Inter({
@@ -120,6 +122,7 @@ export default function RootLayout({
           <ErrorBoundary>
             <Suspense fallback={null}>{children}</Suspense>
           </ErrorBoundary>
+          <FloatingKbdSearch overlayContent={<SearchOverlayContent />} />
         </ThemeProvider>
         <Analytics />
       </body>
