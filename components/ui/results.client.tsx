@@ -7,16 +7,15 @@ import {
   ImageIcon,
   ImageUpIcon,
   Loader2Icon,
-  UploadIcon,
 } from "lucide-react";
-import { useActionState, useEffect } from "react";
+import { useActionState, useEffect, useRef } from "react";
 import { toast } from "sonner";
 import { search } from "@/app/actions/search";
 import { Preview } from "./preview";
 import { Button } from "./button";
 import { Empty, EmptyDescription, EmptyHeader, EmptyTitle } from "./empty";
 import { Input } from "./input";
-import { UploadButton } from "./upload-button";
+import { Kbd } from "./kbd";
 import { useUploadedImages } from "./uploaded-images-provider";
 
 type ResultsClientProps = {
@@ -29,12 +28,25 @@ const PRIORITY_COUNT = 12;
 export const ResultsClient = ({ defaultData, showUploadButton = true }: ResultsClientProps) => {
   const { images } = useUploadedImages();
   const [state, formAction, isPending] = useActionState(search, { data: [] });
+  const searchInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     if ("error" in state) {
       toast.error(state.error);
     }
   }, [state]);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+        e.preventDefault();
+        searchInputRef.current?.focus();
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, []);
 
   const reset = () => {
     window.location.reload();
@@ -79,9 +91,7 @@ export const ResultsClient = ({ defaultData, showUploadButton = true }: ResultsC
               <div className="-rotate-12 translate-x-2 translate-y-2 rounded-full border bg-background p-3 shadow-xs">
                 <ImageIcon className="size-5 text-muted-foreground" />
               </div>
-              <div className="z-10 rounded-full border bg-background p-3 shadow-xs">
-                <UploadIcon className="size-5 text-muted-foreground" />
-              </div>
+
               <div className="-translate-x-2 translate-y-2 rotate-12 rounded-full border bg-background p-3 shadow-xs">
                 <FileIcon className="size-5 text-muted-foreground" />
               </div>
@@ -112,21 +122,26 @@ export const ResultsClient = ({ defaultData, showUploadButton = true }: ResultsC
             <ArrowLeftIcon className="size-4" />
           </Button>
         )}
-        <Input
-          className="w-full rounded-full border-none bg-secondary shadow-none outline-none"
-          disabled={isPending || !hasImages}
-          id="search"
-          name="search"
-          placeholder="Search by description"
-          required
-        />
+        <div className="relative flex w-full">
+          <Input
+            ref={searchInputRef}
+            className="w-full rounded-full border-none bg-secondary shadow-none outline-none pr-12"
+            disabled={isPending || !hasImages}
+            id="search"
+            name="search"
+            placeholder="Search by description"
+            required
+          />
+          <div className="absolute right-3 top-1/2 -translate-y-1/2 flex items-center gap-1">
+            <Kbd className="text-xs">⌘</Kbd>
+            <Kbd className="text-xs">K</Kbd>
+          </div>
+        </div>
         {isPending ? (
           <Button className="shrink-0" disabled size="icon" variant="ghost">
             <Loader2Icon className="size-4 animate-spin" />
           </Button>
-        ) : (
-          showUploadButton && <UploadButton />
-        )}
+        ) : null}
       </form>
     </>
   );
