@@ -1,6 +1,8 @@
 "use client"
 
-import type { Generation } from "./hooks/use-image-generation"
+import type { Generation } from "./types"
+import { Button } from "@/components/ui/button"
+import { Download, Heart, Copy as CopyIcon, Share2, Upload } from "lucide-react"
 
 interface FullscreenViewerProps {
   imageUrl: string
@@ -12,6 +14,9 @@ interface FullscreenViewerProps {
 export function FullscreenViewer({ imageUrl, generations, onClose, onNavigate }: FullscreenViewerProps) {
   const completedGenerations = generations.filter((g) => g.status === "complete" && g.imageUrl)
   const hasMultipleImages = completedGenerations.length > 1
+
+  const overlayButtonClass =
+    "text-sm h-10 px-3 bg-black/40 text-white hover:bg-black/60 flex items-center gap-2 backdrop-blur-sm rounded-xl border border-white/20"
 
   return (
     <div
@@ -62,6 +67,31 @@ export function FullscreenViewer({ imageUrl, generations, onClose, onNavigate }:
             </button>
           </>
         )}
+        {/* Centered overlay action buttons */}
+        <div className="absolute top-6 left-1/2 -translate-x-1/2 z-20">
+          <div className="flex items-center gap-2">
+            <Button variant="outline" size="lg" className={overlayButtonClass} title="Like">
+              <Heart className="size-4" />
+            </Button>
+            <Button variant="outline" size="lg" className={overlayButtonClass} title="Copy">
+              <CopyIcon className="size-4" />
+            </Button>
+            <Button variant="outline" size="lg" className={overlayButtonClass} title="Download">
+              <Download className="size-4" />
+            </Button>
+            <Button variant="outline" size="lg" className={overlayButtonClass} title="Share">
+              <Share2 className="size-4" />
+            </Button>
+            <Button variant="outline" size="lg" className={overlayButtonClass} title="Use this pic">
+              <Upload className="size-4" />
+              <span className="hidden sm:inline">Use this pic</span>
+            </Button>
+            <Button variant="outline" size="lg" className={overlayButtonClass} title="Upload to gallery">
+              <Upload className="size-4" />
+            </Button>
+          </div>
+        </div>
+
         <img
           src={imageUrl || "/placeholder.svg"}
           alt="Fullscreen"

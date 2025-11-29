@@ -12,10 +12,10 @@ import { HowItWorksModal } from "./how-it-works-modal"
 import { usePersistentHistory } from "./hooks/use-persistent-history"
 import { InputSection } from "./input-section"
 import { OutputSection } from "./output-section"
-import { ToastNotification } from "./toast-notification"
 import { GenerationHistory } from "./generation-history"
 import { GlobalDropZone } from "./global-drop-zone"
 import { FullscreenViewer } from "./fullscreen-viewer"
+import { ToastNotification } from "./toast-notification"
 import { Skeleton } from "@/components/ui/skeleton"
 import { ModeToggle } from "@/components/ui/mode-toggle"
 import { DotPattern } from "@/components/hero"
@@ -108,7 +108,7 @@ export function ImageCombiner() {
       ? { url: selectedGeneration.imageUrl, prompt: selectedGeneration.prompt }
       : null
 
-  const hasImages = useUrls ? image1Url || image2Url : image1 || image2
+  const hasImages = Boolean(useUrls ? image1Url || image2Url : image1 || image2)
   const currentMode = hasImages ? "image-editing" : "text-to-image"
   const canGenerate = prompt.trim().length > 0 && (currentMode === "text-to-image" || (useUrls ? image1Url : image1))
 

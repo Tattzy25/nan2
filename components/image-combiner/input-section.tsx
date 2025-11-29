@@ -110,7 +110,7 @@ export function InputSection({
               <div className="flex flex-col gap-1">
                 <label className="text-sm md:text-base font-medium text-gray-300">Images (optional)</label>
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-3 md:gap-4">
                 <ToggleGroup
                   type="single"
                   value={useUrls ? "urls" : "files"}

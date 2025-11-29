@@ -99,16 +99,24 @@ export function GenerationHistory({
                     <span className="text-sm md:text-base text-white/90 font-mono font-semibold drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                       {Math.round(gen.progress)}%
                     </span>
-                    <button
+                    <div
                       onClick={(e) => {
                         e.stopPropagation()
                         onCancel(gen.id)
                       }}
-                      className="mt-2 text-[10px] px-2 py-0.5 bg-white/10 hover:bg-white text-white hover:text-black transition-all"
+                      className="mt-2 text-[10px] px-2 py-0.5 bg-white/10 hover:bg-white text-white hover:text-black transition-all cursor-pointer"
+                      role="button"
+                      tabIndex={0}
                       aria-label="Cancel generation"
+                      onKeyDown={(e) => {
+                        if (e.key === "Enter" || e.key === " ") {
+                          e.preventDefault()
+                          onCancel(gen.id)
+                        }
+                      }}
                     >
                       Cancel
-                    </button>
+                    </div>
                   </div>
                 ) : gen.status === "error" ? (
                   <div className="absolute inset-0 bg-gray-900/50 flex items-center justify-center">
@@ -123,11 +131,21 @@ export function GenerationHistory({
                     </svg>
                     <span className="sr-only">Generation failed</span>
                     {onDelete && (
-                      <button
+                      <div
                         onClick={(e) => handleDelete(e, gen.id)}
-                        disabled={deletingId === gen.id}
-                        className="absolute top-1 right-1 p-1 bg-black/70 hover:bg-white text-white hover:text-black opacity-100 transition-all disabled:opacity-50 z-10"
+                        className={cn(
+                          "absolute top-1 right-1 p-1 bg-black/70 hover:bg-white text-white hover:text-black opacity-100 transition-all z-10 cursor-pointer",
+                          deletingId === gen.id && "opacity-50 pointer-events-none"
+                        )}
+                        role="button"
+                        tabIndex={0}
                         aria-label="Delete generation"
+                        onKeyDown={(e) => {
+                          if (e.key === "Enter" || e.key === " ") {
+                            e.preventDefault()
+                            handleDelete(e as any, gen.id)
+                          }
+                        }}
                       >
                         {deletingId === gen.id ? (
                           <Loader2 className="w-3 h-3 animate-spin" />
@@ -142,17 +160,27 @@ export function GenerationHistory({
                             <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
                           </svg>
                         )}
-                      </button>
+                      </div>
                     )}
                   </div>
                 ) : (
                   <>
                     {onDelete && (
-                      <button
+                      <div
                         onClick={(e) => handleDelete(e, gen.id)}
-                        disabled={deletingId === gen.id}
-                        className="absolute top-1 right-1 p-1 bg-black/70 hover:bg-white text-white hover:text-black opacity-0 group-hover:opacity-100 transition-all disabled:opacity-50 z-10"
+                        className={cn(
+                          "absolute top-1 right-1 p-1 bg-black/70 hover:bg-white text-white hover:text-black opacity-0 group-hover:opacity-100 transition-all z-10 cursor-pointer",
+                          deletingId === gen.id && "opacity-50 pointer-events-none"
+                        )}
+                        role="button"
+                        tabIndex={0}
                         aria-label="Delete generation"
+                        onKeyDown={(e) => {
+                          if (e.key === "Enter" || e.key === " ") {
+                            e.preventDefault()
+                            handleDelete(e as any, gen.id)
+                          }
+                        }}
                       >
                         {deletingId === gen.id ? (
                           <Loader2 className="w-3 h-3 animate-spin" />
@@ -167,7 +195,7 @@ export function GenerationHistory({
                             <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
                           </svg>
                         )}
-                      </button>
+                      </div>
                     )}
                     <Image
                       src={gen.imageUrl || "/placeholder.svg"}
