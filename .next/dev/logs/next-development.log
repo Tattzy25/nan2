@@ -1,33 +1,39 @@
-[00:00:03.009] Server  LOG      ✓ Ready in 2.5s
-[00:00:04.160] Server  LOG     Discovering workflow directives "1653ms"
-[00:00:04.214] Server  LOG     Created steps bundle "51ms"
-[00:00:04.264] Server  LOG     Discovering workflow directives "1194ms"
-[00:00:04.441] Server  LOG     Created steps bundle "154ms"
-[00:00:04.738] Server  LOG     Created intermediate workflow bundle "493ms"
-[00:00:05.030] Server  LOG     Rebuilt steps bundle "216ms"
-[00:00:05.032] Server  LOG     Created intermediate workflow bundle "419ms"
-[00:00:05.090] Server  LOG     Creating webhook route
-[00:00:05.955] Server  LOG     Rebuilt workflow bundle "924ms"
-[00:00:07.495] Server  LOG      ○ Compiling / ...
-[00:00:09.360] Server  LOG     Discovering workflow directives "4063ms"
-[00:00:09.472] Server  LOG     Created steps bundle "106ms"
-[00:00:10.093] Server  LOG     Created intermediate workflow bundle "597ms"
-[00:00:12.841] Server  LOG     Discovering workflow directives "2652ms"
-[00:00:12.924] Server  LOG     Created steps bundle "78ms"
-[00:00:13.270] Server  LOG     Created intermediate workflow bundle "251ms"
-[00:00:15.761] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:16.076] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:00:16.076] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:00:16.076] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764439768804}
-[00:01:22.159] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:01:22.588] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:01:22.588] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/him-and-her","route":"/him-and-her"}
-[00:01:22.588] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/him-and-her color: rgb(120, 120, 120) color: inherit {"dp":"/him-and-her","o":"http://localhost:3000/him-and-her","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764439835451}
-[00:01:29.272] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:01:30.292] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:01:30.292] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:01:30.292] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764439843156}
-[00:02:21.715] Server  LOG     Rebuilt steps bundle "87ms"
-[00:02:21.720] Server  LOG     Rebuilt steps bundle "91ms"
-[00:02:21.846] Server  LOG     Rebuilt workflow bundle "130ms"
-[00:02:21.850] Server  LOG     Rebuilt workflow bundle "129ms"
+[00:00:03.204] Server  LOG     Rebuilt steps bundle "35ms"
+[00:00:03.379] Server  LOG      ✓ Ready in 2.1s
+[00:00:03.421] Server  LOG     Rebuilt workflow bundle "217ms"
+[00:00:12.117] Server  LOG      ○ Compiling / ...
+[00:00:18.454] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:21.820] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:21.820] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:00:21.820] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764441900503}
+[00:09:18.820] Server  LOG     Searching index for query: "upload"
+[00:09:20.167] Server  LOG     Results: [{...},{...},{...},{...},{...}]
+[00:09:20.171] Server  LOG     Images found: [{...},{...},{...},{...},{...}]
+[00:09:27.712] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:09:28.671] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:09:28.671] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:09:28.672] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764442447614}
+[00:10:12.613] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:10:12.899] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:10:12.899] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:10:12.899] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764442491847}
+[00:10:22.641] Server  LOG     Rebuilt steps bundle "1603ms"
+[00:10:23.110] Server  LOG     Rebuilt workflow bundle "467ms"
+[00:10:32.366] Server  LOG     Searching index for query: "share"
+[00:10:32.986] Server  LOG     Results: [{...},{...},{...},{...},{...}]
+[00:10:33.009] Server  LOG     Images found: [{...},{...},{...},{...},{...}]
+[00:10:37.347] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:10:38.297] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:10:38.297] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:10:38.297] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764442516596}
+[00:12:34.804] Server  LOG     Searching index for query: "lions"
+[00:12:35.404] Server  LOG     Results: [{...},{...},{...},{...},{...}]
+[00:12:35.406] Server  LOG     Images found: [{...},{...},{...},{...},{...}]
+[00:12:43.638] Server  LOG     Searching index for query: "lion"
+[00:12:44.239] Server  LOG     Results: [{...},{...},{...},{...},{...}]
+[00:12:44.241] Server  LOG     Images found: [{...},{...},{...},{...},{...}]
+[00:13:07.274] Server  LOG     Rebuilt steps bundle "65ms"
+[00:13:07.938] Server  LOG     Rebuilt workflow bundle "663ms"
+[00:13:07.999] Server  LOG     Rebuilt steps bundle "60ms"
+[00:13:08.090] Server  LOG      ✓ Compiled in 843ms
+[00:13:08.134] Server  LOG     Rebuilt workflow bundle "132ms"
