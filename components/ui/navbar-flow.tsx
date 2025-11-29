@@ -72,21 +72,18 @@ const ListItem: React.FC<ListItemProps> = ({
       }}
     >
       <motion.p
-        transition={{ duration: 0.3 }}
         className="cursor-pointer text-gray-800 dark:text-gray-200 font-medium text-base lg:text-xl whitespace-nowrap hover:opacity-[0.9] hover:text-gray-900 dark:hover:text-white py-1"
       >
         {element}
       </motion.p>
       {selected !== null && (
         <motion.div
-          initial={{ opacity: 0, scale: 0.85, y: 10 }}
+          style={{ opacity: 0, scale: 0.85, y: 10 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
-          transition={springTransition}
         >
           {selected === element && (
             <div className="absolute top-[calc(100%_+_0.5rem)] left-1/2 transform -translate-x-1/2 z-50">
               <motion.div
-                transition={springTransition}
                 layoutId="selected"
                 className="dropdown-content bg-white dark:bg-black backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700 shadow-2xl"
                 style={{
@@ -95,9 +92,9 @@ const ListItem: React.FC<ListItemProps> = ({
                 onMouseEnter={() => setSelected(element)}
                 onMouseLeave={() => setSelected(null)}
               >
-                <motion.div layout className="w-max h-full p-4 min-w-48">
+                <div className="w-max h-full p-4 min-w-48">
                   {children}
-                </motion.div>
+                </div>
               </motion.div>
             </div>
           )}
