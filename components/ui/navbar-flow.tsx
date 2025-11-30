@@ -1,154 +1,34 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import { Button } from "@/components/ui/button";
 import { motion, useAnimation } from "framer-motion";
 import {
   Menu as List,
   X as Close,
-  ChevronDown as ArrowDown,
-  ChevronUp as ArrowUp,
+  Sparkles,
 } from "lucide-react";
-
-interface NavLink {
-  text: string;
-  url?: string;
-  submenu?: React.ReactNode;
-}
 
 interface NavbarFlowProps {
   emblem?: React.ReactNode;
-  links?: NavLink[];
   extraIcons?: React.ReactNode[];
   styleName?: string;
   rightComponent?: React.ReactNode;
+  onMenuClick?: () => void;
+  overlayContent?: React.ReactNode;
 }
-
-interface ListItemProps {
-  setSelected: (element: string | null) => void;
-  selected: string | null;
-  element: string;
-  children: React.ReactNode;
-}
-
-interface HoverLinkProps {
-  url: string;
-  children: React.ReactNode;
-  onPress?: () => void;
-}
-
-interface FeatureItemProps {
-  heading: string;
-  url: string;
-  info: string;
-  onPress?: () => void;
-}
-
-const springTransition = {
-  type: "spring" as const,
-  mass: 0.5,
-  damping: 11.5,
-  stiffness: 100,
-  restDelta: 0.001,
-  restSpeed: 0.001,
-};
-
-const ListItem: React.FC<ListItemProps> = ({
-  setSelected,
-  selected,
-  element,
-  children,
-}) => {
-  return (
-    <div
-      className="relative"
-      onMouseEnter={() => setSelected(element)}
-      onMouseLeave={(e) => {
-        const dropdown = e.currentTarget.querySelector('.dropdown-content');
-        if (dropdown) {
-          const dropdownRect = dropdown.getBoundingClientRect();
-          if (e.clientY < dropdownRect.top - 20) {
-            setSelected(null);
-          }
-        }
-      }}
-    >
-      <motion.p
-        className="cursor-pointer text-gray-800 dark:text-gray-200 font-medium text-base lg:text-xl whitespace-nowrap hover:opacity-[0.9] hover:text-gray-900 dark:hover:text-white py-1"
-      >
-        {element}
-      </motion.p>
-      {selected !== null && (
-        <motion.div
-          style={{ opacity: 0, scale: 0.85, y: 10 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-        >
-          {selected === element && (
-            <div className="absolute top-[calc(100%_+_0.5rem)] left-1/2 transform -translate-x-1/2 z-50">
-              <motion.div
-                layoutId="selected"
-                className="dropdown-content bg-white dark:bg-black backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700 shadow-2xl"
-                style={{
-                  maxWidth: 'min(90vw, 400px)',
-                }}
-                onMouseEnter={() => setSelected(element)}
-                onMouseLeave={() => setSelected(null)}
-              >
-                <div className="w-max h-full p-4 min-w-48">
-                  {children}
-                </div>
-              </motion.div>
-            </div>
-          )}
-        </motion.div>
-      )}
-    </div>
-  );
-};
-
-export const HoverLink: React.FC<HoverLinkProps> = ({ url, children, onPress }) => {
-  return (
-    <a
-      href={url}
-      onClick={onPress}
-      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
-    >
-      {children}
-    </a>
-  );
-};
-
-export const FeatureItem: React.FC<FeatureItemProps> = ({
-  heading,
-  url,
-  info,
-  onPress,
-}) => {
-  return (
-    <a
-      href={url}
-      onClick={onPress}
-      className="block p-3 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
-    >
-      <h4 className="font-medium text-gray-900 dark:text-white">{heading}</h4>
-      <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">{info}</p>
-    </a>
-  );
-};
 
 const NavbarFlow: React.FC<NavbarFlowProps> = ({
   emblem,
-  links = [],
   extraIcons = [],
   styleName = "",
   rightComponent,
+  onMenuClick,
+  overlayContent,
 }) => {
   const [sequenceDone, setSequenceDone] = useState(false);
-  const [mobileMenuVisible, setMobileMenuVisible] = useState(false);
   const [mobileView, setMobileView] = useState(false);
-  const [selectedSubmenu, setSelectedSubmenu] = useState<string | null>(null);
-  const [openedSections, setOpenedSections] = useState<Record<string, boolean>>(
-    {}
-  );
   const [isMounted, setIsMounted] = useState(false);
+  const [isOverlayOpen, setIsOverlayOpen] = useState(false);
 
   const navMotion = useAnimation();
   const emblemMotion = useAnimation();
@@ -158,6 +38,16 @@ const NavbarFlow: React.FC<NavbarFlowProps> = ({
   useEffect(() => {
     setIsMounted(true);
   }, []);
+
+  const handleMenuClick = () => {
+    if (onMenuClick) {
+      onMenuClick();
+      return;
+    }
+    if (overlayContent) {
+      setIsOverlayOpen(true);
+    }
+  };
 
   useEffect(() => {
     const detectMobile = () => {
@@ -222,34 +112,6 @@ const NavbarFlow: React.FC<NavbarFlowProps> = ({
     runSequence();
   }, [navMotion, emblemMotion, switchMotion, svgMotion, mobileView, isMounted]);
 
-  const toggleMobileMenu = () => {
-    setMobileMenuVisible(!mobileMenuVisible);
-  };
-
-  const toggleSection = (text: string) => {
-    setOpenedSections((prev) => ({
-      ...prev,
-      [text]: !prev[text],
-    }));
-  };
-
-  const hideMobileMenu = () => {
-    setMobileMenuVisible(false);
-  };
-
-  const renderSubmenuItems = (submenu: React.ReactNode) => {
-    if (!React.isValidElement(submenu)) return null;
-
-    const submenuProps = submenu.props as { children?: React.ReactNode };
-    if (!submenuProps.children) return null;
-
-    return React.Children.map(submenuProps.children, (child, childIdx) => (
-      <div key={childIdx} onClick={hideMobileMenu}>
-        {child}
-      </div>
-    ));
-  };
-
   return (
     <div className={`sticky top-0 z-50 w-full ${styleName}`}>
       <div className="hidden md:block">
@@ -269,33 +131,16 @@ const NavbarFlow: React.FC<NavbarFlowProps> = ({
             }}
             animate={navMotion}
             className="bg-gray-200/80 dark:bg-black/95 backdrop-blur-sm rounded-full flex items-center justify-center gap-6 lg:gap-12 z-10 flex-shrink-0 shadow-[0_0_12px_rgba(34,197,94,0.35)] border-2 border-green-400"
-            onMouseLeave={() => setSelectedSubmenu(null)}
           >
-            {links.map((element) => (
-              <div key={element.text}>
-                {element.submenu ? (
-                  <ListItem
-                    setSelected={setSelectedSubmenu}
-                    selected={selectedSubmenu}
-                    element={element.text}
-                  >
-                    {element.submenu}
-                  </ListItem>
-                ) : (
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: sequenceDone ? 1 : 0 }}
-                  >
-                    <a
-                      href={element.url || "#"}
-                      className="text-gray-800 dark:text-gray-200 font-medium text-base lg:text-xl whitespace-nowrap hover:text-gray-900 dark:hover:text-white transition-colors py-1"
-                    >
-                      {element.text}
-                    </a>
-                  </motion.div>
-                )}
-              </div>
-            ))}
+            <motion.button
+              initial={{ opacity: 0 }}
+              animate={{ opacity: sequenceDone ? 1 : 0 }}
+              onClick={handleMenuClick}
+              className="text-gray-800 dark:text-gray-200 font-medium text-base lg:text-xl whitespace-nowrap hover:text-gray-900 dark:hover:text-white transition-colors py-1 flex items-center gap-2"
+            >
+              <Sparkles className="w-5 h-5" />
+              MENU
+            </motion.button>
           </motion.nav>
 
           <motion.div
@@ -585,75 +430,33 @@ const NavbarFlow: React.FC<NavbarFlowProps> = ({
               </motion.div>
 
               <button
-                onClick={toggleMobileMenu}
-                className="flex items-center justify-center w-9 h-9 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
+                onClick={handleMenuClick}
+                className="flex items-center justify-center gap-1.5 px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors rounded-full hover:bg-gray-200 dark:hover:bg-gray-800"
               >
-                {mobileMenuVisible ? (
-                  <Close className="h-5 w-5" />
-                ) : (
-                  <List className="h-5 w-5" />
-                )}
-                <span className="sr-only">Toggle menu</span>
+                <Sparkles className="h-4 w-4" />
+                <span className="text-sm font-medium">MENU</span>
               </button>
             </div>
           </div>
-
-          <motion.div
-            initial={{ opacity: 0, maxHeight: 0 }}
-            animate={{
-              opacity: mobileMenuVisible ? 1 : 0,
-              maxHeight: mobileMenuVisible ? "80vh" : 0,
-            }}
-            transition={{ duration: 0.3 }}
-            className="absolute left-0 right-0 top-full z-40 overflow-y-auto border-t border-gray-200/40 dark:border-gray-800/40 bg-gray-50/95 dark:bg-black/95 backdrop-blur"
-          >
-            <div className="container py-4 px-4">
-              <nav className="flex flex-col space-y-3">
-                {links.map((element, idx) => (
-                  <div key={element.text} className="space-y-2">
-                    {element.submenu ? (
-                      <>
-                        <button
-                          className="flex items-center justify-between w-full text-gray-800 dark:text-gray-200 font-medium text-base py-2 px-4 rounded-lg hover:bg-gray-200/50 dark:hover:bg-gray-800/50 transition-colors border-b border-gray-200 dark:border-gray-800"
-                          onClick={() => toggleSection(element.text)}
-                        >
-                          <span>{element.text}</span>
-                          <span>
-                            {openedSections[element.text] ? (
-                              <ArrowUp className="h-4 w-4" />
-                            ) : (
-                              <ArrowDown className="h-4 w-4" />
-                            )}
-                          </span>
-                        </button>
-
-                        {openedSections[element.text] && (
-                          <motion.div
-                            initial={{ opacity: 0, height: 0 }}
-                            animate={{ opacity: 1, height: "auto" }}
-                            transition={{ duration: 0.2 }}
-                            className="pl-4 space-y-1 overflow-hidden"
-                          >
-                            {renderSubmenuItems(element.submenu)}
-                          </motion.div>
-                        )}
-                      </>
-                    ) : (
-                      <a
-                        href={element.url || "#"}
-                        onClick={hideMobileMenu}
-                        className="text-gray-800 dark:text-gray-200 font-medium text-base py-2 px-4 rounded-lg hover:bg-gray-200/50 dark:hover:bg-gray-800/50 transition-colors border-b border-gray-200 dark:border-gray-800 block"
-                      >
-                        {element.text}
-                      </a>
-                    )}
-                  </div>
-                ))}
-              </nav>
-            </div>
-          </motion.div>
         </div>
       </div>
+      {isOverlayOpen && overlayContent && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-background/80 backdrop-blur-sm p-4 sm:p-8">
+          <div className="relative w-full h-full bg-card rounded-3xl shadow-2xl overflow-hidden border ring-1 ring-black/5">
+            <div className="absolute top-4 right-4 z-50">
+              <Button
+                size="icon"
+                variant="ghost"
+                className="rounded-full"
+                onClick={() => setIsOverlayOpen(false)}
+              >
+                <Close className="size-5" />
+              </Button>
+            </div>
+            <div className="h-full overflow-y-auto">{overlayContent}</div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

@@ -24,7 +24,7 @@ const MemoizedDithering = memo(Dithering)
 
 export function ImageCombiner() {
   const isMobile = useMobile()
-  const [prompt, setPrompt] = useState("A beautiful landscape with mountains and a lake at sunset")
+  const [prompt, setPrompt] = useState("An image of a lion chilling in a jaccuzi outside in the mountains while its snowing smoking a cigar and enjoying a delicious anejo tequila on canvas")
   const [useUrls, setUseUrls] = useState(false)
   const [showFullscreen, setShowFullscreen] = useState(false)
   const [fullscreenImageUrl, setFullscreenImageUrl] = useState("")
@@ -97,7 +97,6 @@ export function ImageCombiner() {
     addGeneration,
     onToast: showToast,
     onImageUpload: handleImageUpload,
-    onOutOfCredits: () => {},
     onApiKeyMissing: () => setApiKeyMissing(true),
   })
 
@@ -610,7 +609,7 @@ export function ImageCombiner() {
   }, [isResizing, handleMouseMove, handleMouseUp])
 
   return (
-    <div className="bg-background min-h-screen flex items-center justify-center select-none">
+    <div className="bg-background min-h-screen flex items-center justify-center select-none mt-[20px]">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -620,7 +619,7 @@ export function ImageCombiner() {
             name: "TaTTTy",
             alternateName: "TaTTTy",
             description:
-              "TaTTTy is a powerful AI image generation and editing tool powered by Google Gemini 2.5 Flash Image. Create, edit, and transform images with natural language prompts.",
+    "TaTTTy builds and creates unique tailored tattoo images based on your story, your experiances and journey of your life.",
             url: "https://tattty.com",
             applicationCategory: "MultimediaApplication",
             operatingSystem: "Web Browser",
@@ -648,7 +647,7 @@ export function ImageCombiner() {
 
       <DotPattern />
 
-      <div className="relative z-10 w-full h-full flex items-center justify-center p-2 md:p-4">
+      <div className="relative z-10 w-full h-full flex items-center justify-center pt-0 px-2 pb-2 md:pt-0 md:px-4 md:pb-4">
         <div className="w-full max-w-[98vw] lg:max-w-[96vw] 2xl:max-w-[94vw]">
           <div className="w-full mx-auto select-none">
             <div className="bg-transparent backdrop-blur-md border-2 border-green-400 shadow-[0_0_20px_rgba(34,197,94,0.5)] px-3 py-3 md:px-4 md:py-4 lg:px-6 lg:py-6 flex flex-col rounded-3xl md:rounded-[40px] overflow-hidden">
@@ -773,8 +772,6 @@ export function ImageCombiner() {
           </div>
         </div>
       </div>
-
-      <HowItWorksModal open={showHowItWorks} onOpenChange={setShowHowItWorks} />
 
       {showFullscreen && fullscreenImageUrl && (
         <FullscreenViewer
