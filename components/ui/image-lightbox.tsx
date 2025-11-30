@@ -30,6 +30,7 @@ export const ImageLightbox = ({
   const mouseStartRef = React.useRef<{ x: number; y: number; time: number } | null>(null);
   const mouseEndRef = React.useRef<{ x: number; y: number; time: number } | null>(null);
   const [isDragging, setIsDragging] = React.useState(false);
+  const [imageOrientation, setImageOrientation] = React.useState<'portrait' | 'landscape' | 'square'>('landscape');
 
   // Handle keyboard navigation
   React.useEffect(() => {
@@ -94,6 +95,24 @@ export const ImageLightbox = ({
   const handleImageLoad = () => {
     setIsImageLoaded(true);
   };
+
+  // Determine image orientation
+  React.useEffect(() => {
+    if (!currentImage?.url) return;
+    
+    const img = new Image();
+    img.onload = () => {
+      const aspectRatio = img.width / img.height;
+      if (aspectRatio > 1.1) {
+        setImageOrientation('landscape');
+      } else if (aspectRatio < 0.9) {
+        setImageOrientation('portrait');
+      } else {
+        setImageOrientation('square');
+      }
+    };
+    img.src = currentImage.url;
+  }, [currentImage?.url]);
 
   // Handle touch events for swipe gestures
   const handleTouchStart = (event: React.TouchEvent) => {
@@ -241,14 +260,14 @@ export const ImageLightbox = ({
       <Button
         variant="ghost"
         size="icon"
-        className="absolute top-2 right-2 sm:top-4 sm:right-4 z-10 text-white hover:bg-white/20 rounded-full w-8 h-8 sm:w-10 sm:h-10"
+        className="absolute top-1 right-1 z-10 text-white hover:bg-white/20 rounded-full w-8 h-8"
         onClick={(e) => {
           e.stopPropagation();
           onClose();
         }}
         aria-label="Close lightbox"
       >
-        <XIcon className="h-4 w-4 sm:h-6 sm:w-6" />
+        <XIcon className="h-4 w-4" />
       </Button>
 
       {/* Navigation buttons - Hidden on mobile, visible on larger screens */}
@@ -256,11 +275,11 @@ export const ImageLightbox = ({
         <Button
           variant="ghost"
           size="icon"
-          className="hidden sm:flex absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-10 text-white hover:bg-white/20 rounded-full w-8 h-8 sm:w-10 sm:h-10"
+          className="hidden sm:flex absolute left-1 top-1/2 -translate-y-1/2 z-10 text-white hover:bg-white/20 rounded-full w-8 h-8"
           onClick={(e) => goToPrevious(e)}
           aria-label="Previous image"
         >
-          <ChevronLeftIcon className="h-4 w-4 sm:h-6 sm:w-6" />
+          <ChevronLeftIcon className="h-4 w-4" />
         </Button>
       )}
 
@@ -268,26 +287,18 @@ export const ImageLightbox = ({
         <Button
           variant="ghost"
           size="icon"
-          className="hidden sm:flex absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-10 text-white hover:bg-white/20 rounded-full w-8 h-8 sm:w-10 sm:h-10"
+          className="hidden sm:flex absolute right-1 top-1/2 -translate-y-1/2 z-10 text-white hover:bg-white/20 rounded-full w-8 h-8"
           onClick={(e) => goToNext(e)}
           aria-label="Next image"
         >
-          <ChevronRightIcon className="h-4 w-4 sm:h-6 sm:w-6" />
+          <ChevronRightIcon className="h-4 w-4" />
         </Button>
       )}
-
-      {/* Image counter */}
-      <div 
-        className="absolute top-2 left-1/2 -translate-x-1/2 z-10 bg-black/50 px-2 py-1 sm:px-3 sm:py-1 rounded-full text-white text-xs sm:text-sm"
-        onClick={(e) => e.stopPropagation()}
-      >
-        {currentIndex + 1} / {images.length}
-      </div>
 
       {/* Flip card container */}
       <div 
         className={cn(
-          "relative w-full h-full flex items-center justify-center p-2 sm:p-4 select-none",
+          "relative w-full h-full flex items-center justify-center p-1 select-none",
           isDragging ? "cursor-grabbing" : "cursor-grab"
         )}
         onMouseDown={handleMouseDown}
@@ -298,7 +309,7 @@ export const ImageLightbox = ({
         <div
           ref={cardRef}
           className={cn(
-            "relative w-full max-w-5xl h-full max-h-[85vh] sm:max-h-[90vh] transition-transform duration-700 preserve-3d select-none",
+            "relative w-full h-full max-h-[calc(100vh-2px)] transition-transform duration-700 preserve-3d select-none",
             isFlipped && "rotate-y-180"
           )}
           onClick={handleCardClick}
@@ -350,17 +361,15 @@ export const ImageLightbox = ({
 
       {/* Instructions */}
       <div 
-        className="absolute bottom-2 left-1/2 -translate-x-1/2 z-10 bg-black/50 px-3 py-1 sm:px-4 sm:py-2 rounded-lg text-white text-xs sm:text-sm text-center"
+        className="absolute bottom-1 left-1/2 -translate-x-1/2 z-10 bg-black/50 px-2 py-1 rounded text-white text-xs text-center"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="flex items-center gap-2 sm:gap-4 flex-wrap justify-center">
-          <span className="hidden sm:inline">Click image to flip</span>
+        <div className="flex items-center gap-1 flex-wrap justify-center">
+          <span className="hidden sm:inline">Click to flip</span>
           <span className="hidden sm:inline">•</span>
-          <span>Swipe/Drag to navigate</span>
+          <span>Swipe/Drag</span>
           <span>•</span>
-          <span className="hidden xs:inline">← → to navigate</span>
-          <span className="hidden xs:inline">•</span>
-          <span>ESC to close</span>
+          <span>ESC</span>
         </div>
       </div>
 
