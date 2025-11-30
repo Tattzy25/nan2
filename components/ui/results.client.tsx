@@ -8,11 +8,13 @@ import {
   ImageUpIcon,
   Loader2Icon,
 } from "lucide-react";
-import { useActionState, useEffect, useRef } from "react";
+import { useActionState, useEffect, useRef, useState } from "react";
 import { toast } from "sonner";
 import { search } from "@/app/actions/search";
 import { Preview } from "./preview";
+import { ClickablePreview } from "./clickable-preview";
 import { Button } from "./button";
+import { ImageLightbox } from "./image-lightbox";
 import { Empty, EmptyDescription, EmptyHeader, EmptyTitle } from "./empty";
 import { Input } from "./input";
 import { Kbd } from "./kbd";
@@ -29,6 +31,16 @@ export const ResultsClient = ({ defaultData, showUploadButton = true }: ResultsC
   const { images } = useUploadedImages();
   const [state, formAction, isPending] = useActionState(search, { data: [] });
   const searchInputRef = useRef<HTMLInputElement>(null);
+  
+  // Lightbox state
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  
+  // Combine all images for lightbox
+  const allImages = [
+    ...images.map(img => ({ url: img.url, alt: `Uploaded image ${img.url}` })),
+    ...("data" in state && state.data?.length ? state.data.map(blob => ({ url: blob.url, alt: `Search result ${blob.url}` })) : defaultData.map(blob => ({ url: blob.downloadUrl, alt: `Gallery image ${blob.downloadUrl}` })))
+  ];
 
   useEffect(() => {
     if ("error" in state) {
@@ -52,6 +64,20 @@ export const ResultsClient = ({ defaultData, showUploadButton = true }: ResultsC
     window.location.reload();
   };
 
+  // Lightbox functions
+  const openLightbox = (index: number) => {
+    setCurrentImageIndex(index);
+    setLightboxOpen(true);
+  };
+
+  const closeLightbox = () => {
+    setLightboxOpen(false);
+  };
+
+  const navigateLightbox = (index: number) => {
+    setCurrentImageIndex(index);
+  };
+
   const hasImages =
     images.length ||
     defaultData.length ||
@@ -62,25 +88,28 @@ export const ResultsClient = ({ defaultData, showUploadButton = true }: ResultsC
       {hasImages ? (
         <div className="gap-4 columns-2 sm:columns-2 md:columns-3 lg:columns-4 xl:columns-4 2xl:columns-4">
           {images.map((image, index) => (
-            <Preview
+            <ClickablePreview
               key={image.url}
               priority={index < PRIORITY_COUNT}
               url={image.url}
+              onClick={() => openLightbox(index)}
             />
           ))}
           {"data" in state && state.data?.length
             ? state.data.map((blob, index) => (
-                <Preview
+                <ClickablePreview
                   key={blob.url}
-                  priority={index < PRIORITY_COUNT}
+                  priority={images.length + index < PRIORITY_COUNT}
                   url={blob.url}
+                  onClick={() => openLightbox(images.length + index)}
                 />
               ))
             : defaultData.map((blob, index) => (
-                <Preview
+                <ClickablePreview
                   key={blob.url}
-                  priority={index < PRIORITY_COUNT}
+                  priority={images.length + index < PRIORITY_COUNT}
                   url={blob.downloadUrl}
+                  onClick={() => openLightbox(images.length + index)}
                 />
               ))}
         </div>
@@ -143,6 +172,15 @@ export const ResultsClient = ({ defaultData, showUploadButton = true }: ResultsC
           </Button>
         ) : null}
       </form>
+      
+      {/* Lightbox */}
+      <ImageLightbox
+        images={allImages}
+        currentIndex={currentImageIndex}
+        isOpen={lightboxOpen}
+        onClose={closeLightbox}
+        onNavigate={navigateLightbox}
+      />
     </>
   );
 };

@@ -1,6 +1,6 @@
 import { CheckCircle2Icon, ImageUpIcon } from "lucide-react";
 import { DeployButton } from "./deploy";
-import { Button } from "./button";
+import { Button } from "@/components/ui/button"
 
 export const Header = () => (
   <div className="flex flex-col gap-8 sm:gap-12">
