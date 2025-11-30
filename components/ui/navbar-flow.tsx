@@ -136,10 +136,12 @@ const NavbarFlow: React.FC<NavbarFlowProps> = ({
               initial={{ opacity: 0 }}
               animate={{ opacity: sequenceDone ? 1 : 0 }}
               onClick={handleMenuClick}
-              className="text-gray-800 dark:text-gray-200 font-medium text-base lg:text-xl whitespace-nowrap hover:text-gray-900 dark:hover:text-white transition-colors py-1 flex items-center gap-2"
+              className="text-gray-800 dark:text-gray-200 font-medium text-base lg:text-xl whitespace-nowrap hover:text-white transition-all duration-300 py-3 px-6 flex items-center gap-2 bg-gray-200/80 dark:bg-black/95 hover:bg-gray-300/80 dark:hover:bg-black/100 rounded-xl relative group z-20"
+              style={{ margin: '-8px 0' }}
             >
-              <Sparkles className="w-5 h-5" />
-              MENU
+              <div className="absolute inset-0 bg-gradient-to-r from-green-400 to-emerald-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl blur-xl -z-10 scale-125" />
+              <Sparkles className="w-5 h-5 relative z-10 group-hover:scale-110 transition-transform duration-300" />
+              <span className="relative z-10 group-hover:font-semibold">MENU</span>
             </motion.button>
           </motion.nav>
 

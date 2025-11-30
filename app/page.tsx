@@ -1,6 +1,5 @@
 import { ImageCombiner } from "@/components/image-combiner"
 import NavbarFlow from "@/components/ui/navbar-flow"
-import HoverLink, { FeatureItem } from "@/components/ui/navbar-flow"
 import { ModeToggle } from "@/components/ui/mode-toggle"
 import { SearchOverlayContent } from "@/components/search-overlay-content"
 import type { Metadata } from "next"

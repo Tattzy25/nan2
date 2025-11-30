@@ -60,7 +60,7 @@ export const ResultsClient = ({ defaultData, showUploadButton = true }: ResultsC
   return (
     <>
       {hasImages ? (
-        <div className="gap-4 sm:columns-2 md:columns-3 lg:columns-2 xl:columns-3">
+        <div className="gap-4 columns-2 sm:columns-2 md:columns-3 lg:columns-4 xl:columns-4 2xl:columns-4">
           {images.map((image, index) => (
             <Preview
               key={image.url}
@@ -108,7 +108,7 @@ export const ResultsClient = ({ defaultData, showUploadButton = true }: ResultsC
 
       <form
         action={formAction}
-        className="-translate-x-1/2 fixed bottom-8 left-1/2 flex w-full max-w-sm items-center gap-1 rounded-full bg-background p-1 shadow-xl sm:max-w-lg lg:ml-[182px]"
+        className="fixed bottom-8 left-1/2 transform -translate-x-1/2 flex w-full max-w-2xl items-center gap-2 rounded-full bg-background p-2 shadow-xl"
       >
         {"data" in state && state.data.length > 0 && (
           <Button
@@ -119,27 +119,27 @@ export const ResultsClient = ({ defaultData, showUploadButton = true }: ResultsC
             type="button"
             variant="ghost"
           >
-            <ArrowLeftIcon className="size-4" />
+            <ArrowLeftIcon className="size-6" />
           </Button>
         )}
         <div className="relative flex w-full">
           <Input
             ref={searchInputRef}
-            className="w-full rounded-full border-none bg-secondary shadow-none outline-none pr-12"
+            className="w-full rounded-full border-none bg-secondary shadow-none outline-none pr-12 py-4 text-lg"
             disabled={isPending || !hasImages}
             id="search"
             name="search"
             placeholder="Search by description"
             required
           />
-          <div className="absolute right-3 top-1/2 -translate-y-1/2 flex items-center gap-1">
-            <Kbd className="text-xs">⌘</Kbd>
-            <Kbd className="text-xs">K</Kbd>
+          <div className="absolute right-4 top-1/2 -translate-y-1/2 flex items-center gap-1">
+            <Kbd className="text-sm">⌘</Kbd>
+            <Kbd className="text-sm">K</Kbd>
           </div>
         </div>
         {isPending ? (
           <Button className="shrink-0" disabled size="icon" variant="ghost">
-            <Loader2Icon className="size-4 animate-spin" />
+            <Loader2Icon className="size-6 animate-spin" />
           </Button>
         ) : null}
       </form>

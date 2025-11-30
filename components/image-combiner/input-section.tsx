@@ -115,8 +115,7 @@ export function InputSection({
                   value={useUrls ? "urls" : "files"}
                   onValueChange={(value) => setUseUrls(value === "urls")}
                   variant="default"
-                  spacing={0}
-                >
+                                  >
                   <ToggleGroupItem
                     value="files"
                     className="data-[state=on]:border-2 data-[state=on]:border-green-400"

@@ -20,10 +20,7 @@ const ImagesSkeleton = () => (
 
 export const SearchOverlayContent = () => (
   <UploadedImagesProvider>
-    <div className="container relative mx-auto grid items-start gap-12 px-4 py-8 sm:gap-16 lg:grid-cols-[300px_1fr]">
-      <div className="lg:sticky lg:top-8">
-        <Header />
-      </div>
+    <div className="container relative mx-auto px-4 py-8">
       <Suspense fallback={<ImagesSkeleton />}>
         <Results showUploadButton={false} />
       </Suspense>
