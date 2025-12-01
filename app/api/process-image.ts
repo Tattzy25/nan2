@@ -43,7 +43,7 @@ export const processImage = async (fileData: SerializableFile) => {
 
     // Step 3: Index in search with metadata
     console.log("[WORKFLOW] Step 3/3: Indexing in search");
-    await indexImage(blob, text);
+    await indexImage(blob, { title: text, shortDesc: text, longDesc: text, tags: [], categories: [] });
     console.log("[WORKFLOW] Step 3/3 complete. Image indexed successfully");
 
     const workflowDuration = Date.now() - workflowStartTime;

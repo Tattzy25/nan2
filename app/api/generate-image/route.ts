@@ -1,6 +1,12 @@
 import { type NextRequest, NextResponse } from "next/server"
 import { generateText } from "ai"
-import { createGateway } from "@ai-sdk/gateway"
+import { createGateway } from "@ai-sdk/gateway";
+import { uploadImage } from "../upload-image";
+import { generateDescription } from "../generate-description";
+import { indexImage } from "../index-image";
+import type { PutBlobResult } from "@vercel/blob";
+import type { SerializableFile } from "../process-image";
+import crypto from 'crypto';
 
 export const dynamic = "force-dynamic"
 
@@ -215,10 +221,29 @@ export async function POST(request: NextRequest) {
       }
 
       const firstImage = imageFiles[0]
-      const imageUrl = `data:${firstImage.mediaType};base64,${firstImage.base64}`
-
-      return NextResponse.json<GenerateImageResponse>({
-        url: imageUrl,
+      const buffer = Buffer.from(firstImage.base64, 'base64');
+      const extension = firstImage.mediaType.split('/')[1];
+      const filename = `generated-${crypto.randomUUID()}.${extension}`;
+      const arrayBuffer = buffer.buffer;
+      const fileData: SerializableFile = {
+        buffer: arrayBuffer,
+        name: filename,
+        type: firstImage.mediaType,
+        size: buffer.length,
+      };
+      const blob = await uploadImage(fileData);
+      Promise.resolve().then(async () => {
+        const desc = await generateDescription(blob);
+        await indexImage(blob, desc, {
+          isPrivate: true,
+          generatedAt: new Date().toISOString(),
+          userType: 'free' // TODO: determine from session
+        });
+      }).catch(error => {
+        console.error('Background processing failed:', error);
+      });
+      return NextResponse.json&lt;GenerateImageResponse&gt;({
+        url: blob.downloadUrl,
         prompt: editingPrompt,
         description: result.text || "",
       })

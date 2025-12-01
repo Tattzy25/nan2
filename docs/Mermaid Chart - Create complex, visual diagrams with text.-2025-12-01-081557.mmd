@@ -1,0 +1,20 @@
+---
+config:
+  theme: redux
+---
+flowchart TB
+    A(["user clicks run"]) --> B{"API CHECK"}
+    B --> M{"TEXT-TO-IMAGE or IMAGE-TO-IMAGE"}
+    M --> C["GEMINI - FOR IMAGE GENERATION"]
+    C --> n1["GROK FOR VISUAL ANALYZE , TITLE, 2 DESCRIPTIONS - SHORT &amp; LONG , METADATA= PUBLIC/PRIVATE, TAGS."]
+    n1 --> n2["VERCEL BLOB FOR IMAGE UPLOAD, IMAGE URL, AND STORAGE"]
+    n2 --> n3["VERCEL BLOB SEND A UNIQUE IMAGE URL BACK TO USER"] & n4["VERCEL BLOB SEND IMAGE URL AND ALL DATA FROM GROK TO UPSTASH SEARCH FOR INDEXING"]
+    n3 --> n5["USER SEES RENDERED IMAGE"]
+    n4 --> n7["UPSTASH SEARCH FOR INDEXING UPSIRT ETC.."]
+    n5 --> n8["SIMPLE"]
+    n7 --> n8
+
+     A:::Peach
+    n3:::Peach
+    n5:::Peach
+    classDef Peach stroke-width:1px, stroke-dasharray:none, stroke:#FBB35A, fill:#FFEFDB, color:#8F632D

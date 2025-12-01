@@ -1,47 +1,24 @@
-[00:00:02.817] Server  LOG      ✓ Ready in 2.4s
-[00:00:03.455] Server  LOG     Discovering workflow directives "969ms"
-[00:00:03.487] Server  LOG     Created steps bundle "30ms"
-[00:00:03.556] Server  LOG     Created intermediate workflow bundle "60ms"
-[00:00:03.584] Server  LOG     Rebuilt steps bundle "23ms"
-[00:00:03.632] Server  LOG     Rebuilt workflow bundle "48ms"
-[00:00:23.744] Server  LOG      ○ Compiling / ...
-[00:00:28.663] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:29.036] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:00:29.037] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:00:29.037] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764480890781}
-[00:02:39.405] Server  LOG     Rebuilt steps bundle "71ms"
-[00:02:39.504] Server  LOG     Rebuilt workflow bundle "97ms"
-[00:02:39.565] Server  LOG      ✓ Compiled in 174ms
-[00:03:10.450] Server  LOG     Rebuilt steps bundle "179ms"
-[00:03:10.592] Server  LOG     Rebuilt workflow bundle "140ms"
-[00:03:10.618] Server  LOG      ✓ Compiled in 310ms
-[00:04:10.999] Server  LOG     Rebuilt steps bundle "120ms"
-[00:04:11.195] Server  LOG     Rebuilt workflow bundle "193ms"
-[00:04:11.299] Server  LOG      ✓ Compiled in 471ms
-[00:04:39.429] Server  LOG     Rebuilt steps bundle "180ms"
-[00:04:39.632] Server  LOG     Rebuilt workflow bundle "198ms"
-[00:04:39.730] Server  LOG      ✓ Compiled in 442ms
-[00:05:45.924] Server  LOG     Rebuilt steps bundle "56ms"
-[00:05:45.999] Server  LOG     Rebuilt workflow bundle "74ms"
-[00:05:46.066] Server  LOG      ✓ Compiled in 117ms
-[00:06:22.669] Server  LOG     Rebuilt steps bundle "58ms"
-[00:06:22.760] Server  LOG     Rebuilt workflow bundle "91ms"
-[00:06:22.809] Server  LOG      ✓ Compiled in 128ms
-[00:06:48.361] Server  LOG     Rebuilt steps bundle "69ms"
-[00:06:48.465] Server  LOG     Rebuilt workflow bundle "104ms"
-[00:06:48.534] Server  LOG      ✓ Compiled in 212ms
-[00:06:58.797] Server  LOG     Rebuilt steps bundle "67ms"
-[00:06:59.003] Server  LOG     Rebuilt workflow bundle "206ms"
-[00:06:59.050] Server  LOG      ✓ Compiled in 282ms
-[00:07:10.064] Server  LOG     Rebuilt steps bundle "88ms"
-[00:07:10.158] Server  LOG     Rebuilt workflow bundle "93ms"
-[00:07:10.161] Server  LOG      ✓ Compiled in 123ms
-[00:07:38.569] Server  LOG     Rebuilt steps bundle "50ms"
-[00:07:38.663] Server  LOG     Rebuilt workflow bundle "94ms"
-[00:07:38.673] Server  LOG      ✓ Compiled in 125ms
-[00:08:31.717] Server  LOG     Rebuilt steps bundle "1579ms"
-[00:08:32.312] Server  LOG     Rebuilt workflow bundle "594ms"
-[00:08:43.331] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:08:45.222] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:08:45.222] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:08:45.222] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764481385789}
+[00:00:05.962] Server  LOG      ✓ Ready in 5.1s
+[00:00:06.337] Server  LOG     Discovering workflow directives "1157ms"
+[00:00:06.372] Server  LOG     Created steps bundle "32ms"
+[00:00:06.446] Server  LOG     Created intermediate workflow bundle "63ms"
+[00:00:11.875] Server  LOG      ○ Compiling / ...
+[00:00:25.721] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:27.272] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:27.272] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:00:27.272] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764586647864}
+[00:00:29.091] Server  LOG      ○ Compiling /api/check-api-key ...
+[00:00:58.570] Browser ERROR   Error saving generation to localStorage: {}
+[00:01:22.518] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:22.732] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:01:22.732] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:01:22.732] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764586703321}
+[00:18:57.981] Server  ERROR   C:\Users\relay\Downloads\nan2\nano-main\.next\dev\server\chunks\ssr\5a584_b4b68d62._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:18:57.985] Server  ERROR   C:\Users\relay\Downloads\nan2\nano-main\.next\dev\server\chunks\ssr\[root-of-the-server]__f5181527._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:18:57.988] Server  ERROR    ⨯ Error: Vercel Blob: Access denied, please provide a valid token for this resource.
+[00:18:58.038] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:18:58.871] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:18:58.871] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:18:58.871] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764587758977}
+[00:19:07.821] Browser ERROR   Error caught by boundary: {"digest":"2671640611","environmentName":"Server","name":"Error"} {"componentStack":"\n    at Results (about://React/Server/C:%5CUsers%5Crelay%5CDownloads%5Cnan2%5Cnano-main%5C.next%5Cdev%5Cserver%5Cchunks%5Cssr%5C%5Broot-of-the-server%5D__f5181527._.js?34:328:240)\n    at Suspense (<anonymous>)\n    at div (<anonymous>)\n    at UploadedImagesProvider (http://localhost:3000/_next/static/chunks/Downloads_nan2_nano-main_76063410._.js:7081:35)\n    at SearchOverlayContent (about://React/Server/C:%5CUsers%5Crelay%5CDownloads%5Cnan2%5Cnano-main%5C.next%5Cdev%5Cserver%5Cchunks%5Cssr%5C%5Broot-of-the-server%5D__f5181527._.js?1:431:315)\n    at div (<anonymous>)\n    at div (<anonymous>)\n    at div (<anonymous>)\n    at div (<anonymous>)\n    at NavbarFlow (http://localhost:3000/_next/static/chunks/Downloads_nan2_nano-main_76063410._.js:5163:23)\n    at main (<anonymous>)\n    at Home (about://React/Server/C:%5CUsers%5Crelay%5CDownloads%5Cnan2%5Cnano-main%5C.next%5Cdev%5Cserver%5Cchunks%5Cssr%5C%5Broot-of-the-server%5D__f5181527._.js?0:494:321)\n    at SegmentViewNode (http://localhost:3000/_next/static/chunks/5a584_next_dist_6f987a86._.js:3299:28)\n    at InnerLayoutRouter (http://localhost:3000/_next/static/chunks/5a584_next_dist_7de4dffb._.js:390:34)\n    at RedirectErrorBoundary (http://localhost:3000/_next/static/chunks/5a584_next_dist_client_623ce449._.js:9325:9)\n    at RedirectBoundary (http://localhost:3000/_next/static/chunks/5a584_next_dist_client_623ce449._.js:9367:29)\n    at HTTPAccessFallbackErrorBoundary (http://localhost:3000/_next/static/chunks/5a584_next_dist_client_623ce449._.js:9815:9)\n    at HTTPAccessFallbackBoundary (http://localhost:3000/_next/static/chunks/5a584_next_dist_client_623ce449._.js:9890:39)\n    at LoadingBoundary (http://localhost:3000/_next/static/chunks/5a584_next_dist_7de4dffb._.js:496:32)\n    at ErrorBoundary (http://localhost:3000/_next/static/chunks/5a584_next_dist_client_623ce449._.js:1048:26)\n    at InnerScrollAndFocusHandler (http://localhost:3000/_next/static/chunks/5a584_next_dist_7de4dffb._.js:290:9)\n    at ScrollAndFocusHandler (http://localhost:3000/_next/static/chunks/5a584_next_dist_7de4dffb._.js:373:34)\n    at RenderFromTemplateContext (http://localhost:3000/_next/static/chunks/5a584_next_dist_7de4dffb._.js:769:44)\n    at SegmentStateProvider (http://localhost:3000/_next/static/chunks/5a584_next_dist_6f987a86._.js:3315:33)\n    at OuterLayoutRouter (http://localhost:3000/_next/static/chunks/5a584_next_dist_7de4dffb._.js:532:30)\n    at Suspense (<anonymous>)\n    at ErrorBoundary (http://localhost:3000/_next/static/chunks/Downloads_nan2_nano-main_d73ae025._.js:16:9)\n    at V (http://localhost:3000/_next/static/chunks/Downloads_nan2_nano-main_d73ae025._.js:625:24)\n    at J (http://localhost:3000/_next/static/chunks/Downloads_nan2_nano-main_d73ae025._.js:620:221)\n    at ThemeProvider (http://localhost:3000/_next/static/chunks/Downloads_nan2_nano-main_d73ae025._.js:93:26)\n    at body (<anonymous>)\n    at html (<anonymous>)\n    at RootLayout [Server] (<anonymous>)\n    at SegmentViewNode (http://localhost:3000/_next/static/chunks/5a584_next_dist_6f987a86._.js:3299:28)\n    at __next_root_layout_boundary__ (http://localhost:3000/_next/static/chunks/5a584_next_dist_6f987a86._.js:1666:64)\n    at RedirectErrorBoundary (http://localhost:3000/_next/static/chunks/5a584_next_dist_client_623ce449._.js:9325:9)\n    at RedirectBoundary (http://localhost:3000/_next/static/chunks/5a584_next_dist_client_623ce449._.js:9367:29)\n    at HTTPAccessFallbackErrorBoundary (http://localhost:3000/_next/static/chunks/5a584_next_dist_client_623ce449._.js:9815:9)\n    at HTTPAccessFallbackBoundary (http://localhost:3000/_next/static/chunks/5a584_next_dist_client_623ce449._.js:9890:39)\n    at DevRootHTTPAccessFallbackBoundary (http://localhost:3000/_next/static/chunks/5a584_next_dist_client_623ce449._.js:9959:46)\n    at AppDevOverlayErrorBoundary (http://localhost:3000/_next/static/chunks/5a584_next_dist_6f987a86._.js:3410:9)\n    at HotReload (http://localhost:3000/_next/static/chunks/5a584_next_dist_client_623ce449._.js:10953:22)\n    at Router (http://localhost:3000/_next/static/chunks/5a584_next_dist_client_623ce449._.js:11131:23)\n    at ErrorBoundaryHandler (http://localhost:3000/_next/static/chunks/5a584_next_dist_client_623ce449._.js:982:9)\n    at ErrorBoundary (http://localhost:3000/_next/static/chunks/5a584_next_dist_client_623ce449._.js:1048:26)\n    at RootErrorBoundary (http://localhost:3000/_next/static/chunks/5a584_next_dist_client_623ce449._.js:9639:30)\n    at AppRouter (http://localhost:3000/_next/static/chunks/5a584_next_dist_client_623ce449._.js:11448:22)\n    at ServerRoot (http://localhost:3000/_next/static/chunks/5a584_next_dist_client_623ce449._.js:12965:23)\n    at Root (http://localhost:3000/_next/static/chunks/5a584_next_dist_client_623ce449._.js:12983:17)"}
+[00:20:04.559] Server  LOG        Reload env: .env.local

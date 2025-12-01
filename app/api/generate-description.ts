@@ -1,7 +1,7 @@
 /** biome-ignore-all lint/suspicious/noConsole: "Handy for debugging" */
 
 import type { PutBlobResult } from "@vercel/blob";
-import { generateText, type ImagePart } from "ai";
+import { describeImageWithGrok } from "@/lib/grok/describeImage";
 import { FatalError, getStepMetadata, RetryableError } from "workflow";
 
 export const generateDescription = async (blob: PutBlobResult) => {
@@ -15,22 +15,7 @@ export const generateDescription = async (blob: PutBlobResult) => {
   );
 
   try {
-    const imagePart: ImagePart = {
-      type: "image",
-      image: blob.downloadUrl,
-      mediaType: blob.contentType,
-    };
-
-    const { text } = await generateText({
-      model: "xai/grok-2-vision",
-      system: "Describe the image in detail.",
-      messages: [
-        {
-          role: "user",
-          content: [imagePart],
-        },
-      ],
-    });
+    const text = await describeImageWithGrok(blob);
 
     console.log(
       `[${stepId}] Successfully generated description at ${stepStartedAt.toISOString()}`

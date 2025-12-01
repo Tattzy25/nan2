@@ -1,0 +1,25 @@
+```mermaid
+graph TD
+  A[User clicks Run<br/>components/image-combiner/input-section.tsx:273] --> B[Parent calls runGeneration<br/>components/image-combiner/index.tsx:678-680]
+  B --> C[generateImage()<br/>components/image-combiner/hooks/use-image-generation.ts:90]
+  C --> D[POST /api/generate-image<br/>components/image-combiner/hooks/use-image-generation.ts:186-190]
+  D --> E[Server handler<br/>app/api/generate-image/route.ts:1]
+
+  E -->|Text only| F[Return data: URL<br/>app/api/generate-image/route.ts:110-114]
+  E -->|Editing/combining| G[Upload to Blob, describe with Grok, index in Upstash<br/>app/api/upload-image.ts:24-36; app/api/generate-description.ts:18-24; app/api/index-image.ts:20-27]
+  G --> H[Return Blob download URL<br/>app/api/generate-image/route.ts:245-247]
+
+  F --> I[Mark complete & save URL<br/>components/image-combiner/hooks/use-image-generation.ts:209-225]
+  H --> I
+  I --> J[Render image on screen<br/>components/image-combiner/output-section.tsx:178-188]
+
+  C -.-> K[Progress bar updates while waiting<br/>components/image-combiner/hooks/use-image-generation.ts:138-161; components/image-combiner/output-section.tsx:164-170]
+
+  classDef client fill:#0ea5e9,stroke:#0369a1,stroke-width:1,color:#fff
+  classDef server fill:#22c55e,stroke:#166534,stroke-width:1,color:#052e16
+  classDef route fill:#f59e0b,stroke:#92400e,stroke-width:1,color:#1c1917
+
+  class A,B,C,I,J,K client
+  class D,E,F,H,G route
+```
+
