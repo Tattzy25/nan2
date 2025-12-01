@@ -19,6 +19,7 @@ import { Empty, EmptyDescription, EmptyHeader, EmptyTitle } from "./empty";
 import { Input } from "./input";
 import { Kbd } from "./kbd";
 import { useUploadedImages } from "./uploaded-images-provider";
+import { MyShitPage } from "./my-shit-page";
 
 type ResultsClientProps = {
   defaultData: ListBlobResult["blobs"];

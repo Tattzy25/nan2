@@ -8,7 +8,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
 interface ImageLightboxProps {
-  images: Array<{ url: string; alt?: string }>;
+  images: Array<{ url: string; alt?: string; title?: string; shortDesc?: string; longDesc?: string }>;
   currentIndex: number;
   isOpen: boolean;
   onClose: () => void;
@@ -338,9 +338,19 @@ export const ImageLightbox = ({
             style={{ backfaceVisibility: "hidden" }}
           >
             <Card className="w-full h-full border-0 shadow-none bg-white">
-              <CardContent className="p-0 h-full flex items-center justify-center">
-                <div className="text-gray-400 text-lg">
-                  Click to flip back
+              <CardContent className="p-4 h-full">
+                <div className="relative w-full h-full select-none">
+                  {/* Left side content: Title & Description */}
+                  <div className="absolute top-4 left-4 max-w-[45%]">
+                    <h2 className="text-lg font-semibold text-gray-900 leading-snug">
+                      {currentImage.title || currentImage.alt || `Image ${currentIndex + 1}`}
+                    </h2>
+                    <p className="mt-2 text-sm text-gray-600 break-words">
+                      {currentImage.shortDesc || currentImage.longDesc || 'No description available'}
+                    </p>
+                  </div>
+                  {/* Center vertical separator */}
+                  <div className="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-px bg-gray-200" />
                 </div>
               </CardContent>
             </Card>

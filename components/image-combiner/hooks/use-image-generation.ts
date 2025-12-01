@@ -217,6 +217,10 @@ export function useImageGeneration({
               createdAt: new Date().toISOString(),
               aspectRatio: effectiveAspectRatio,
               mode: currentMode,
+              title: data.title,
+              shortDesc: data.shortDesc,
+              longDesc: data.longDesc,
+              tags: data.tags,
             }
 
             setGenerations((prev) => prev.filter((gen) => gen.id !== generationId))

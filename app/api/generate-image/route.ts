@@ -5,7 +5,12 @@ import { uploadImage } from "../upload-image";
 import { generateDescription } from "../generate-description";
 import { indexImage } from "../index-image";
 import type { PutBlobResult } from "@vercel/blob";
-import type { SerializableFile } from "../process-image";
+interface SerializableFile {
+  buffer: ArrayBuffer
+  name: string
+  type: string
+  size: number
+}
 import crypto from 'crypto';
 
 export const dynamic = "force-dynamic"
@@ -18,6 +23,10 @@ interface GenerateImageResponse {
   url: string
   prompt: string
   description?: string
+  title?: string
+  shortDesc?: string
+  longDesc?: string
+  tags?: string[]
 }
 
 interface ErrorResponse {
@@ -107,12 +116,33 @@ export async function POST(request: NextRequest) {
       }
 
       const firstImage = imageFiles[0]
-      const imageUrl = `data:${firstImage.mediaType};base64,${firstImage.base64}`
-
+      const buffer = Buffer.from(firstImage.base64, 'base64')
+      const extension = firstImage.mediaType.split('/')[1]
+      const filename = `generated-${crypto.randomUUID()}.${extension}`
+      const arrayBuffer = buffer.buffer
+      const fileData: SerializableFile = {
+        buffer: arrayBuffer,
+        name: filename,
+        type: firstImage.mediaType,
+        size: buffer.length,
+      }
+      const blob = await uploadImage(fileData)
+      const grokData = await generateDescription(blob)
+      Promise.resolve().then(async () => {
+        await indexImage(blob, grokData, {
+          isPrivate: true,
+          generatedAt: new Date().toISOString(),
+          userType: 'free'
+        })
+      }).catch(() => {})
       return NextResponse.json<GenerateImageResponse>({
-        url: imageUrl,
+        url: blob.downloadUrl,
         prompt: prompt,
         description: result.text || "",
+        title: grokData.title,
+        shortDesc: grokData.shortDesc,
+        longDesc: grokData.longDesc,
+        tags: grokData.tags,
       })
     } else if (mode === "image-editing") {
       const image1 = formData.get("image1") as File
@@ -232,20 +262,22 @@ export async function POST(request: NextRequest) {
         size: buffer.length,
       };
       const blob = await uploadImage(fileData);
+      const grokData = await generateDescription(blob);
       Promise.resolve().then(async () => {
-        const desc = await generateDescription(blob);
-        await indexImage(blob, desc, {
+        await indexImage(blob, grokData, {
           isPrivate: true,
           generatedAt: new Date().toISOString(),
-          userType: 'free' // TODO: determine from session
         });
       }).catch(error => {
-        console.error('Background processing failed:', error);
       });
-      return NextResponse.json&lt;GenerateImageResponse&gt;({
+      return NextResponse.json<GenerateImageResponse>({
         url: blob.downloadUrl,
         prompt: editingPrompt,
         description: result.text || "",
+        title: grokData.title,
+        shortDesc: grokData.shortDesc,
+        longDesc: grokData.longDesc,
+        tags: grokData.tags,
       })
     } else {
       return NextResponse.json<ErrorResponse>(

@@ -6,7 +6,11 @@ import { FatalError, getStepMetadata, RetryableError } from "workflow";
 
 const upstash = Search.fromEnv();
 
-export const indexImage = async (blob: PutBlobResult, text: string) => {
+export const indexImage = async (
+  blob: PutBlobResult,
+  content: string | { title?: string; shortDesc?: string; longDesc?: string; tags?: string[]; text?: string },
+  extraMetadata?: Record<string, any>
+) => {
   "use step";
 
   const { attempt, stepStartedAt, stepId } = getStepMetadata();
@@ -18,12 +22,11 @@ export const indexImage = async (blob: PutBlobResult, text: string) => {
 
   try {
     const index = upstash.index("images");
-
-    // Store blob metadata in Upstash along with the description
+    const payloadContent = typeof content === "string" ? { text: content } : content;
     const result = await index.upsert({
       id: blob.pathname,
-      content: { text },
-      metadata: { ...blob },
+      content: payloadContent,
+      metadata: { ...blob, ...(extraMetadata || {}) },
     });
 
     console.log(

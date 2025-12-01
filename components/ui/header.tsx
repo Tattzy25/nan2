@@ -1,101 +1,55 @@
-import { CheckCircle2Icon, ImageUpIcon } from "lucide-react";
-import { DeployButton } from "./deploy";
-import { Button } from "@/components/ui/button"
+"use client";
 
-export const Header = () => (
-  <div className="flex flex-col gap-8 sm:gap-12">
-    <div className="flex flex-col gap-4">
-      <div className="flex items-center gap-2">
-        <ImageUpIcon className="size-4" />
-        <h1 className="font-semibold tracking-tight">vectr.store</h1>
-      </div>
-      <p className="text-balance text-muted-foreground">
-        A free, open-source template for building natural language image search
-        on the AI Cloud.
-      </p>
-      <p className="text-muted-foreground text-sm italic">
-        Try searching for "water" or "desert".
-      </p>
-    </div>
-    <ul className="flex flex-col gap-2 text-muted-foreground sm:gap-4">
-      <li className="flex gap-2">
-        <CheckCircle2Icon className="mt-0.5 size-4 shrink-0" />
-        <p className="text-sm">
-          Uploads images to{" "}
-          <a
-            className="underline"
-            href="https://vercel.com/storage"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Vercel Blob Storage
-          </a>
-        </p>
-      </li>
-      <li className="flex gap-2">
-        <CheckCircle2Icon className="mt-0.5 size-4 shrink-0" />
-        <p className="text-sm">
-          Generates descriptions using Grok 2 Vision AI through the{" "}
-          <a
-            className="underline"
-            href="https://ai-sdk.dev/"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            AI SDK
-          </a>{" "}
-          +{" "}
-          <a
-            className="underline"
-            href="https://vercel.com/ai-gateway"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Gateway
-          </a>
-        </p>
-      </li>
-      <li className="flex gap-2">
-        <CheckCircle2Icon className="mt-0.5 size-4 shrink-0" />
-        <p className="text-sm">
-          Indexes descriptions in{" "}
-          <a
-            className="underline"
-            href="https://upstash.com/docs/search/overall/getstarted"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Upstash Vector Search
-          </a>
-        </p>
-      </li>
-      <li className="flex gap-2">
-        <CheckCircle2Icon className="mt-0.5 size-4 shrink-0" />
-        <p className="text-sm">
-          Uses{" "}
-          <a
-            className="underline"
-            href="https://useworkflow.dev/"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Vercel Workflow
-          </a>{" "}
-          for resilient processing
-        </p>
-      </li>
-    </ul>
-    <div className="flex gap-2">
-      <DeployButton />
-      <Button asChild size="sm" variant="outline">
-        <a
-          href="https://github.com/vercel/vectr"
-          rel="noopener noreferrer"
-          target="_blank"
+import { cn } from "@/lib/utils";
+import { Skull } from "lucide-react";
+
+interface HeaderProps {
+  activeTab: "gallery" | "my-shit";
+  onTabChange: (tab: "gallery" | "my-shit") => void;
+}
+
+export const Header = ({ activeTab, onTabChange }: HeaderProps) => (
+  <nav className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <div className="w-full flex h-14 items-center justify-between px-4">
+      {/* Left spacer for balance */}
+      <div className="w-[200px]"></div>
+      
+      {/* Center navigation */}
+      <div className="flex gap-6 md:gap-10">
+        <button
+          onClick={() => onTabChange("gallery")}
+          className={cn(
+            "relative flex items-center text-sm font-medium transition-all hover:text-foreground/80 px-3 py-2 rounded-md",
+            activeTab === "gallery" 
+              ? "text-foreground bg-accent" 
+              : "text-foreground/60"
+          )}
         >
-          Source code
-        </a>
-      </Button>
+          Gallery
+        </button>
+        <button
+          onClick={() => onTabChange("my-shit")}
+          className={cn(
+            "relative flex items-center text-sm font-medium transition-all hover:text-foreground/80 px-3 py-2 rounded-md",
+            activeTab === "my-shit" 
+              ? "text-foreground bg-accent" 
+              : "text-foreground/60"
+          )}
+        >
+          My Shit
+        </button>
+      </div>
+      
+      {/* Right side actions */}
+      <div className="flex items-center gap-3">
+        <button className="inline-flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors">
+          <Skull className="size-4" />
+          Ink It Now
+        </button>
+        <div className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white text-sm font-semibold cursor-pointer hover:ring-2 hover:ring-primary transition-all">
+          A
+        </div>
+      </div>
     </div>
-  </div>
+  </nav>
 );

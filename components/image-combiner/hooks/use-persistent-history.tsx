@@ -4,13 +4,18 @@ import { useState, useEffect, useRef, useCallback } from "react"
 import type { Generation } from "../types"
 
 const STORAGE_KEY = "nb2_generations"
-const MAX_STORED = 50
+const MAX_STORED = 12
+const MAX_BYTES = 4_000_000
 
 function getLocalGenerations(): Generation[] {
   try {
     const stored = localStorage.getItem(STORAGE_KEY)
     if (!stored) return []
-    return JSON.parse(stored)
+    const parsed: Generation[] = JSON.parse(stored)
+    const sanitized = parsed.map((g) =>
+      g.imageUrl && g.imageUrl.startsWith("data:") ? { ...g, imageUrl: null } : g,
+    )
+    return sanitized
   } catch (error) {
     console.error("Error loading generations from localStorage:", error)
     return []
@@ -20,10 +25,23 @@ function getLocalGenerations(): Generation[] {
 function saveLocalGeneration(generation: Generation) {
   try {
     const current = getLocalGenerations()
-    const updated = [generation, ...current].slice(0, MAX_STORED)
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(updated))
+    let updated = [generation, ...current].slice(0, MAX_STORED)
+    updated = updated.map((g) =>
+      g.imageUrl && g.imageUrl.startsWith("data:") ? { ...g, imageUrl: null } : g,
+    )
+    let json = JSON.stringify(updated)
+    while (json.length > MAX_BYTES && updated.length > 1) {
+      updated = updated.slice(0, Math.max(1, Math.floor(updated.length * 0.8)))
+      json = JSON.stringify(updated)
+    }
+    localStorage.setItem(STORAGE_KEY, json)
   } catch (error) {
-    console.error("Error saving generation to localStorage:", error)
+    try {
+      const minimal = [{ ...generation, imageUrl: null }]
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(minimal))
+    } catch (e) {
+      console.error("Error saving generation to localStorage:", e)
+    }
   }
 }
 
@@ -31,7 +49,10 @@ function deleteLocalGeneration(id: string) {
   try {
     const current = getLocalGenerations()
     const updated = current.filter((g) => g.id !== id)
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(updated))
+    const sanitized = updated.map((g) =>
+      g.imageUrl && g.imageUrl.startsWith("data:") ? { ...g, imageUrl: null } : g,
+    )
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(sanitized))
   } catch (error) {
     console.error("Error deleting generation from localStorage:", error)
   }

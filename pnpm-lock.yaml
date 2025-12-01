@@ -52,7 +52,7 @@ importers:
         version: 2.0.0
       ai:
         specifier: latest
-        version: 5.0.104(zod@4.1.13)
+        version: 5.0.105(zod@4.1.13)
       autoprefixer:
         specifier: ^10.4.20
         version: 10.4.22(postcss@8.5.6)
@@ -2073,8 +2073,8 @@ packages:
     resolution: {integrity: sha512-MnA+YT8fwfJPgBx3m60MNqakm30XOkyIoH1y6huTQvC0PwZG7ki8NacLBcrPbNoo8vEZy7Jpuk7+jMO+CUovTQ==}
     engines: {node: '>= 14'}
 
-  ai@5.0.104:
-    resolution: {integrity: sha512-MZOkL9++nY5PfkpWKBR3Rv+Oygxpb9S16ctv8h91GvrSif7UnNEdPMVZe3bUyMd2djxf0AtBk/csBixP0WwWZQ==}
+  ai@5.0.105:
+    resolution: {integrity: sha512-waQZAvv44KYzys6S3l25ti2jcSuJnkyWFTliSKy3swASL6w6ttPxJTm80d+v9sLWoIxrqE3OwhTJbweNp065fg==}
     engines: {node: '>=18'}
     peerDependencies:
       zod: ^3.25.76 || ^4.1.8
@@ -6367,7 +6367,7 @@ snapshots:
 
   agent-base@7.1.4: {}
 
-  ai@5.0.104(zod@4.1.13):
+  ai@5.0.105(zod@4.1.13):
     dependencies:
       '@ai-sdk/gateway': 2.0.17(zod@4.1.13)
       '@ai-sdk/provider': 2.0.0

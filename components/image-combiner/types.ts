@@ -3,6 +3,10 @@ export interface GeneratedImage {
   url: string
   prompt: string
   description?: string
+  title?: string
+  shortDesc?: string
+  longDesc?: string
+  tags?: string[]
 }
 
 export interface Generation {
@@ -15,6 +19,10 @@ export interface Generation {
   timestamp: number
   abortController?: AbortController
   thumbnailLoaded?: boolean
+  title?: string
+  shortDesc?: string
+  longDesc?: string
+  tags?: string[]
 }
 
 export type AspectRatioOption = {

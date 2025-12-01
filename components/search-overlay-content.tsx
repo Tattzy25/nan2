@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import { Header } from "@/components/ui/header";
+import { SearchOverlayClient } from "@/components/ui/search-overlay-client";
 import { Results } from "@/components/ui/results";
 import { UploadedImagesProvider } from "@/components/ui/uploaded-images-provider";
 
@@ -20,9 +20,11 @@ const ImagesSkeleton = () => (
 
 export const SearchOverlayContent = () => (
   <UploadedImagesProvider>
-    <div className="container relative mx-auto px-4 py-8">
+    <div className="min-h-screen">
       <Suspense fallback={<ImagesSkeleton />}>
-        <Results showUploadButton={false} />
+        <SearchOverlayClient>
+          <Results showUploadButton={false} />
+        </SearchOverlayClient>
       </Suspense>
     </div>
   </UploadedImagesProvider>
