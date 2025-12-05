@@ -1,8 +1,0 @@
-[00:00:04.765] Server  LOG      ✓ Ready in 4.3s
-[00:07:20.932] Server  LOG      ○ Compiling / ...
-[00:07:26.094] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:07:27.514] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:07:27.514] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:07:27.514] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764925978192}
-[00:07:54.350] Server  LOG     Rebuilt steps bundle "165ms"
-[00:07:55.861] Server  LOG     Rebuilt workflow bundle "1508ms"
