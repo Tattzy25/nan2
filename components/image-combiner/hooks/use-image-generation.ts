@@ -226,9 +226,8 @@ export function useImageGeneration({
             setGenerations((prev) => prev.filter((gen) => gen.id !== generationId))
 
             await addGeneration(completedGeneration)
-          }
-
-          if (selectedGenerationId === generationId) {
+            // Set imageLoaded to true after adding the completed generation
+            // The useEffect in index.tsx only resets this when selectedGenerationId changes
             setImageLoaded(true)
           }
 
