@@ -1,19 +1,19 @@
 {
   "node": {
-    "7f793d4e6d4992ac8bc0c0e87c8f6933afad30e4e6": {
+    "7feb492ffe780b59e758ba1075c858324f7c78444d": {
       "workers": {
         "app/page": {
-          "moduleId": 50587,
+          "moduleId": 51354,
           "async": false,
           "exportedName": "search",
-          "filename": "Downloads/nan2/nano-main/app/actions/search.ts"
+          "filename": "app/actions/search.ts"
         }
       },
       "layer": {
         "app/page": "action-browser"
       },
       "exportedName": "search",
-      "filename": "Downloads/nan2/nano-main/app/actions/search.ts"
+      "filename": "app/actions/search.ts"
     }
   },
   "edge": {}
