@@ -23,7 +23,7 @@ pnpm build
 # Start development server
 pnpm dev
 
-# Lint with ultracite/biome (note: "pnpm lint" requires configuration)
+# Lint with ultracite (uses Biome internally)
 pnpm check
 
 # Format code
