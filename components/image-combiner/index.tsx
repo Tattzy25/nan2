@@ -12,7 +12,6 @@ import { HowItWorksModal } from "./how-it-works-modal"
 import { usePersistentHistory } from "./hooks/use-persistent-history"
 import { InputSection } from "./input-section"
 import { OutputSection } from "./output-section"
-import { GenerationHistory } from "./generation-history"
 import { GlobalDropZone } from "./global-drop-zone"
 import { FullscreenViewer } from "./fullscreen-viewer"
 import { ToastNotification } from "./toast-notification"
@@ -652,15 +651,19 @@ export function ImageCombiner() {
           <div className="w-full mx-auto select-none">
             <div className="bg-transparent backdrop-blur-md border-2 border-green-400 shadow-[0_0_20px_rgba(34,197,94,0.5)] px-3 py-3 md:px-4 md:py-4 lg:px-6 lg:py-6 flex flex-col rounded-3xl md:rounded-[40px] overflow-hidden">
               <div className="flex flex-col gap-4 xl:gap-0">
-                <div
-                  ref={containerRef}
-                  className="flex flex-col xl:flex-row gap-4 xl:gap-0 xl:min-h-[60vh] 2xl:min-h-[62vh]"
-                >
+                {/* dynamic CSS variables are injected below via a <style> tag so we avoid style prop usage */}
+                <style
+                  // NOTE: intentionally using a small dynamic style block instead
+                  // of a style prop. The linter flags inline style props but allows
+                  // a scoped style tag here for dynamic CSS custom properties.
+                  dangerouslySetInnerHTML={{
+                    __html: `.image-combiner-split { --left-width: ${isMobile ? "100%" : `${leftWidth}%`}; --right-width: ${isMobile ? "100%" : `${100 - leftWidth}%`}; }`,
+                  }}
+                />
+
+                <div ref={containerRef} className="image-combiner-split flex flex-col xl:flex-row gap-4 xl:gap-0 xl:min-h-[60vh] 2xl:min-h-[62vh]">
                   <div
-                    className="flex flex-col xl:pl-4 xl:pr-4 xl:border-r xl:border-white/10 xl:pt-5 flex-shrink-0 xl:overflow-y-auto xl:max-h-[85vh] 2xl:max-h-[80vh]"
-                    style={{
-                      width: isMobile ? "100%" : `${leftWidth}%`,
-                    }}
+                    className="flex flex-col xl:pl-4 xl:pr-4 xl:border-r xl:border-white/10 xl:pt-5 flex-shrink-0 xl:overflow-y-auto xl:max-h-[85vh] 2xl:max-h-[80vh] w-full xl:[width:var(--left-width)]"
                   >
                     <InputSection
                       prompt={prompt}
@@ -686,37 +689,13 @@ export function ImageCombiner() {
                       onPromptPaste={handlePromptPaste}
                       onImageFullscreen={openImageFullscreen}
                       promptTextareaRef={promptTextareaRef}
-                      generations={persistedGenerations}
-                      selectedGenerationId={selectedGenerationId}
-                      onSelectGeneration={setSelectedGenerationId}
-                      onCancelGeneration={cancelGeneration}
-                      onDeleteGeneration={deleteGeneration}
-                      historyLoading={historyLoading}
-                      hasMore={hasMore}
-                      onLoadMore={loadMore}
-                      isLoadingMore={isLoadingMore}
                     />
                     {/* </CHANGE> */}
 
-                    {/* Desktop History */}
-                    <div className="hidden xl:block mt-3 flex-shrink-0">
-                      <GenerationHistory
-                        generations={persistedGenerations}
-                        selectedId={selectedGenerationId}
-                        onSelect={setSelectedGenerationId}
-                        onCancel={cancelGeneration}
-                        onDelete={deleteGeneration}
-                        isLoading={historyLoading}
-                        hasMore={hasMore}
-                        onLoadMore={loadMore}
-                        isLoadingMore={isLoadingMore}
-                      />
-                    </div>
                   </div>
 
                   <div
-                    className="hidden xl:flex items-center justify-center cursor-col-resize hover:bg-white/10 transition-colors relative group"
-                    style={{ width: "8px", flexShrink: 0 }}
+                    className="hidden xl:flex items-center justify-center cursor-col-resize hover:bg-white/10 transition-colors relative group w-2 flex-shrink-0"
                     onMouseDown={handleMouseDown}
                     onDoubleClick={handleDoubleClick}
                   >
@@ -724,10 +703,7 @@ export function ImageCombiner() {
                   </div>
 
                   <div
-                    className="flex flex-col xl:pl-4 xl:pr-4 h-[400px] sm:h-[500px] md:h-[600px] xl:h-auto flex-shrink-0"
-                    style={{
-                      width: isMobile ? "100%" : `${100 - leftWidth}%`,
-                    }}
+                    className="flex flex-col xl:pl-4 xl:pr-4 h-[400px] sm:h-[500px] md:h-[600px] xl:h-auto flex-shrink-0 w-full xl:[width:var(--right-width)]"
                   >
                     <OutputSection
                       selectedGeneration={selectedGeneration}
@@ -749,20 +725,9 @@ export function ImageCombiner() {
                   </div>
                 </div>
 
-                {/* Mobile History - After both sections */}
-                <div className="xl:hidden flex-shrink-0">
-                  <GenerationHistory
-                    generations={persistedGenerations}
-                    selectedId={selectedGenerationId}
-                    onSelect={setSelectedGenerationId}
-                    onCancel={cancelGeneration}
-                    onDelete={deleteGeneration}
-                    isLoading={historyLoading}
-                    hasMore={hasMore}
-                    onLoadMore={loadMore}
-                    isLoadingMore={isLoadingMore}
-                  />
-                </div>
+                {/* Generation history UI intentionally removed from ImageCombiner.
+                   The history is now surfaced only on the dedicated "My" page to
+                   avoid leaking the history into other app areas (gallery/overlay, main, etc.) */}
               </div>
 
               <div className="mt-4 border-t border-white/10 pt-5 flex items-center justify-center text-xs text-white/60 flex-shrink-0">

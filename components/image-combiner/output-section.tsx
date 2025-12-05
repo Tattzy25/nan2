@@ -7,6 +7,7 @@ import { ProgressBar } from "./progress-bar"
 import { useMobile } from "@/hooks/use-mobile"
 import type { Generation } from "./types"
 import { useEffect } from "react"
+import { useFavorites } from "@/hooks/use-favorites"
 
 const actionButtonClass =
   "text-sm h-10 px-3 md:px-4 bg-transparent text-white hover:bg-black/30 flex items-center gap-2 backdrop-blur-sm disabled:opacity-50 disabled:cursor-not-allowed rounded-xl md:rounded-2xl border border-white/20"
@@ -85,52 +86,25 @@ export function OutputSection({
       ? { url: selectedGeneration.imageUrl, prompt: selectedGeneration.prompt }
       : null
 
+  const { toggle: toggleFavorite, isFavorite } = useFavorites()
+
   const renderButtons = (className?: string) => (
     <div className={className}>
       <div className="flex items-center gap-2">
         <Button
-          onClick={() => {/* TODO: like/favorite handler */}}
+          onClick={() => {
+            if (!generatedImage) return
+            toggleFavorite(generatedImage.url)
+          }}
           disabled={!generatedImage}
           variant="outline"
           size="lg"
           className={actionButtonClass}
           title="Like"
         >
-          <Heart className="size-4" />
+          <Heart className={cn("size-4", generatedImage && isFavorite(generatedImage.url) ? "text-rose-400" : "")} />
         </Button>
 
-        <Button
-          onClick={onCopy}
-          disabled={!generatedImage}
-          variant="outline"
-          size="lg"
-          className={actionButtonClass}
-          title="Copy to clipboard"
-        >
-          <CopyIcon className="size-4" />
-        </Button>
-
-        <Button
-          onClick={onDownload}
-          disabled={!generatedImage}
-          variant="outline"
-          size="lg"
-          className={actionButtonClass}
-          title="Download image"
-        >
-          <Download className="size-4" />
-        </Button>
-
-        <Button
-          onClick={onOpenInNewTab}
-          disabled={!generatedImage}
-          variant="outline"
-          size="lg"
-          className={actionButtonClass}
-          title="Share / Open in new tab"
-        >
-          <Share2 className="size-4" />
-        </Button>
 
         <Button
           onClick={onLoadAsInput}
@@ -144,16 +118,6 @@ export function OutputSection({
           <span className="hidden sm:inline">Use this pic</span>
         </Button>
 
-        <Button
-          onClick={() => {/* TODO: upload to gallery */}}
-          disabled={!generatedImage}
-          variant="outline"
-          size="lg"
-          className={actionButtonClass}
-          title="Upload to gallery"
-        >
-          <Upload className="size-4" />
-        </Button>
       </div>
     </div>
   )

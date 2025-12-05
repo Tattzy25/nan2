@@ -35,16 +35,17 @@ export const processImage = async (fileData: SerializableFile) => {
     );
 
     // Step 2: Generate description using AI
-    console.log("[WORKFLOW] Step 2/3: Generating description");
+    console.log("[WORKFLOW] Step 2/2: Generating description");
     const text = await generateDescription(blob);
     console.log(
-      `[WORKFLOW] Step 2/3 complete. Generated ${text.length} characters`
+      `[WORKFLOW] Step 2/2 complete. Generated ${text.length} characters`
     );
 
-    // Step 3: Index in search with metadata
-    console.log("[WORKFLOW] Step 3/3: Indexing in search");
-    await indexImage(blob, { title: text, shortDesc: text, longDesc: text, tags: [], categories: [] });
-    console.log("[WORKFLOW] Step 3/3 complete. Image indexed successfully");
+    // Step 3: Index in search with metadata - REMOVED
+    // console.log("[WORKFLOW] Step 3/3: Indexing in search");
+    // await indexImage(blob, { title: text, shortDesc: text, longDesc: text, tags: [], categories: [] });
+    // console.log("[WORKFLOW] Step 3/3 complete. Image indexed successfully");
+    // Upstash Search is now only used for image gallery, not generation workflow
 
     const workflowDuration = Date.now() - workflowStartTime;
     console.log(

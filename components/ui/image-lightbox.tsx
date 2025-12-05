@@ -239,8 +239,8 @@ export const ImageLightbox = ({
     >
       {/* Close button */}
       <Button
-        variant="ghost"
-        size="icon"
+        variant="outline"
+        size="icon-lg"
         className="absolute top-2 right-2 sm:top-4 sm:right-4 z-10 text-white hover:bg-white/20 rounded-full w-8 h-8 sm:w-10 sm:h-10"
         onClick={(e) => {
           e.stopPropagation();
@@ -254,8 +254,8 @@ export const ImageLightbox = ({
       {/* Navigation buttons - Hidden on mobile, visible on larger screens */}
       {hasPrevious && (
         <Button
-          variant="ghost"
-          size="icon"
+          variant="outline"
+          size="icon-lg"
           className="hidden sm:flex absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-10 text-white hover:bg-white/20 rounded-full w-8 h-8 sm:w-10 sm:h-10"
           onClick={(e) => goToPrevious(e)}
           aria-label="Previous image"
@@ -266,8 +266,8 @@ export const ImageLightbox = ({
 
       {hasNext && (
         <Button
-          variant="ghost"
-          size="icon"
+          variant="outline"
+          size="icon-lg"
           className="hidden sm:flex absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-10 text-white hover:bg-white/20 rounded-full w-8 h-8 sm:w-10 sm:h-10"
           onClick={(e) => goToNext(e)}
           aria-label="Next image"
@@ -276,13 +276,13 @@ export const ImageLightbox = ({
         </Button>
       )}
 
-      {/* Image counter */}
-      <div 
+      {/* Image counter - REMOVED as requested */}
+      {/* <div
         className="absolute top-2 left-1/2 -translate-x-1/2 z-10 bg-black/50 px-2 py-1 sm:px-3 sm:py-1 rounded-full text-white text-xs sm:text-sm"
         onClick={(e) => e.stopPropagation()}
       >
         {currentIndex + 1} / {images.length}
-      </div>
+      </div> */}
 
       {/* Flip card container */}
       <div 
@@ -358,8 +358,8 @@ export const ImageLightbox = ({
         </div>
       </div>
 
-      {/* Instructions */}
-      <div 
+      {/* Instructions - REMOVED confusing note */}
+      {/* <div
         className="absolute bottom-2 left-1/2 -translate-x-1/2 z-10 bg-black/50 px-3 py-1 sm:px-4 sm:py-2 rounded-lg text-white text-xs sm:text-sm text-center"
         onClick={(e) => e.stopPropagation()}
       >
@@ -372,7 +372,15 @@ export const ImageLightbox = ({
           <span className="hidden xs:inline">•</span>
           <span>ESC to close</span>
         </div>
-      </div>
+      </div> */}
+
+      {/* Simple "Click to flip" message - REMOVED as requested */}
+      {/* <div
+        className="absolute top-[calc(50%+100px)] left-1/2 -translate-x-1/2 z-10 bg-black/50 px-3 py-1 sm:px-4 sm:py-2 rounded-lg text-white text-xs sm:text-sm text-center"
+        onClick={(e) => e.stopPropagation()}
+      >
+        Click to flip
+      </div> */}
 
       {/* Loading indicator */}
       {!isImageLoaded && (

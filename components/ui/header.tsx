@@ -1,54 +1,82 @@
 "use client";
 
-import { cn } from "@/lib/utils";
+import {
+  NavigationMenu,
+  NavigationMenuList,
+  NavigationMenuItem,
+  NavigationMenuLink,
+} from "@/components/ui/navigation-menu";
+import { Button } from "@/components/ui/button";
 import { Skull } from "lucide-react";
 
 interface HeaderProps {
   activeTab: "gallery" | "my-shit";
   onTabChange: (tab: "gallery" | "my-shit") => void;
+  onClose?: () => void;
 }
 
-export const Header = ({ activeTab, onTabChange }: HeaderProps) => (
+export const Header = ({ activeTab, onTabChange, onClose }: HeaderProps) => (
   <nav className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
     <div className="w-full flex h-14 items-center justify-between px-4">
       {/* Left spacer for balance */}
       <div className="w-[200px]"></div>
-      
-      {/* Center navigation */}
-      <div className="flex gap-6 md:gap-10">
-        <button
-          onClick={() => onTabChange("gallery")}
-          className={cn(
-            "relative flex items-center text-sm font-medium transition-all hover:text-foreground/80 px-3 py-2 rounded-md",
-            activeTab === "gallery" 
-              ? "text-foreground bg-accent" 
-              : "text-foreground/60"
-          )}
+
+      {/* Center navigation using NavigationMenu */}
+      <NavigationMenu viewport={false}>
+        <NavigationMenuList className="gap-12">
+          <NavigationMenuItem>
+            <Button asChild variant="ghost" size="lg">
+              <NavigationMenuLink
+                href="#"
+                data-active={activeTab === "gallery"}
+                onClick={(e) => {
+                  e.preventDefault();
+                  onTabChange("gallery");
+                }}
+              >
+                Gallery
+              </NavigationMenuLink>
+            </Button>
+          </NavigationMenuItem>
+          <NavigationMenuItem>
+            <Button asChild variant="ghost" size="lg">
+              <NavigationMenuLink
+                href="#"
+                data-active={activeTab === "my-shit"}
+                onClick={(e) => {
+                  e.preventDefault();
+                  onTabChange("my-shit");
+                }}
+              >
+                My Shit
+              </NavigationMenuLink>
+            </Button>
+          </NavigationMenuItem>
+        </NavigationMenuList>
+      </NavigationMenu>
+
+      {/* Right side - Close button */}
+      <div className="w-[200px] flex justify-end">
+        <Button
+          onClick={() => {
+            if (typeof onClose === "function") {
+              onClose()
+              return
+            }
+            try {
+              window.dispatchEvent(new CustomEvent("close-overlay"))
+            } catch (e) {
+              // ignore
+            }
+          }}
+          variant="default"
+          size="lg"
+          aria-label="Get inked now — close overlay"
+          className="inline-flex items-center gap-3"
         >
-          Gallery
-        </button>
-        <button
-          onClick={() => onTabChange("my-shit")}
-          className={cn(
-            "relative flex items-center text-sm font-medium transition-all hover:text-foreground/80 px-3 py-2 rounded-md",
-            activeTab === "my-shit" 
-              ? "text-foreground bg-accent" 
-              : "text-foreground/60"
-          )}
-        >
-          My Shit
-        </button>
-      </div>
-      
-      {/* Right side actions */}
-      <div className="flex items-center gap-3">
-        <button className="inline-flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors">
-          <Skull className="size-4" />
-          Ink It Now
-        </button>
-        <div className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white text-sm font-semibold cursor-pointer hover:ring-2 hover:ring-primary transition-all">
-          A
-        </div>
+          <Skull className="size-5" />
+          <span className="text-base font-medium leading-none">gEt iNkd nOw</span>
+        </Button>
       </div>
     </div>
   </nav>

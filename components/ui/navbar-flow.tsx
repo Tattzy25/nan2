@@ -49,6 +49,13 @@ const NavbarFlow: React.FC<NavbarFlowProps> = ({
     }
   };
 
+  // Listen for a custom 'close-overlay' event dispatched by other components (header, etc.)
+  useEffect(() => {
+    const handler = () => setIsOverlayOpen(false)
+    window.addEventListener("close-overlay", handler)
+    return () => window.removeEventListener("close-overlay", handler)
+  }, [])
+
   useEffect(() => {
     const detectMobile = () => {
       setMobileView(window.innerWidth < 768);

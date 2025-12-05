@@ -3,6 +3,7 @@
 import type { Generation } from "./types"
 import { Button } from "@/components/ui/button"
 import { Download, Heart, Copy as CopyIcon, Share2, Upload } from "lucide-react"
+import { useFavorites } from "@/hooks/use-favorites"
 
 interface FullscreenViewerProps {
   imageUrl: string
@@ -17,6 +18,8 @@ export function FullscreenViewer({ imageUrl, generations, onClose, onNavigate }:
 
   const overlayButtonClass =
     "text-sm h-10 px-3 bg-black/40 text-white hover:bg-black/60 flex items-center gap-2 backdrop-blur-sm rounded-xl border border-white/20"
+
+  const { toggle: toggleFavorite, isFavorite } = useFavorites()
 
   return (
     <div
@@ -70,8 +73,14 @@ export function FullscreenViewer({ imageUrl, generations, onClose, onNavigate }:
         {/* Centered overlay action buttons */}
         <div className="absolute top-6 left-1/2 -translate-x-1/2 z-20">
           <div className="flex items-center gap-2">
-            <Button variant="outline" size="lg" className={overlayButtonClass} title="Like">
-              <Heart className="size-4" />
+            <Button
+              variant="outline"
+              size="lg"
+              className={overlayButtonClass}
+              title="Like"
+              onClick={() => toggleFavorite(imageUrl)}
+            >
+              <Heart className={`size-4 ${isFavorite(imageUrl) ? "text-rose-400" : ""}`} />
             </Button>
             <Button variant="outline" size="lg" className={overlayButtonClass} title="Copy">
               <CopyIcon className="size-4" />

@@ -128,13 +128,8 @@ export async function POST(request: NextRequest) {
       }
       const blob = await uploadImage(fileData)
       const grokData = await generateDescription(blob)
-      Promise.resolve().then(async () => {
-        await indexImage(blob, grokData, {
-          isPrivate: true,
-          generatedAt: new Date().toISOString(),
-          userType: 'free'
-        })
-      }).catch(() => {})
+      // REMOVED: Upstash indexing from image generation pipeline
+      // Upstash Search is now only used for image gallery, not generation
       return NextResponse.json<GenerateImageResponse>({
         url: blob.downloadUrl,
         prompt: prompt,
@@ -263,13 +258,8 @@ export async function POST(request: NextRequest) {
       };
       const blob = await uploadImage(fileData);
       const grokData = await generateDescription(blob);
-      Promise.resolve().then(async () => {
-        await indexImage(blob, grokData, {
-          isPrivate: true,
-          generatedAt: new Date().toISOString(),
-        });
-      }).catch(error => {
-      });
+      // REMOVED: Upstash indexing from image generation pipeline
+      // Upstash Search is now only used for image gallery, not generation
       return NextResponse.json<GenerateImageResponse>({
         url: blob.downloadUrl,
         prompt: editingPrompt,

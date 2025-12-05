@@ -46,20 +46,7 @@ interface InputSectionProps {
   onPromptPaste: (e: React.ClipboardEvent<HTMLTextAreaElement>) => void
   onImageFullscreen: (url: string) => void
   promptTextareaRef: React.RefObject<HTMLTextAreaElement>
-  isAuthenticated: boolean
-  remaining: number
-  decrementOptimistic: () => void
-  usageLoading: boolean
-  onShowAuthModal: () => void
-  generations: any[]
-  selectedGenerationId: string | null
-  onSelectGeneration: (id: string) => void
-  onCancelGeneration: (id: string) => void
-  onDeleteGeneration: (id: string) => Promise<void>
-  historyLoading: boolean
-  hasMore: boolean
-  onLoadMore: () => void
-  isLoadingMore: boolean
+  // NOTE: history-related props were removed — GenerationHistory is now rendered only on the "My" page.
 }
 
 export function InputSection({
