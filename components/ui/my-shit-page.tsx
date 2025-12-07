@@ -45,14 +45,14 @@ export const MyShitPage = () => {
               {persistedGenerations.length === 0 ? (
                 // show a single branded placeholder slide when there are no generations
                 <CarouselItem className="basis-1/4">
-                  <div className="aspect-square rounded-[2rem] overflow-hidden border border-white/8 bg-neutral-900/40 flex items-center justify-center">
+                  <div className="aspect-square rounded-xl overflow-hidden border border-white/8 bg-neutral-900/40 flex items-center justify-center">
                     <img src="/ink fever.svg" alt="Generated images placeholder" className="w-full h-full object-cover" />
                   </div>
                 </CarouselItem>
               ) : (
                 persistedGenerations.map((g) => (
                   <CarouselItem className="basis-1/4" key={g.id}>
-                    <div className="aspect-square rounded-[2rem] overflow-hidden border border-white/8 bg-neutral-900/40">
+                    <div className="aspect-square rounded-xl overflow-hidden border border-white/8 bg-neutral-900/40">
                       <img src={g.imageUrl ?? "/placeholder.svg"} alt={g.prompt ?? "Generated"} className="w-full h-full object-cover" />
                     </div>
                   </CarouselItem>
@@ -72,14 +72,14 @@ export const MyShitPage = () => {
               {likedImages.length === 0 ? (
                 // single branded placeholder slide for saved images when empty
                 <CarouselItem className="basis-1/4">
-                  <div className="aspect-square rounded-[2rem] overflow-hidden border border-white/8 bg-neutral-900/40 flex items-center justify-center">
+                  <div className="aspect-square rounded-xl overflow-hidden border border-white/8 bg-neutral-900/40 flex items-center justify-center">
                     <img src="/ink fever.svg" alt="Ink Fever placeholder" className="w-full h-full object-cover" />
                   </div>
                 </CarouselItem>
               ) : (
                 likedImages.map((img: string, idx: number) => (
                   <CarouselItem className="basis-1/4" key={`liked-${idx}`}>
-                    <div className="aspect-square rounded-[2rem] overflow-hidden border border-white/8 bg-neutral-900/40">
+                    <div className="aspect-square rounded-xl overflow-hidden border border-white/8 bg-neutral-900/40">
                       <img src={img} alt={`Saved ${idx + 1}`} className="w-full h-full object-cover" />
                     </div>
                   </CarouselItem>

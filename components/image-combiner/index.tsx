@@ -111,10 +111,15 @@ export function ImageCombiner() {
   const canGenerate = prompt.trim().length > 0 && (currentMode === "text-to-image" || (useUrls ? image1Url : image1))
 
   useEffect(() => {
-    // Only reset imageLoaded when switching to a different generation
-    // Don't reset when the current generation's imageUrl changes (i.e., when it completes)
-    setImageLoaded(false)
-  }, [selectedGenerationId, setImageLoaded])
+    // Reset imageLoaded when switching to a different generation
+    // But if the current generation is complete, set it to true immediately
+    const currentGen = persistedGenerations.find((g) => g.id === selectedGenerationId)
+    if (currentGen?.status === "complete" && currentGen.imageUrl) {
+      setImageLoaded(true)
+    } else {
+      setImageLoaded(false)
+    }
+  }, [selectedGenerationId, persistedGenerations, setImageLoaded])
 
   useEffect(() => {
     uploadShowToast.current = showToast

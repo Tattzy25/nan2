@@ -37,32 +37,35 @@ export const ResultsClient = ({ defaultData, showUploadButton = true }: ResultsC
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   
-  // Combine all images for lightbox with full metadata
+  // Combine all images for lightbox with full metadata from Upstash Search
   const allImages = [
     ...images.map(img => ({ 
       url: img.url, 
       alt: `Uploaded image ${img.url}`,
-      title: img.pathname || 'Untitled',
-      shortDesc: 'Recently uploaded image',
-      longDesc: 'This image was recently uploaded to your gallery',
-      downloadUrl: img.downloadUrl || img.url
+      title: (img as any).title || img.pathname || 'Untitled Design',
+      shortDesc: (img as any).shortDesc || 'Recently uploaded tattoo design',
+      longDesc: (img as any).longDesc || 'This image was recently uploaded to your gallery',
+      downloadUrl: img.downloadUrl || img.url,
+      tags: (img as any).tags || []
     })),
     ...("data" in state && state.data?.length 
       ? state.data.map(blob => ({ 
           url: blob.url, 
           alt: `Search result ${blob.url}`,
-          title: blob.pathname || 'Untitled',
-          shortDesc: 'Search result',
-          longDesc: 'Image from search results',
-          downloadUrl: blob.downloadUrl || blob.url
+          title: (blob as any).title || blob.pathname || 'Tattoo Design',
+          shortDesc: (blob as any).shortDesc || 'Unique tattoo design from gallery',
+          longDesc: (blob as any).longDesc || 'Beautiful tattoo design from your collection',
+          downloadUrl: blob.downloadUrl || blob.url,
+          tags: (blob as any).tags || []
         })) 
       : defaultData.map(blob => ({ 
           url: blob.downloadUrl, 
           alt: `Gallery image ${blob.downloadUrl}`,
-          title: blob.pathname || 'Untitled',
-          shortDesc: 'Gallery image',
-          longDesc: blob.pathname || 'Image from your gallery',
-          downloadUrl: blob.downloadUrl
+          title: (blob as any).title || blob.pathname || 'Tattoo Design',
+          shortDesc: (blob as any).shortDesc || 'Gallery tattoo design',
+          longDesc: (blob as any).longDesc || blob.pathname || 'Image from your tattoo gallery',
+          downloadUrl: blob.downloadUrl,
+          tags: (blob as any).tags || []
         })))
   ];
 
@@ -110,7 +113,7 @@ export const ResultsClient = ({ defaultData, showUploadButton = true }: ResultsC
   return (
     <>
       {hasImages ? (
-        <div className="gap-4 columns-2 sm:columns-2 md:columns-3 lg:columns-4 xl:columns-4 2xl:columns-4">
+        <div className="gap-[2px] columns-2 sm:columns-2 md:columns-3 lg:columns-4 xl:columns-4 2xl:columns-4">
           {images.map((image, index) => (
             <ClickablePreview
               key={image.url}

@@ -354,49 +354,35 @@ export const ImageLightbox = ({
             </Card>
           </div>
 
-          {/* Back side - Product Card */}
+          {/* Back side - Product Card - Mobile First Responsive */}
           <div
             className="absolute inset-0 backface-hidden rotate-y-180"
             style={{ backfaceVisibility: "hidden" }}
             onClick={(e) => e.stopPropagation()}
           >
             <Card className="w-full h-full border-0 shadow-none bg-white">
-              <CardContent className="p-6 sm:p-8 h-full flex flex-col">
+              <CardContent className="p-4 sm:p-6 md:p-8 h-full flex flex-col">
                 <div className="flex-1 overflow-auto">
-                  {/* Product Title */}
-                  <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
-                    {currentImage.title || currentImage.alt || `Image ${currentIndex + 1}`}
+                  {/* Product Title - Mobile Optimized */}
+                  <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 mb-3 sm:mb-4 line-clamp-2">
+                    {currentImage.title || currentImage.alt || `Tattoo Design ${currentIndex + 1}`}
                   </h2>
 
-                  {/* Star Ratings */}
-                  <div className="flex items-center gap-2 mb-4">
-                    {[1, 2, 3, 4, 5].map((star) => (
-                      <StarIcon
-                        key={star}
-                        className={cn(
-                          "w-5 h-5",
-                          star <= 4 ? "fill-yellow-400 text-yellow-400" : "text-gray-300"
-                        )}
-                      />
-                    ))}
-                    <span className="text-sm text-gray-600 ml-2">(4.0)</span>
-                  </div>
-
-                  {/* Description */}
-                  <div className="mb-6">
-                    <h3 className="text-sm font-semibold text-gray-700 uppercase mb-2">Description</h3>
-                    <p className="text-base text-gray-700 leading-relaxed">
+                  {/* Description - Mobile Optimized */}
+                  <div className="mb-4 sm:mb-6">
+                    <h3 className="text-xs sm:text-sm font-semibold text-gray-700 uppercase mb-1 sm:mb-2">Description</h3>
+                    <p className="text-sm sm:text-base text-gray-700 leading-relaxed line-clamp-4 sm:line-clamp-6">
                       {currentImage.shortDesc || currentImage.longDesc || 'A unique tattoo design from your gallery.'}
                     </p>
                   </div>
 
-                  {/* Action Buttons */}
-                  <div className="flex flex-wrap gap-3 mb-4">
+                  {/* Action Buttons - Mobile First Stack */}
+                  <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 mb-3 sm:mb-4">
                     {/* Heart/Save Button */}
                     <Button
                       variant="outline"
                       size="lg"
-                      className="flex items-center gap-2"
+                      className="flex items-center justify-center gap-2 w-full sm:w-auto"
                       onClick={(e) => {
                         e.stopPropagation();
                         toggleFavorite(currentImage.url);
@@ -404,18 +390,18 @@ export const ImageLightbox = ({
                     >
                       <HeartIcon
                         className={cn(
-                          "w-5 h-5",
+                          "w-4 h-4 sm:w-5 sm:h-5",
                           isFavorite(currentImage.url) ? "fill-rose-500 text-rose-500" : ""
                         )}
                       />
-                      <span>{isFavorite(currentImage.url) ? "Saved" : "Save"}</span>
+                      <span className="text-sm sm:text-base">{isFavorite(currentImage.url) ? "Saved" : "Save"}</span>
                     </Button>
 
                     {/* Share Button */}
                     <Button
                       variant="outline"
                       size="lg"
-                      className="flex items-center gap-2"
+                      className="flex items-center justify-center gap-2 w-full sm:w-auto"
                       onClick={async (e) => {
                         e.stopPropagation();
                         if (navigator.share) {
@@ -441,28 +427,28 @@ export const ImageLightbox = ({
                         }
                       }}
                     >
-                      <Share2Icon className="w-5 h-5" />
-                      <span>Share</span>
+                      <Share2Icon className="w-4 h-4 sm:w-5 sm:h-5" />
+                      <span className="text-sm sm:text-base">Share</span>
                     </Button>
 
                     {/* Download Button - Opens Dialog */}
                     <Button
                       variant="default"
                       size="lg"
-                      className="flex items-center gap-2"
+                      className="flex items-center justify-center gap-2 w-full sm:w-auto"
                       onClick={(e) => {
                         e.stopPropagation();
                         setShowLongDescDialog(true);
                       }}
                     >
-                      <DownloadIcon className="w-5 h-5" />
-                      <span>Download</span>
+                      <DownloadIcon className="w-4 h-4 sm:w-5 sm:h-5" />
+                      <span className="text-sm sm:text-base">Download</span>
                     </Button>
                   </div>
                 </div>
 
-                {/* Tap to flip back hint */}
-                <div className="text-center text-sm text-gray-500 mt-4 pt-4 border-t">
+                {/* Tap to flip back hint - Mobile Optimized */}
+                <div className="text-center text-xs sm:text-sm text-gray-500 mt-3 sm:mt-4 pt-3 sm:pt-4 border-t">
                   Tap anywhere to flip back to image
                 </div>
               </CardContent>
