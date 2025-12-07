@@ -37,10 +37,33 @@ export const ResultsClient = ({ defaultData, showUploadButton = true }: ResultsC
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   
-  // Combine all images for lightbox
+  // Combine all images for lightbox with full metadata
   const allImages = [
-    ...images.map(img => ({ url: img.url, alt: `Uploaded image ${img.url}` })),
-    ...("data" in state && state.data?.length ? state.data.map(blob => ({ url: blob.url, alt: `Search result ${blob.url}` })) : defaultData.map(blob => ({ url: blob.downloadUrl, alt: `Gallery image ${blob.downloadUrl}` })))
+    ...images.map(img => ({ 
+      url: img.url, 
+      alt: `Uploaded image ${img.url}`,
+      title: img.pathname || 'Untitled',
+      shortDesc: 'Recently uploaded image',
+      longDesc: 'This image was recently uploaded to your gallery',
+      downloadUrl: img.downloadUrl || img.url
+    })),
+    ...("data" in state && state.data?.length 
+      ? state.data.map(blob => ({ 
+          url: blob.url, 
+          alt: `Search result ${blob.url}`,
+          title: blob.pathname || 'Untitled',
+          shortDesc: 'Search result',
+          longDesc: 'Image from search results',
+          downloadUrl: blob.downloadUrl || blob.url
+        })) 
+      : defaultData.map(blob => ({ 
+          url: blob.downloadUrl, 
+          alt: `Gallery image ${blob.downloadUrl}`,
+          title: blob.pathname || 'Untitled',
+          shortDesc: 'Gallery image',
+          longDesc: blob.pathname || 'Image from your gallery',
+          downloadUrl: blob.downloadUrl
+        })))
   ];
 
   useEffect(() => {
