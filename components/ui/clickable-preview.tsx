@@ -18,7 +18,7 @@ export const ClickablePreview = ({
   className 
 }: ClickablePreviewProps) => (
   <div
-    className={cn("mb-[2px] rounded-lg bg-card p-[2px] shadow-lg cursor-pointer hover:shadow-xl transition-all border border-transparent hover:border-[var(--color-primary-400)]", className)}
+    className={cn("mb-[1px] bg-card p-[1px] cursor-pointer hover:opacity-90 transition-opacity", className)}
     onClick={onClick}
     role="button"
     tabIndex={0}
@@ -30,10 +30,10 @@ export const ClickablePreview = ({
     }}
     aria-label="View image in lightbox"
   >
-    <div className="relative rounded-md overflow-hidden group">
+    <div className="relative overflow-hidden group">
       <Image
         alt={url}
-        className="rounded-md block w-full h-auto"
+        className="block w-full h-auto"
         height={630}
         priority={priority}
         sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 25vw"

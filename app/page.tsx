@@ -1,6 +1,5 @@
 import { ImageCombiner } from "@/components/image-combiner"
 import NavbarFlow from "@/components/ui/navbar-flow"
-import { ModeToggle } from "@/components/ui/mode-toggle"
 import { SearchOverlayContent } from "@/components/search-overlay-content"
 import type { Metadata } from "next"
 
@@ -16,10 +15,6 @@ export default function Home() {
       <NavbarFlow
         emblem={<span>TaTTTy</span>}
         overlayContent={<SearchOverlayContent />}
-        links={[
-          { text: "Home", url: "/" },
-        ]}
-        extraIcons={[<ModeToggle key="mode-toggle" />]}
       />
       <ImageCombiner />
     </main>

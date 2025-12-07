@@ -123,13 +123,14 @@ const NavbarFlow: React.FC<NavbarFlowProps> = ({
     <div className={`sticky top-0 z-50 w-full ${styleName}`}>
       <div className="hidden md:block">
         <div className="relative w-full max-w-7xl mx-auto h-24 flex items-center justify-between px-4 lg:px-10">
-          <motion.div
+          <motion.a
+            href="/"
             initial={{ opacity: 0, x: -50 }}
             animate={emblemMotion}
-            className="bg-gray-200/80 dark:bg-black/95 backdrop-blur-sm text-gray-800 dark:text-gray-200 px-4 lg:px-8 py-3 lg:py-4 rounded-full font-semibold text-lg lg:text-xl z-10 flex-shrink-0 shadow-[0_0_12px_rgba(34,197,94,0.35)] border-2 border-green-400"
+            className="bg-gray-200/80 dark:bg-black/95 backdrop-blur-sm text-gray-800 dark:text-gray-200 px-4 lg:px-8 py-3 lg:py-4 rounded-full font-semibold text-lg lg:text-xl z-10 flex-shrink-0 shadow-[0_0_12px_rgba(34,197,94,0.35)] border-2 border-green-400 cursor-pointer hover:shadow-[0_0_18px_rgba(34,197,94,0.5)] transition-shadow"
           >
             {emblem}
-          </motion.div>
+          </motion.a>
 
           <motion.nav
             initial={{
@@ -409,15 +410,16 @@ const NavbarFlow: React.FC<NavbarFlowProps> = ({
       <div className="block md:hidden">
         <div className="top-0 z-50 w-full border-b border-gray-200/40 dark:border-gray-800/40 bg-gray-50/95 dark:bg-black/95 backdrop-blur supports-[backdrop-filter]:bg-gray-50/60 dark:supports-[backdrop-filter]:bg-black/60 relative">
           <div className="container flex h-16 max-w-screen-2xl items-center px-4">
-            <motion.div
+            <motion.a
+              href="/"
               initial={{ opacity: 0, x: -20 }}
               animate={emblemMotion}
               className="mr-4 flex-shrink-0"
             >
-              <div className="bg-gray-200/80 dark:bg-gray-800/80 backdrop-blur-sm text-gray-800 dark:text-gray-200 px-4 py-2 rounded-full font-semibold text-base">
+              <div className="bg-gray-200/80 dark:bg-gray-800/80 backdrop-blur-sm text-gray-800 dark:text-gray-200 px-4 py-2 rounded-full font-semibold text-base cursor-pointer hover:bg-gray-300/80 dark:hover:bg-gray-700/80 transition-colors">
                 {emblem}
               </div>
-            </motion.div>
+            </motion.a>
 
             <div className="flex flex-1 items-center justify-end space-x-2">
               <motion.div

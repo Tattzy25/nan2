@@ -113,7 +113,7 @@ export const ResultsClient = ({ defaultData, showUploadButton = true }: ResultsC
   return (
     <>
       {hasImages ? (
-        <div className="gap-[2px] columns-2 sm:columns-2 md:columns-3 lg:columns-4 xl:columns-4 2xl:columns-4">
+        <div className="gap-[1px] columns-2 sm:columns-2 md:columns-3 lg:columns-4 xl:columns-4 2xl:columns-4 bg-white dark:bg-background">
           {images.map((image, index) => (
             <ClickablePreview
               key={image.url}
