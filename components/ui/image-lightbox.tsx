@@ -250,7 +250,7 @@ export const ImageLightbox = ({
 
   return (
     <div
-      className="fixed inset-0 z-50 bg-black/90 backdrop-blur-sm touch-none"
+      className="fixed inset-0 z-50 bg-black/90 backdrop-blur-sm"
       onClick={onClose}
       role="dialog"
       aria-modal="true"
@@ -258,6 +258,7 @@ export const ImageLightbox = ({
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
+      style={{ touchAction: 'pan-y' }}
     >
       {/* Close button */}
       <Button
