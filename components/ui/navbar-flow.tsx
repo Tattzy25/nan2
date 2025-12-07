@@ -409,45 +409,16 @@ const NavbarFlow: React.FC<NavbarFlowProps> = ({
 
       <div className="block md:hidden">
         <div className="top-0 z-50 w-full border-b border-gray-200/40 dark:border-gray-800/40 bg-gray-50/95 dark:bg-black/95 backdrop-blur supports-[backdrop-filter]:bg-gray-50/60 dark:supports-[backdrop-filter]:bg-black/60 relative">
-          <div className="container flex h-16 max-w-screen-2xl items-center px-4">
-            <motion.a
-              href="/"
-              initial={{ opacity: 0, x: -20 }}
-              animate={emblemMotion}
-              className="mr-4 flex-shrink-0"
+          <div className="container flex h-16 max-w-screen-2xl items-center justify-end px-4">
+            <motion.button
+              onClick={handleMenuClick}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: sequenceDone ? 1 : 0 }}
+              className="flex items-center justify-center gap-1.5 px-4 py-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 bg-gray-200/50 dark:bg-gray-800/50"
             >
-              <div className="bg-gray-200/80 dark:bg-gray-800/80 backdrop-blur-sm text-gray-800 dark:text-gray-200 px-4 py-2 rounded-full font-semibold text-base cursor-pointer hover:bg-gray-300/80 dark:hover:bg-gray-700/80 transition-colors">
-                {emblem}
-              </div>
-            </motion.a>
-
-            <div className="flex flex-1 items-center justify-end space-x-2">
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                animate={switchMotion}
-                className="flex items-center space-x-2"
-              >
-                {extraIcons.map((icon, idx) => (
-                  <div key={idx} className="flex items-center justify-center">
-                    {icon}
-                  </div>
-                ))}
-
-                {rightComponent && (
-                  <div className="flex items-center justify-center">
-                    {rightComponent}
-                  </div>
-                )}
-              </motion.div>
-
-              <button
-                onClick={handleMenuClick}
-                className="flex items-center justify-center gap-1.5 px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors rounded-full hover:bg-gray-200 dark:hover:bg-gray-800"
-              >
-                <Sparkles className="h-4 w-4" />
-                <span className="text-sm font-medium">MENU</span>
-              </button>
-            </div>
+              <Sparkles className="h-5 w-5" />
+              <span className="text-base font-medium">MENU</span>
+            </motion.button>
           </div>
         </div>
       </div>

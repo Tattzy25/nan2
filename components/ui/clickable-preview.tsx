@@ -30,10 +30,10 @@ export const ClickablePreview = ({
     }}
     aria-label="View image in lightbox"
   >
-    <div className="relative overflow-hidden group">
+    <div className="relative overflow-hidden rounded-lg group">
       <Image
         alt={url}
-        className="block w-full h-auto"
+        className="block w-full h-auto rounded-lg"
         height={630}
         priority={priority}
         sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 25vw"
