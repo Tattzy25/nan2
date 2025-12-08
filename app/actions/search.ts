@@ -118,8 +118,9 @@ export const search = async (
      * Result processing - IMPORTANT: Upstash already sorts by relevance
      * We only need to:
      * 1. Validate each result has metadata
-     * 2. Preserve search scores for debugging
-     * 3. Filter out invalid results
+     * 2. Extract content fields (title, shortDesc, longDesc, tags) from Upstash
+     * 3. Preserve search scores for debugging
+     * 4. Filter out invalid results
      *
      * DO NOT manually sort results - Upstash handles relevance sorting
      */
@@ -130,9 +131,17 @@ export const search = async (
         return null;
       }
 
-      // Preserve score information for debugging and analysis
+      // Extract content fields from Upstash Search (title, shortDesc, longDesc, tags)
+      const contentFields = result.content || {};
+      
+      // Preserve score information and merge content fields with metadata
       const blobWithScore = {
         ...result.metadata,
+        // Add Upstash Search content fields to metadata
+        title: contentFields.title,
+        shortDesc: contentFields.shortDesc,
+        longDesc: contentFields.longDesc,
+        tags: contentFields.tags,
         __searchScore: result.score // Add score for reference (0-1 range)
       } as PutBlobResultWithScore;
 

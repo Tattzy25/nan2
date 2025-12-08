@@ -80,12 +80,14 @@ export function InputSection({
         <div className="space-y-6 md:space-y-8 flex flex-col">
           <div className="space-y-3">
             <Textarea
+              ref={promptTextareaRef}
               value={prompt}
               onChange={(e) => setPrompt(e.target.value)}
               onKeyDown={onKeyDown}
               onPaste={onPromptPaste}
               placeholder="Type your message here."
               aria-label="Your message"
+              className="min-h-24 sm:min-h-20 md:min-h-16"
             />
           </div>
         </div>

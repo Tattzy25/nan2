@@ -137,18 +137,19 @@ export function OutputSection({
             <ProgressBar progress={heicProgress} onCancel={() => {}} isConverting />
           </div>
         ) : generatedImage ? (
-          <div className="absolute inset-0 flex flex-col select-none">
-            <div className="flex-1 flex items-center justify-center relative group max-w-full max-h-full overflow-hidden">
+          <div className="absolute inset-0 flex flex-col select-none bg-black/5">
+            <div className="flex-1 flex items-center justify-center relative group max-w-full max-h-full overflow-hidden p-2">
               <img
                 src={generatedImage.url || "/placeholder.svg"}
                 alt="Generated"
                 className={cn(
-                  "max-w-full max-h-full transition-all duration-700 ease-out cursor-pointer",
-                  "lg:w-full lg:h-full lg:object-contain",
+                  "max-w-full max-h-full transition-all duration-300 ease-out cursor-pointer",
+                  "object-contain",
                   imageLoaded ? "opacity-100 scale-100" : "opacity-0 scale-95",
                 )}
                 onLoad={() => setImageLoaded(true)}
                 onClick={onOpenFullscreen}
+                style={{ display: 'block' }}
               />
             </div>
           </div>

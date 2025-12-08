@@ -2,13 +2,21 @@
 
 import * as React from "react";
 import Image from "next/image";
-import { XIcon, ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
+import { XIcon, ChevronLeftIcon, ChevronRightIcon, HeartIcon, Share2Icon, DownloadIcon, StarIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { useFavorites } from "@/hooks/use-favorites";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 
 interface ImageLightboxProps {
-  images: Array<{ url: string; alt?: string; title?: string; shortDesc?: string; longDesc?: string }>;
+  images: Array<{ url: string; alt?: string; title?: string; shortDesc?: string; longDesc?: string; downloadUrl?: string }>;
   currentIndex: number;
   isOpen: boolean;
   onClose: () => void;
@@ -24,12 +32,30 @@ export const ImageLightbox = ({
 }: ImageLightboxProps) => {
   const [isFlipped, setIsFlipped] = React.useState(false);
   const [isImageLoaded, setIsImageLoaded] = React.useState(false);
+  const [showLongDescDialog, setShowLongDescDialog] = React.useState(false);
   const cardRef = React.useRef<HTMLDivElement>(null);
   const touchStartRef = React.useRef<{ x: number; y: number; time: number } | null>(null);
   const touchEndRef = React.useRef<{ x: number; y: number; time: number } | null>(null);
   const mouseStartRef = React.useRef<{ x: number; y: number; time: number } | null>(null);
   const mouseEndRef = React.useRef<{ x: number; y: number; time: number } | null>(null);
   const [isDragging, setIsDragging] = React.useState(false);
+  const { toggle: toggleFavorite, isFavorite } = useFavorites();
+
+  // Reset states when image changes
+  React.useEffect(() => {
+    setIsFlipped(false);
+    setIsImageLoaded(false);
+    setShowLongDescDialog(false);
+  }, [currentIndex]);
+
+  // Reset states when lightbox closes
+  React.useEffect(() => {
+    if (!isOpen) {
+      setIsFlipped(false);
+      setIsImageLoaded(false);
+      setShowLongDescDialog(false);
+    }
+  }, [isOpen]);
 
   // Handle keyboard navigation
   React.useEffect(() => {
@@ -43,13 +69,11 @@ export const ImageLightbox = ({
         case "ArrowLeft":
           if (currentIndex > 0) {
             onNavigate(currentIndex - 1);
-            setIsFlipped(false);
           }
           break;
         case "ArrowRight":
           if (currentIndex < images.length - 1) {
             onNavigate(currentIndex + 1);
-            setIsFlipped(false);
           }
           break;
         case " ":
@@ -70,7 +94,6 @@ export const ImageLightbox = ({
     }
     if (currentIndex > 0) {
       onNavigate(currentIndex - 1);
-      setIsFlipped(false);
     }
   };
 
@@ -80,7 +103,6 @@ export const ImageLightbox = ({
     }
     if (currentIndex < images.length - 1) {
       onNavigate(currentIndex + 1);
-      setIsFlipped(false);
     }
   };
 
@@ -228,7 +250,7 @@ export const ImageLightbox = ({
 
   return (
     <div
-      className="fixed inset-0 z-50 bg-black/90 backdrop-blur-sm touch-none"
+      className="fixed inset-0 z-50 bg-black/90 backdrop-blur-sm"
       onClick={onClose}
       role="dialog"
       aria-modal="true"
@@ -236,6 +258,7 @@ export const ImageLightbox = ({
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
+      style={{ touchAction: 'pan-y' }}
     >
       {/* Close button */}
       <Button
@@ -332,25 +355,102 @@ export const ImageLightbox = ({
             </Card>
           </div>
 
-          {/* Back side - Empty white */}
+          {/* Back side - Product Card - Mobile First Responsive */}
           <div
             className="absolute inset-0 backface-hidden rotate-y-180"
             style={{ backfaceVisibility: "hidden" }}
+            onClick={(e) => e.stopPropagation()}
           >
             <Card className="w-full h-full border-0 shadow-none bg-white">
-              <CardContent className="p-4 h-full">
-                <div className="relative w-full h-full select-none">
-                  {/* Left side content: Title & Description */}
-                  <div className="absolute top-4 left-4 max-w-[45%]">
-                    <h2 className="text-lg font-semibold text-gray-900 leading-snug">
-                      {currentImage.title || currentImage.alt || `Image ${currentIndex + 1}`}
-                    </h2>
-                    <p className="mt-2 text-sm text-gray-600 break-words">
-                      {currentImage.shortDesc || currentImage.longDesc || 'No description available'}
+              <CardContent className="p-4 sm:p-6 md:p-8 h-full flex flex-col">
+                <div className="flex-1 overflow-auto">
+                  {/* Product Title - Mobile Optimized */}
+                  <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 mb-3 sm:mb-4 line-clamp-2">
+                    {currentImage.title || currentImage.alt || `Tattoo Design ${currentIndex + 1}`}
+                  </h2>
+
+                  {/* Description - Mobile Optimized */}
+                  <div className="mb-4 sm:mb-6">
+                    <h3 className="text-xs sm:text-sm font-semibold text-gray-700 uppercase mb-1 sm:mb-2">Description</h3>
+                    <p className="text-sm sm:text-base text-gray-700 leading-relaxed line-clamp-4 sm:line-clamp-6">
+                      {currentImage.shortDesc || currentImage.longDesc || 'A unique tattoo design from your gallery.'}
                     </p>
                   </div>
-                  {/* Center vertical separator */}
-                  <div className="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-px bg-gray-200" />
+
+                  {/* Action Buttons - Mobile First Stack */}
+                  <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 mb-3 sm:mb-4">
+                    {/* Heart/Save Button */}
+                    <Button
+                      variant="outline"
+                      size="lg"
+                      className="flex items-center justify-center gap-2 w-full sm:w-auto"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        toggleFavorite(currentImage.url);
+                      }}
+                    >
+                      <HeartIcon
+                        className={cn(
+                          "w-4 h-4 sm:w-5 sm:h-5",
+                          isFavorite(currentImage.url) ? "fill-rose-500 text-rose-500" : ""
+                        )}
+                      />
+                      <span className="text-sm sm:text-base">{isFavorite(currentImage.url) ? "Saved" : "Save"}</span>
+                    </Button>
+
+                    {/* Share Button */}
+                    <Button
+                      variant="outline"
+                      size="lg"
+                      className="flex items-center justify-center gap-2 w-full sm:w-auto"
+                      onClick={async (e) => {
+                        e.stopPropagation();
+                        if (navigator.share) {
+                          try {
+                            await navigator.share({
+                              title: currentImage.title || 'Tattoo Design',
+                              text: currentImage.shortDesc || 'Check out this tattoo design!',
+                              url: currentImage.url,
+                            });
+                          } catch (err) {
+                            if (err instanceof Error && err.name !== 'AbortError') {
+                              console.error('Error sharing:', err);
+                            }
+                          }
+                        } else {
+                          // Fallback: copy to clipboard
+                          try {
+                            await navigator.clipboard.writeText(currentImage.url);
+                            alert('Link copied to clipboard!');
+                          } catch (err) {
+                            console.error('Error copying to clipboard:', err);
+                          }
+                        }
+                      }}
+                    >
+                      <Share2Icon className="w-4 h-4 sm:w-5 sm:h-5" />
+                      <span className="text-sm sm:text-base">Share</span>
+                    </Button>
+
+                    {/* Download Button - Opens Dialog */}
+                    <Button
+                      variant="default"
+                      size="lg"
+                      className="flex items-center justify-center gap-2 w-full sm:w-auto"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setShowLongDescDialog(true);
+                      }}
+                    >
+                      <DownloadIcon className="w-4 h-4 sm:w-5 sm:h-5" />
+                      <span className="text-sm sm:text-base">Download</span>
+                    </Button>
+                  </div>
+                </div>
+
+                {/* Tap to flip back hint - Mobile Optimized */}
+                <div className="text-center text-xs sm:text-sm text-gray-500 mt-3 sm:mt-4 pt-3 sm:pt-4 border-t">
+                  Tap anywhere to flip back to image
                 </div>
               </CardContent>
             </Card>
@@ -388,6 +488,64 @@ export const ImageLightbox = ({
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-white"></div>
         </div>
       )}
+
+      {/* Long Description Dialog */}
+      <Dialog open={showLongDescDialog} onOpenChange={setShowLongDescDialog}>
+        <DialogContent className="sm:max-w-[600px]" onClick={(e) => e.stopPropagation()}>
+          <DialogHeader>
+            <DialogTitle>Full Description & Prompt</DialogTitle>
+            <DialogDescription>
+              Use this prompt to regenerate or modify this design
+            </DialogDescription>
+          </DialogHeader>
+          <div className="mt-4 space-y-4">
+            <div>
+              <h4 className="font-semibold text-sm text-gray-700 mb-2">Original Prompt:</h4>
+              <p className="text-sm text-gray-900 bg-gray-50 p-4 rounded-md border">
+                {currentImage.longDesc || currentImage.shortDesc || 'No detailed prompt available for this image.'}
+              </p>
+            </div>
+            <div className="flex gap-3 pt-4">
+              <Button
+                variant="outline"
+                className="flex-1"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setShowLongDescDialog(false);
+                }}
+              >
+                Close
+              </Button>
+              <Button
+                variant="default"
+                className="flex-1"
+                onClick={async (e) => {
+                  e.stopPropagation();
+                  try {
+                    const response = await fetch(currentImage.downloadUrl || currentImage.url);
+                    const blob = await response.blob();
+                    const url = window.URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = `${currentImage.title || 'tattoo-design'}.png`;
+                    document.body.appendChild(a);
+                    a.click();
+                    window.URL.revokeObjectURL(url);
+                    document.body.removeChild(a);
+                    setShowLongDescDialog(false);
+                  } catch (err) {
+                    console.error('Error downloading image:', err);
+                    alert('Failed to download image. Please try again.');
+                  }
+                }}
+              >
+                <DownloadIcon className="w-4 h-4 mr-2" />
+                Download Now
+              </Button>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 };

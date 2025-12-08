@@ -9,9 +9,14 @@ import { usePersistentHistory } from "@/components/image-combiner/hooks/use-pers
 import { ChevronDownIcon } from "lucide-react";
 import { useFavorites } from "@/hooks/use-favorites"
 import { useState } from "react";
+import { ImageLightbox } from "./image-lightbox";
 
 export const MyShitPage = () => {
   const [toast, setToast] = useState<{ message: string; type: "success" | "error" } | null>(null);
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [lightboxType, setLightboxType] = useState<"generated" | "liked">("generated");
+  
   const showToast = (message: string, type: "success" | "error" = "success") => {
     setToast({ message, type });
     setTimeout(() => setToast(null), 3000);
@@ -30,6 +35,41 @@ export const MyShitPage = () => {
   // Liked / favorites (persisted)
   const { favorites: likedImages } = useFavorites()
 
+  const openLightbox = (index: number, type: "generated" | "liked") => {
+    setCurrentImageIndex(index);
+    setLightboxType(type);
+    setLightboxOpen(true);
+  };
+
+  const closeLightbox = () => {
+    setLightboxOpen(false);
+  };
+
+  const navigateLightbox = (index: number) => {
+    setCurrentImageIndex(index);
+  };
+
+  // Prepare images for lightbox
+  const generatedImages = persistedGenerations.map((g) => ({
+    url: g.imageUrl || "/placeholder.svg",
+    alt: g.prompt || "Generated tattoo",
+    title: "Generated Tattoo Design",
+    shortDesc: g.prompt || "AI-generated tattoo design",
+    longDesc: g.prompt || "This tattoo was generated using AI",
+    downloadUrl: g.imageUrl || "/placeholder.svg"
+  }));
+
+  const likedImagesData = likedImages.map((img, idx) => ({
+    url: img,
+    alt: `Liked tattoo ${idx + 1}`,
+    title: "Saved Tattoo Design",
+    shortDesc: "Liked tattoo design from your collection",
+    longDesc: "A tattoo design you saved to your favorites",
+    downloadUrl: img
+  }));
+
+  const currentLightboxImages = lightboxType === "generated" ? generatedImages : likedImagesData;
+
   return (
       <div className="space-y-10 pb-12">
         {/* Top row: generated images (4 columns visible) - replaces GenerationHistory header */}
@@ -45,14 +85,17 @@ export const MyShitPage = () => {
               {persistedGenerations.length === 0 ? (
                 // show a single branded placeholder slide when there are no generations
                 <CarouselItem className="basis-1/4">
-                  <div className="aspect-square rounded-[2rem] overflow-hidden border border-white/8 bg-neutral-900/40 flex items-center justify-center">
+                  <div className="aspect-square rounded-xl overflow-hidden border border-white/8 bg-neutral-900/40 flex items-center justify-center">
                     <img src="/ink fever.svg" alt="Generated images placeholder" className="w-full h-full object-cover" />
                   </div>
                 </CarouselItem>
               ) : (
-                persistedGenerations.map((g) => (
+                persistedGenerations.map((g, idx) => (
                   <CarouselItem className="basis-1/4" key={g.id}>
-                    <div className="aspect-square rounded-[2rem] overflow-hidden border border-white/8 bg-neutral-900/40">
+                    <div 
+                      className="aspect-square rounded-xl overflow-hidden border border-white/8 bg-neutral-900/40 cursor-pointer hover:border-white/20 transition-colors"
+                      onClick={() => openLightbox(idx, "generated")}
+                    >
                       <img src={g.imageUrl ?? "/placeholder.svg"} alt={g.prompt ?? "Generated"} className="w-full h-full object-cover" />
                     </div>
                   </CarouselItem>
@@ -72,14 +115,17 @@ export const MyShitPage = () => {
               {likedImages.length === 0 ? (
                 // single branded placeholder slide for saved images when empty
                 <CarouselItem className="basis-1/4">
-                  <div className="aspect-square rounded-[2rem] overflow-hidden border border-white/8 bg-neutral-900/40 flex items-center justify-center">
+                  <div className="aspect-square rounded-xl overflow-hidden border border-white/8 bg-neutral-900/40 flex items-center justify-center">
                     <img src="/ink fever.svg" alt="Ink Fever placeholder" className="w-full h-full object-cover" />
                   </div>
                 </CarouselItem>
               ) : (
                 likedImages.map((img: string, idx: number) => (
                   <CarouselItem className="basis-1/4" key={`liked-${idx}`}>
-                    <div className="aspect-square rounded-[2rem] overflow-hidden border border-white/8 bg-neutral-900/40">
+                    <div 
+                      className="aspect-square rounded-xl overflow-hidden border border-white/8 bg-neutral-900/40 cursor-pointer hover:border-white/20 transition-colors"
+                      onClick={() => openLightbox(idx, "liked")}
+                    >
                       <img src={img} alt={`Saved ${idx + 1}`} className="w-full h-full object-cover" />
                     </div>
                   </CarouselItem>
@@ -99,6 +145,17 @@ export const MyShitPage = () => {
             <ChevronDownIcon className="size-6" />
           </button>
         </div>
+
+        {/* Lightbox for viewing images */}
+        {lightboxOpen && currentLightboxImages.length > 0 && (
+          <ImageLightbox
+            images={currentLightboxImages}
+            currentIndex={currentImageIndex}
+            isOpen={lightboxOpen}
+            onClose={closeLightbox}
+            onNavigate={navigateLightbox}
+          />
+        )}
       </div>
   );
 };
